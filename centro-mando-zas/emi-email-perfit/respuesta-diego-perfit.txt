@@ -1,0 +1,36 @@
+Hola Diego,
+
+Gracias por la disposición. Te cuento el caso de uso en detalle:
+
+**Contexto:**
+Desde ZAS creamos campañas de email marketing estratégicas para clientes de e-commerce. Cada campaña es única: copy, estructura visual, producto protagonista, timing específico. Todo hecho por Emi, nuestro agente especialista en email marketing.
+
+**El flujo que queremos automatizar:**
+1. Emi crea la campaña (copy, HTML responsive, estrategia)
+2. Mica aprueba (validación final)
+3. Emi conecta a la API de Perfit y sube:
+   - El contenido HTML completo
+   - Metadata (subject, preheader, etc.)
+4. Según el tipo de campaña:
+   - Si es programada → la deja scheduled para una fecha/hora específica
+   - Si es envío inmediato → la envía directamente
+5. Todo esto para múltiples cuentas de clientes en paralelo
+
+**Lo que necesitamos de vos:**
+
+1. **Documentación paso a paso:** Cómo crear una campaña + cargar el contenido HTML de forma confiable en una secuencia de requests (o los requests en orden correcto si son varios)
+2. **Endpoint para programar envío:** Que acepte date/time específico
+3. **Endpoint para enviar inmediato:** Disparo directo sin delay
+4. **Rate limits y restricciones:** Cuántas campañas por minuto/hora, límites de tamaño de HTML, etc.
+5. **Validaciones necesarias:** Campos obligatorios, formatos requeridos, prerequisitos que falten
+
+**Contexto técnico:**
+Ya tenemos un script Python que conecta a la API. El paso 1 (crear campaña) funcionó sin problemas. El problema está en el paso 2 (persistir HTML). Llevamos intentos con POST `/v2/campaigns/{id}/contents` y PUT `/v2/campaigns/{id}/contents/{id}`, pero el HTML nunca queda guardado.
+
+¿Podés armar esa documentación?
+
+Quedo atento.
+
+Saludos,
+Mica
+ZAS Digital
