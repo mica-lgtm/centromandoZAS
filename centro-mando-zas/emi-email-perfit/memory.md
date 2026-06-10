@@ -97,3 +97,152 @@ Formato sugerido:
   - Email 5 (Combo 3 piezas): ID 1286
   - Email 6 (Remate urgencia): ID 1287
 - Próximo paso: Mail con Diego Sánchez (Perfit Engineering Manager) en progreso para resolver API issue
+
+## 2026-06-09 · Sistema Automático · Retroalimentación Vitalis cada 48hs
+
+- **Activación:** Sistema de análisis automático de performance cada 48 horas
+- **Skill:** `skills/analizar-performance-klaviyo.md` (nuevo)
+- **Herramienta:** Agente cloud vía `/schedule` skill, cron cada 2 días a las 9am Argentina (12:00 UTC)
+- **Almacenamiento:** `retroalimentacion-vitalis/AAAA-MM-DD-ciclo-N.md` (uno por ciclo)
+- **Primer análisis:** Ciclo 00 (histórico) — 100 campañas mayo-junio 2026
+- **Benchmarks internos Vitalis** (referencias, no absolutos):
+  - Open Rate mínimo aceptable: 10%
+  - Open Rate bueno: 15%+
+  - CTR mínimo: 0.5%
+  - CTR bueno: 2%+
+  - Bounce Rate máximo: 2% (crítico si > 5%)
+  - Unsubscribe máximo: 0.3%
+- **Comparación:** Solo contra datos propios de Vitalis — ciclo a ciclo, no benchmarks externos
+- **Cómo funciona:**
+  1. Cada 48hs, agente trae campañas Vitalis enviadas recientemente desde Klaviyo
+  2. Analiza performance: open rate, CTR, bounce, unsubscribe
+  3. Detecta patrones ganadores y perdedores
+  4. Genera archivo nuevo de ciclo con hallazgos
+  5. Reporta a Mica con top insights
+  6. Emi aplica reglas en próxima campaña
+- **Próximo paso:** Leer ciclo 00 (2026-06-09), aplicar reglas en Vitalis Navitas emails próximos
+
+## 2026-06-09 · Skill · Crear Campaña en Perfit por API
+
+- **Ubicación:** `skills/crear-campana-perfit-api.md`
+- **Propósito:** Automatizar creación de campañas completas en Perfit (sin interfaz web)
+- **Alcance:** Cualquier cuenta Perfit de clientes ZAS
+- **Flujo:** 10 pasos (crear campaña → crear template → HTML → sender → validar → opcionalmente lanzar)
+- **Opciones de lanzamiento:** DRAFT (borrador), NOW (inmediato), SCHEDULED (programado)
+- **Script base:** `create_campaign_script/create_campaign.py` (con opción --draft)
+- **Uso:** Python 3, sin dependencias externas
+- **Caso de uso real:** Simona Shop 6 campañas fin de semana (2026-06-09 validado - IDs 1309-1314)
+
+### Artefactos creados
+
+1. **Skill documentado:** `skills/crear-campana-perfit-api.md` - Guía completa con procedimiento, argumentos, ejemplos
+2. **Script batch:** `batch_create_campaigns.py` - Crear múltiples campañas desde JSON config en un comando
+3. **Config ejemplo:** `batch_config_example.json` - Plantilla de configuración (Simona 6 campañas)
+4. **Script draft:** `create_campaign_script/create_campaign.py` - Versión con --draft flag (crear sin lanzar)
+
+### Cómo usar
+
+**Opción 1 - Una campaña por vez:**
+```bash
+python3 create_campaign_script/create_campaign.py \
+  --account simonashop --api-key $PERFIT_API_KEY \
+  --name "Mi Campaña" --subject "Asunto" \
+  --sender-id sen_xxx --html-file email.html \
+  --list-ids 1 --draft
+```
+
+**Opción 2 - Batch de múltiples campañas:**
+```bash
+python3 batch_create_campaigns.py --config batch_config_example.json
+```
+
+### Próximas mejoras
+- Integración con workflows Emi para crear campañas automáticamente después de QA
+- UI Perfit para visualizar IDs creados
+- Sincronización bidireccional (traer performance desde Perfit)
+
+## 2026-06-09 · Sistema Automático · Retroalimentación Perfit cada 48hs
+
+- **Activación:** Sistema de análisis automático de performance cada 48 horas para todas las cuentas Perfit
+- **Skill:** `skills/analizar-performance-perfit.md`
+- **Script:** `analizar_performance_perfit.py`
+- **Herramienta:** Agente cloud vía `/schedule`, cron cada 2 días a las 9am Argentina (12:00 UTC)
+- **Almacenamiento:** `retroalimentacion-perfit/{account}-AAAA-MM-DD-ciclo-N.md` (uno por cuenta, por ciclo)
+- **Cuentas monitoreadas:** Se leen desde `retroalimentacion-perfit/cuentas.json`
+- **Cuentas iniciales:**
+  - simonashop (Simona Shop)
+- **Benchmarks internos Perfit** (referencias, no absolutos):
+  - Open Rate mínimo aceptable: 5%
+  - Open Rate bueno: 10%+
+  - CTR mínimo: 0.3%
+  - CTR bueno: 1%+
+  - Bounce Rate máximo: 3% (crítico si > 5%)
+  - Unsubscribe máximo: 0.2%
+- **Comparación:** Solo contra datos propios de cada cuenta — ciclo a ciclo, no benchmarks externos
+- **Cómo funciona:**
+  1. Cada 48hs, script trae campañas enviadas recientemente desde Perfit (por cada cuenta)
+  2. Analiza performance: open rate, CTR, bounce, unsubscribe
+  3. Detecta patrones ganadores y perdedores
+  4. Genera archivo nuevo de ciclo con hallazgos (uno por account)
+  5. Reporta a Mica con top insights
+  6. Emi aplica reglas en próximas campañas
+- **Seguridad:**
+  - API keys en `cuentas.json` NO commitear a git
+  - Archivo está en `.gitignore`
+- **Próximo paso:** Agregar más cuentas a `cuentas.json` (una por cliente Perfit), leer reportes después de cada ciclo
+
+## 2026-06-09 · Sistema Completo · Análisis → Propuestas → Creación → Envío
+
+### Descripción
+
+Sistema end-to-end que automatiza:
+1. **Análisis de performance** (cada 48hs)
+2. **Generación de 3 propuestas de campaña** basadas en patrones ganadores
+3. **Aprobación manual** de propuestas (editar asuntos, cambiar estado a "aprobada")
+4. **Creación en borrador** en Perfit (sin HTML)
+5. **Emi agrega HTML** personalizado
+6. **Validación manual** en Perfit
+7. **Envío final** (lanzar campañas)
+
+### Flujo principal
+
+```
+Análisis automático (48hs)
+    ↓
+Genera 3 propuestas → Tú apruebas
+    ↓
+Crea en borrador (Perfit)
+    ↓
+Emi agrega HTML
+    ↓
+Tú validas en Perfit
+    ↓
+Lanza campañas → Monitorear performance
+```
+
+### Artefactos creados
+
+1. **Skill actualizado:** `skills/analizar-performance-perfit.md`
+   - Ahora incluye generación de propuestas
+   - Detalla qué datos genera
+
+2. **Scripts Python:**
+   - `analizar_performance_perfit.py` — Análisis + generación de propuestas
+   - `crear_campanas_aprobadas.py` — Crear drafts en Perfit desde propuestas aprobadas
+   - `enviar_campanas_aprobadas.py` — Lanzar campañas aprobadas y validadas
+
+3. **Documentación:**
+   - `FLUJO_RETROALIMENTACION_Y_PROPUESTAS.md` — Guía visual y completa del workflow
+
+### Archivos JSON generados por ciclo
+
+- `{account}-AAAA-MM-DD-ciclo-N.md` — Reporte de análisis
+- `{account}-AAAA-MM-DD-propuestas.json` — 3 propuestas para revisar/editar
+- `{account}-AAAA-MM-DD-propuestas-creadas.json` — Campañas creadas en Perfit
+- `{account}-AAAA-MM-DD-envios.json` — Reporte de envío final
+
+### Próximas mejoras
+
+- Script para que Emi agregue HTML automáticamente (`subir_html_a_campanas_creadas.py`)
+- Integración con `/schedule` para programar rutina automática
+- Dashboard para visualizar propuestas y performance ciclo a ciclo
