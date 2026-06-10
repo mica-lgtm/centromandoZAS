@@ -1,0 +1,50 @@
+{
+  "account": "simonashop",
+  "api_key": "simonashop-r9NSUAgw3TxyimMTrEDFr5rNLh6ah0an",
+  "sender_id": "sen_cktp44qao048i07748n87slt2",
+  "list_ids": [1],
+  "campaigns": [
+    {
+      "name": "Simona - Viernes Mañana - Jean Nascar",
+      "subject": "El jean que funciona con todo",
+      "preheader": "Fit perfecto, precio accesible. 12 cuotas sin interés.",
+      "html_file": "campanas/simona-fin-de-semana-2026-06-03/email-1-viernes-manana-jean-nascar.html",
+      "draft": true
+    },
+    {
+      "name": "Simona - Viernes Tarde - Blazer Mendoza",
+      "subject": "El blazer que te hace más fuerte",
+      "preheader": "Corte impecable, 12 cuotas sin interés.",
+      "html_file": "campanas/simona-fin-de-semana-2026-06-03/email-2-viernes-tarde-blazer-mendoza.html",
+      "draft": true
+    },
+    {
+      "name": "Simona - Sábado Mañana - Sweater Nievre",
+      "subject": "El sweater que se adaptá a vos",
+      "preheader": "Suave, cómodo, 12 cuotas sin interés.",
+      "html_file": "campanas/simona-fin-de-semana-2026-06-03/email-3-sabado-manana-sweater-nievre.html",
+      "draft": true
+    },
+    {
+      "name": "Simona - Sábado Tarde - Camisa Brisa",
+      "subject": "La camisa que se lleva con todo",
+      "preheader": "Versátil, fresca, 12 cuotas sin interés.",
+      "html_file": "campanas/simona-fin-de-semana-2026-06-03/email-4-sabado-tarde-camisa-brisa.html",
+      "draft": true
+    },
+    {
+      "name": "Simona - Domingo Mañana - Combo 3 Piezas",
+      "subject": "Combo 3: vistete completo",
+      "preheader": "Jean + Blazer + Camisa. 12 cuotas sin interés.",
+      "html_file": "campanas/simona-fin-de-semana-2026-06-03/email-5-domingo-manana-combo.html",
+      "draft": true
+    },
+    {
+      "name": "Simona - Domingo Tarde - Remate Urgencia",
+      "subject": "Últimas piezas: remate de fin de semana",
+      "preheader": "Se agotan. 12 cuotas sin interés.",
+      "html_file": "campanas/simona-fin-de-semana-2026-06-03/email-6-domingo-tarde-remate.html",
+      "draft": true
+    }
+  ]
+}
