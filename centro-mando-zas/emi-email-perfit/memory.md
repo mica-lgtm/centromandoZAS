@@ -191,6 +191,19 @@ python3 batch_create_campaigns.py --config batch_config_example.json
   - Archivo está en `.gitignore`
 - **Próximo paso:** Agregar más cuentas a `cuentas.json` (una por cliente Perfit), leer reportes después de cada ciclo
 
+## 2026-06-10 · CRÍTICO · Klaviyo MCP es obligatorio
+
+- **Regla:** SOLO usar MCP de Klaviyo para crear campañas, templates y actualizaciones
+- **NO usar:** API requests directos, curl, tokens, ni scripts de requests
+- **Por qué:** MCP maneja autenticación, formato de payload y versionado automáticamente
+- **Flujo correcto:**
+  1. Crear template con `mcp__claude_ai_Klaviyo__klaviyo_create_email_template`
+  2. Crear campaña con `mcp__claude_ai_Klaviyo__klaviyo_create_campaign` (incluye campaignMessages)
+  3. Asignar template con `mcp__claude_ai_Klaviyo__klaviyo_assign_template_to_campaign_message`
+  4. NO crear scripts con requests — el MCP es la única interfaz válida
+- **Documentación:** Ver `KLAVIYO-MCP-PROCEDURE.md` en carpeta de marcas (global, no por campaña)
+- **Aplicar en:** Todos los clientes que usen Klaviyo (Vitalis, futuros)
+
 ## 2026-06-09 · Sistema Completo · Análisis → Propuestas → Creación → Envío
 
 ### Descripción
