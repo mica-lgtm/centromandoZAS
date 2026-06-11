@@ -862,10 +862,35 @@ Ver documento global para detalles y ejemplos.
 
 5. **Test:** Agregar 1-2 emojis relevantes (💜 bienestar, ⚡ energía, 🧠 cerebro) — medir en próximo ciclo
 
+### Ciclo 01 — Hallazgos nuevos (2026-06-11, 12 campañas)
+
+**Ángulos ganadores confirmados:**
+- ✅ "Educativo comparativo" ("No todos son iguales", "Creatina: mitos y evidencia") → 21-22% open en segmentos medios
+- ✅ "Producto + área corporal" ("Articulaciones desde adentro") → 37.46% open en segmento intención
+- ✅ "Guía + sustantivo concreto" ("Instestino sano: guía simple") → 35% open + 9.96% CTR
+- ✅ "Producto: adjetivo/expectativa" ("Colágeno: tiempos reales") → 17.13% open, 0.74% CTR
+
+**Asuntos perdedores confirmados:**
+- ❌ Preguntas retóricas largas + emoji inicial ("✨ ¿Qué le pasa a tu piel...") → 7.25% open
+- ❌ Frase genérica de continuidad sin urgencia ("✨ Ya elegiste Vitalis. Ahora sumá...") → 5.95% open
+
+**Segmentación: multiplicador de CTR**
+- Segmentos < 600 por comportamiento: CTR 2.12% a 9.96%
+- Segmentos > 5,000 lista amplia: CTR 0.13% a 0.55%
+
+**Alerta técnica — Apple Mail Privacy:**
+- Segmento "Interacción alta" muestra open rate imposibles (> 100% total opens/enviados)
+- Usar CTR como KPI primario para cualquier campaña enviada a ese segmento
+
+**Problema sistémico — Preheader:**
+- 83% de las campañas enviadas sin preheader en ciclo 01
+- Implementar como campo obligatorio y verificado antes de cada envío
+
 ### Historial y seguimiento
 
 - **Ciclo 00 (2026-06-09):** Análisis base histórico — 100 campañas
-- **Ciclo 01 (2026-06-11):** Próximo análisis automático (cada 48hs)
+- **Ciclo 01 (2026-06-11):** 12 campañas, ángulo educativo confirmado, preheader sistémicamente vacío, Apple Mail distorsión detectada
+- **Ciclo 02 (2026-06-13):** Próximo análisis automático
 - Ver: `retroalimentacion-vitalis/` para reportes detallados
 
 ---

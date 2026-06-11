@@ -41,6 +41,19 @@ Referencia conceptual: email tipo Juanitas. Productos destacados, precios, benef
 
 Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, productos destacados, beneficios comerciales y CTA directo.
 
+## 2026-06-11 · Ciclo 01 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 01.1:** Asunto tipo "Sustantivo: adjetivo/dato concreto" supera preguntas retóricas largas — "Colágeno: tiempos reales" (17%) vs. "¿Qué le pasa a tu piel cuando baja la temperatura?" (7.25%)
+- **Regla ciclo 01.2:** Ángulo educativo-comparativo o desmitificador = open rate 20-37% consistente — "mitos y evidencia", "comparativa", "guía simple", "tiempos reales" funcionan muy bien
+- **Regla ciclo 01.3:** Segmentación comportamental multiplica CTR 18x — segmentos < 600 por intención/comportamiento logran hasta 9.96% CTR vs. 0.14% en listas grandes
+- **Regla ciclo 01.4:** CTOR > 25% señal de match perfecto segmento-contenido — si el segmento ya mostró intención y el email responde exactamente a esa intención, más de 1 de 4 personas que abre hace click
+- **Regla ciclo 01.5:** Preheader vacío en 83% de campañas — implementar como bloqueante obligatorio antes de envío, pasar por QA
+- **Regla ciclo 01.6:** Apple Mail Privacy inflación — segmento "Interacción alta" mostró 81% open (imposible). Usar CTR como KPI primario cuando open rate supere 40%
+- **Regla ciclo 01.7:** Lista VIP Champions (WmEPCF) tiene bounce 0.45-0.50% — necesita auditoría y limpieza antes del próximo envío masivo a ese segmento
+- **Regla ciclo 01.8:** Emoji solo al inicio sin beneficio concreto NO diferencia — "✨" sin promesa real en el asunto = peor performance del ciclo (5.95%)
+- **Regla ciclo 01.9:** QA obligatorio de ortografía en asunto — "Instestino" fue enviado en campaña real sin detectar error
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-11
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
