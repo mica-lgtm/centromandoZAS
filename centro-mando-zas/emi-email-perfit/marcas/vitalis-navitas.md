@@ -890,7 +890,8 @@ Ver documento global para detalles y ejemplos.
 
 - **Ciclo 00 (2026-06-09):** Análisis base histórico — 100 campañas
 - **Ciclo 01 (2026-06-11):** 12 campañas, ángulo educativo confirmado, preheader sistémicamente vacío, Apple Mail distorsión detectada
-- **Ciclo 02 (2026-06-13):** Próximo análisis automático
+- **Ciclo 02 (2026-06-13):** 15 campañas (48-72hs). Nuevo patrón ganador: cross-sell post-compra (CTR 2.63-2.77%, CTOR 8-10%). Alerta crítica: bounce 3.13% en segmento "Vieron Citrato". VIP Champions degradada (8.54% open). Preheader vacío: 80% de campañas. Testimonios standalone: 0.17% CTOR. Ver: `retroalimentacion-vitalis/2026-06-13-ciclo-02.md`
+- **Ciclo 03 (2026-06-15):** Próximo análisis automático
 - Ver: `retroalimentacion-vitalis/` para reportes detallados
 
 ---

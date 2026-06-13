@@ -54,6 +54,19 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **Regla ciclo 01.9:** QA obligatorio de ortografía en asunto — "Instestino" fue enviado en campaña real sin detectar error
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-11
 
+## 2026-06-13 · Ciclo 02 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 02.1:** Cross-sell post-compra = mayor CTR del ciclo — compradores recientes de un producto con email sobre producto complementario: CTR 2.63-2.77%, CTOR 8-10%. Sistematizar para todas las líneas.
+- **Regla ciclo 02.2:** Testimonios como email standalone no convierte — CTOR 0.17% (peor del ciclo). Integrar testimonios DENTRO de emails de venta o educativos, nunca como tipo único de email.
+- **Regla ciclo 02.3:** Segmentos "Vieron pero no compraron" tienen riesgo de bounce elevado (hasta 3.13%) — pueden incluir emails temporales o spam traps. Filtrar o limpiar antes de enviar.
+- **Regla ciclo 02.4:** Preheader vacío sigue sin resolverse — 80% de campañas sin preheader en ciclo 02 (era 83% en ciclo 01). Necesita proceso bloqueante real, no solo recordatorio.
+- **Regla ciclo 02.5:** VIP Champions (WmEPCF) con open rate 8.54% en 6,753 enviados — tercer ciclo con baja performance. Lista urgentemente degradada, requiere segmentación interna o limpieza total antes del próximo envío masivo.
+- **Regla ciclo 02.6:** Segmentos dormidos (91-180 días sin actividad) + asunto genérico = 0% apertura y 0% CTR. Si se reactiva segmento dormido, usar asunto de alto impacto con beneficio o promo muy concreta.
+- **Regla ciclo 02.7:** El patrón "Asunto: dato educativo" es el más consistente en open rate real por tercer ciclo consecutivo — "Colágeno: tiempos reales" (22.40%), confiable incluso en segmentos medianos (3,252 enviados).
+- **Regla ciclo 02.8:** Preheader con 3 beneficios claros potencia CTOR — "Menos tensión, mejor sueño, más energía sostenida" acompañando asunto educativo logró 9.09% CTOR en segmento de intención.
+- **Alerta CRÍTICA ciclo 02:** Bounce 3.13% en segmento "Vieron Citrato y no compraron" (64 enviados) — supera umbral de 2%. Auditar ese segmento antes del próximo envío.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-13
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
