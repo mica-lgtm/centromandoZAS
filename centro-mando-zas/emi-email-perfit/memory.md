@@ -67,6 +67,20 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **Alerta CRÍTICA ciclo 02:** Bounce 3.13% en segmento "Vieron Citrato y no compraron" (64 enviados) — supera umbral de 2%. Auditar ese segmento antes del próximo envío.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-13
 
+## 2026-06-15 · Ciclo 03 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 03.1:** Reconexión emocional en segmento dormido (91-180d) = mejor performance del ciclo — "Volvé a elegir bienestar" logró 17.43% open + 3.57% CTOR en 482 contactos. Sistematizar emails de reconexión mensuales para este segmento.
+- **Regla ciclo 03.2:** Asunto filosófico/metafórico sin beneficio ("Desconectá para reconectar") = 6.61% open en lista grande (9,674). Nunca usar asuntos que no respondan "¿qué voy a encontrar si abro?".
+- **Regla ciclo 03.3:** Email de fidelización a compradores recientes con 0 clicks (14.4% open) → CTA debe ser explícito y comercial incluso en emails de valor. Sin CTA claro, el contenido no convierte.
+- **Regla ciclo 03.4:** Lista inactivos (90-365d) + asunto educativo suave = apertura <8%. Para reactivar inactivos: beneficio concreto + urgencia real, no educativo genérico.
+- **Regla ciclo 03.5:** Segmento "Vieron Citrato y no compraron" RETIRADO — bounce 3.13% (ciclo 02) + unsubscribe 2.63% (ciclo 03). No usar hasta limpieza y auditoría completa.
+- **Regla ciclo 03.6:** Producto de nicho (Creatina) enviado a Base Completa Marketing = unsubscribe 0.36%. Siempre segmentar por interés/comportamiento para productos con target específico.
+- **Regla ciclo 03.7:** CTOR del 3.57% en dormidos reactivados confirma que segmento con intención latente + asunto correcto = alta conversión dentro del email. Usar CTOR como señal de calidad de contenido.
+- **Regla ciclo 03.8:** Preheader vacío empeoró a 100% en ciclo 03 (era 80% en ciclo 02). Se necesita proceso BLOQUEANTE real: checklist pre-envío o campo obligatorio en Klaviyo — los recordatorios no funcionan.
+- **ALERTA CRÍTICA ciclo 03:** Segmento "Vieron Citrato y no compraron" — unsubscribe 2.63% (1 de 38 contactos). Combinado con bounce 3.13% del ciclo anterior, este segmento está dañado. No usar hasta auditoría.
+- **Nuevo producto:** Primera campaña de Creatina para mujeres detectada. A seguir en próximos ciclos.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-15
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
