@@ -892,6 +892,7 @@ Ver documento global para detalles y ejemplos.
 - **Ciclo 01 (2026-06-11):** 12 campañas, ángulo educativo confirmado, preheader sistémicamente vacío, Apple Mail distorsión detectada
 - **Ciclo 02 (2026-06-13):** 15 campañas (48-72hs). Nuevo patrón ganador: cross-sell post-compra (CTR 2.63-2.77%, CTOR 8-10%). Alerta crítica: bounce 3.13% en segmento "Vieron Citrato". VIP Champions degradada (8.54% open). Preheader vacío: 80% de campañas. Testimonios standalone: 0.17% CTOR. Ver: `retroalimentacion-vitalis/2026-06-13-ciclo-02.md`
 - **Ciclo 03 (2026-06-15):** 7 campañas (48hs). Mejor performance: reconexión emocional en dormidos 91-180d (17.43% open, 3.57% CTOR). Alerta crítica: segmento "Vieron Citrato" con unsubscribe 2.63% — RETIRADO. Preheader vacío 100% (peor ciclo). "Creatina para mujeres" a Base Completa = unsubscribe 0.36% (producto de nicho requiere segmentación). Ver: `retroalimentacion-vitalis/2026-06-15-ciclo-03.md`
+- **Ciclo 04 (2026-06-17):** 12 campañas (48hs), 79.831 enviados. Cross-sell Citrato→Omega3: 1.43% CTR, 8.70% CTOR (patrón ganador 3er ciclo consecutivo). ALERTA CRÍTICA: "Nunca han interaccionado" — 1.01% bounce en 44.949 envíos — RETIRADO. Apple Mail Privacy confirma distorsión total en segmentos "Interacción alta/media/baja". Preheader vacío 100% (4to ciclo). Nuevo producto: Cellular NAD+ (primer lanzamiento con asunto débil). Ver: `retroalimentacion-vitalis/2026-06-17-ciclo-04.md`
 - Ver: `retroalimentacion-vitalis/` para reportes detallados
 
 ---

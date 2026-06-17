@@ -81,6 +81,18 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **Nuevo producto:** Primera campaña de Creatina para mujeres detectada. A seguir en próximos ciclos.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-15
 
+## 2026-06-17 · Ciclo 04 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 04.1:** Segmento "Nunca han interaccionado (email)" es TÓXICO — 0.89% open rate + 1.01% bounce en 44.949 envíos. Riesgo real de reputación de IP. No usar en campañas estándar. Si se usa alguna vez, máximo 5.000 contactos con asunto de alto impacto + incentivo concreto.
+- **Regla ciclo 04.2:** Cross-sell post-compra confirmado por TERCER ciclo consecutivo como patrón de mayor CTR — Compradores de Citrato + email Omega 3: 1.43% CTR, 8.70% CTOR. Sistematizar para todas las líneas: Citrato→Omega3, Colágeno→Magnesio, Omega3→NeuroCalm.
+- **Regla ciclo 04.3:** Segmentos "Interacción alta/media/baja" en Klaviyo están completamente distorsionados por Apple Mail Privacy. Open rates 44-70% son imposibles. Para CUALQUIER campaña a estos segmentos, usar SOLO CTR y CTOR como KPIs. Ignorar open rate.
+- **Regla ciclo 04.4:** Asunto emoji + adjetivo genérico sin número ("Belleza desde adentro ✨", "Energía desde tus células ⚡") → open rate bajo umbral (8-10%). La fórmula ganadora sigue siendo: Sustantivo concreto + beneficio + número/timeframe (confirmado desde ciclo 01).
+- **Regla ciclo 04.5:** Preheader vacío al 100% por CUARTO ciclo consecutivo. Recordatorios verbales inútiles. Requiere proceso bloqueante real: QA checklist con campo obligatorio antes de schedule.
+- **Regla ciclo 04.6:** Ángulo educativo pre-decisión ("Antes de elegir un suplemento, leé esto") logró CTOR 25% en suscriptores recientes (muestra pequeña, 40 contactos). Escalar con mayor volumen en ciclo 05.
+- **Nuevo producto:** Cellular NAD+ detectado en primer lanzamiento. Asunto débil en debut ("Energía desde tus células ⚡💪🏻") sin número ni beneficio concreto. Próxima campaña debe usar fórmula validada: "Cellular NAD+: [beneficio] en [N] días".
+- **ALERTA CRÍTICA ciclo 04:** Segmento "Nunca han interaccionado (email)" — 1.01% bounce en 44.949 enviados (454 rebotes). Combinado con 0.89% open rate, este segmento debe retirarse de rotación inmediatamente.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-17
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
