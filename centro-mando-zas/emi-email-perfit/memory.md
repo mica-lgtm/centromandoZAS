@@ -93,6 +93,19 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **ALERTA CRÍTICA ciclo 04:** Segmento "Nunca han interaccionado (email)" — 1.01% bounce en 44.949 enviados (454 rebotes). Combinado con 0.89% open rate, este segmento debe retirarse de rotación inmediatamente.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-17
 
+## 2026-06-19 · Ciclo 05 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 05.1:** Retargeting comportamental "Vieron X sin comprar" → CTR 7%+ incluso con asuntos simples sin emoji ni urgencia ("Bienestar duradero con Omega 3" → 7.04% CTR en 71 enviados). La segmentación sola convierte cuando hay intención declarada. Sistematizar para todos los productos con segmentos de "Vieron".
+- **Regla ciclo 05.2:** Post-compra educativo (sobre producto que ya compraron) = mayor CTOR del ciclo — "🧠 Foco con más criterio" a Compradores de Melena de León: 7.14% CTR, 27.27% CTOR. Después de la compra, enseñar cómo usar el producto convierte mejor que vender algo nuevo. CTA ideal: "Aprovechá mejor tu X".
+- **Regla ciclo 05.3:** Comparativa directa de productos en el asunto ("¿Qué magnesio elegir? 🤔") resuelve objeción de decisión y activa conversión en segmento indeciso. CTOR 5.56% validado en 332 contactos (Vieron Bisglicinato/Citrato sin comprar).
+- **Regla ciclo 05.4:** Segmento "Nunca han interaccionado (email)" PROHIBIDO PERMANENTEMENTE — segunda infracción: 0.48% open + 2.56% bounce (supera umbral crítico de 2%) + 0.00% CTR en 7.727 envíos. Ninguna optimización de copy lo rescata. Archivar o eliminar de Klaviyo para prevenir uso futuro.
+- **Regla ciclo 05.5:** Preheader vacío al 100% por QUINTO ciclo consecutivo. Los recordatorios verbales son inefectivos en 10 semanas de análisis. Requiere implementación técnica bloqueante: checklist pre-schedule o campo obligatorio en template/proceso de envío.
+- **Regla ciclo 05.6:** NAD+ con asunto "Descubre el rol del NAD+ en tu salud" en base grande (12.157) logra solo 0.44% CTR. Dos problemas: (1) "Descubre" es español neutro (usar "Descubrí"); (2) "el rol de X en tu salud" no activa urgencia. Próxima campaña NAD+: segmento chico con intención + fórmula "Cellular NAD+: [beneficio concreto] en [N días]".
+- **Regla ciclo 05.7:** Cross-sell post-compra confirmado por CUARTO ciclo consecutivo — Compradores de Bisglicinato + email complementario: 2.82% CTOR. Continuar rotación: Colágeno→Omega3, Omega3→NeuroCalm, Melena de León→NAD+.
+- **Alerta QA:** Asunto cortado detectado en Probióticos — "seguí acompañando tu bienesta" (falta "r"). Agregar revisión de ortografía y longitud en checklist pre-schedule.
+- **ALERTA CRÍTICA ciclo 05:** Segmento "Nunca han interaccionado" usado por segunda vez a pesar de retiro explícito en Ciclo 04. Bounce 2.56% en 7.727 enviados. Comunicar bloqueo a toda persona con acceso a Klaviyo.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-19
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
