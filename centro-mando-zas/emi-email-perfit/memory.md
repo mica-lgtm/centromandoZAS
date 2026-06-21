@@ -106,6 +106,20 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **ALERTA CRÍTICA ciclo 05:** Segmento "Nunca han interaccionado" usado por segunda vez a pesar de retiro explícito en Ciclo 04. Bounce 2.56% en 7.727 enviados. Comunicar bloqueo a toda persona con acceso a Klaviyo.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-19
 
+## 2026-06-21 · Ciclo 06 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 06.1:** Educativo comparativo directo en segmento de alta intención = CTOR 11.01% — "Qué mirar en un Omega 3" (Compradores potenciales, 2.520 enviados). Patrón validado por quinta vez consecutiva. Aplicar obligatoriamente en campañas a "Compradores potenciales".
+- **Regla ciclo 06.2:** Suscriptores nuevos + pregunta con timeframe = CTOR 25% en muestra pequeña (57 enviados, "¿Qué pasa en 90 días?"). Escalar en ciclo 07 con muestra 300-500 y segmento específico por producto.
+- **Regla ciclo 06.3:** Lista "Leads Fríos / Quiz" (excluyendo Shopify Customers) = bounce 0.93%, open 4.30%, CTR 0.03% — comportamiento idéntico a "Nunca interaccionaron". No usar hasta auditoría y limpieza. Si se usa, solo con asunto de altísimo impacto + incentivo concreto.
+- **Regla ciclo 06.4:** Frecuencia máxima a Base Completa = 1 campaña por día. Dos envíos a Base Completa el mismo día genera fatiga documentada y CTR < 0.05%. Implementar frequency cap operativo.
+- **Regla ciclo 06.5:** El naming formal "20JUN-XX" fue el primer factor que mejoró la tasa de preheader (de 100% a 64%). Mantener obligatoriamente el naming con fecha + número de secuencia para que el proceso de preheader sea natural.
+- **Regla ciclo 06.6:** "Interacción alta" infladísima por Apple Mail (79.48% open, CTOR 0.31%) + unsubscribe 0.45% supera límite. Asunto genérico "Descanso y recuperación" posible causa. Solo CTR/CTOR como KPIs en ese segmento.
+- **Regla ciclo 06.7:** Cross sell con asunto genérico = 0% CTR. Fórmula obligatoria para cross sell: "[Producto que ya tienen] + [beneficio del complementario]" — ej: "Tu Colágeno Flex funciona mejor con esto".
+- **Regla ciclo 06.8:** Segmento "Vieron Citrato y no compraron nunca ese producto" — TERCER ciclo consecutivo en que se usa a pesar de retiro explícito (ciclos 03 y 05). Requiere bloqueo técnico en Klaviyo: archivar segmento o agregar tag "PROHIBIDO". Los recordatorios verbales no funcionan.
+- **ALERTA CRÍTICA ciclo 06:** "20JUN-04 NeuroCalm" (Base Completa, 64.737 enviados) generó 511 bounces (0.79%) y solo 16 clicks (0.02% CTR). NeuroCalm es producto de nicho (sueño/cerebro) — no debe enviarse a Base Completa sin filtro de interés. 511 bounces en un envío = riesgo real de reputación de IP.
+- **ALERTA ciclo 06:** Doble campaña NAD+ en menos de 17hs a Base Completa — "Nuevo lanzamiento" (19-jun 18:30) y "Creatina/NAD+ informativo" (20-jun 11:00) solaparon audiencia. Evitar duplicar producto en 48hs a misma lista.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-21
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
