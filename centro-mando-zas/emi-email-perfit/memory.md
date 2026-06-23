@@ -120,6 +120,20 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **ALERTA ciclo 06:** Doble campaña NAD+ en menos de 17hs a Base Completa — "Nuevo lanzamiento" (19-jun 18:30) y "Creatina/NAD+ informativo" (20-jun 11:00) solaparon audiencia. Evitar duplicar producto en 48hs a misma lista.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-21
 
+## 2026-06-23 · Ciclo 07 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 07.1:** Ángulo estacional natural (invierno + articulaciones) = open rate 20% y CTR 0.64% en segmento de intención (Colágeno Flex). "Dale vida a tus movimientos este invierno❄️" funciona. Sistematizar ángulos estacionales para Flex/Omega 3/Magnesio en invierno argentino (junio-agosto).
+- **Regla ciclo 07.2:** Segmento "04 - Nuevos Lanzamientos (activos 180d)" con 2.54% open rate — comportamiento de lista fría. Auditar antes del próximo uso. No usar sin limpieza previa.
+- **Regla ciclo 07.3:** Social proof con números grandes ("25.000 personas ya lo usan") a inactivos 90-365d = 6.07% open + 0.013% CTR. Social proof NO reactiva inactivos. Para este segmento: beneficio concreto + urgencia real (confirmado 3er ciclo consecutivo).
+- **Regla ciclo 07.4:** Naming estructurado garantiza preheader. Campañas con naming formal (22JUN-XX, Vitalis Email X, Email X-tema) tienen 100% preheader. Campañas sin naming formal tienen 0% preheader. El naming es el único control que funciona en la práctica.
+- **Regla ciclo 07.5:** Frecuencia cap urgente Base Completa. Dos envíos masivos en <24hs generaron 1.292 bounces acumulados. Máximo 1 envío a Base Completa cada 3-4 días para proteger reputación de IP.
+- **Regla ciclo 07.6:** Retargeting Probióticos "Vieron sin comprar" + dato estadístico en asunto = 12.50% CTOR (310 enviados). Sexta confirmación del patrón retargeting comportamental. Sistematizar para todos los productos.
+- **Regla ciclo 07.7:** Dormidos 91-180d + NAD+ = 23.79% open + 1.29% CTR (618 enviados). Escalar con segmento más amplio y asunto con número concreto.
+- **Regla ciclo 07.8:** Asunto-pregunta educativa abre pero NO convierte si el CTA no es explícito y comercial. "¿Se pueden combinar suplementos?" → 18.63% open / 0% CTR. Toda pieza educativa debe tener CTA visible y activo.
+- **MEJORA HISTÓRICA ciclo 07:** Preheader compliance del 0% (ciclos 04-06) al 59% (ciclo 07). El naming formal de series es el único mecanismo que funciona. Mantener y escalar.
+- **ALERTA CRÍTICA ciclo 07:** 1.292 bounces acumulados en dos envíos masivos consecutivos a Base Completa (<24hs). Auditar reputación de IP y lista Base Completa antes del próximo envío masivo.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-23
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
