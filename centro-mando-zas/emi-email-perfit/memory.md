@@ -134,6 +134,20 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **ALERTA CRÍTICA ciclo 07:** 1.292 bounces acumulados en dos envíos masivos consecutivos a Base Completa (<24hs). Auditar reputación de IP y lista Base Completa antes del próximo envío masivo.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-23
 
+## 2026-06-25 · Ciclo 08 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 08.1:** Ángulo "menopausia + colágeno" a segmento de potenciales antiage = CTOR 8.40% (1.512 enviados). Primer test de ángulo hormonal exitoso. Escalar: "perimenopausia", "colágeno después de los 40", "piel y hormonas". Nuevo eje de contenido validado.
+- **Regla ciclo 08.2:** NeuroCalm a Base Completa = 1.35% open rate (record mínimo histórico absoluto) + 507 bounces (0.75%). NeuroCalm, Melena de León, Cellular NAD+, Creatina = productos de nicho que NO van a Base Completa NUNCA. Solo a segmentos de intención específica.
+- **Regla ciclo 08.3:** Asunto > 55 caracteres = open rate catastrófico. "Tu piel en invierno necesita esto: rutina completa día y noche con -20% OFF" (72 chars) → 2.72% open. Límite de 55 caracteres pasa de recomendación a REGLA BLOQUEANTE. Si supera 55 chars, se acorta antes del envío.
+- **Regla ciclo 08.4:** Preheader compliance al 69% — récord histórico. Naming formal (24JUN-XX, Vitalis Miercoles X, Email X — Tema) = preheader siempre presente. Naming informal (Campaña ZAS, Campaña del DD jun) = preheader siempre vacío. Objetivo: 100% con naming estandarizado.
+- **Regla ciclo 08.5:** "Nunca han interaccionado (email)" — CUARTA INFRACCIÓN CONSECUTIVA a pesar de retiro explícito en ciclos 04, 05 y 06. Los recordatorios verbales son definitivamente inefectivos. Único camino: eliminar o archivar el segmento de Klaviyo. Tag "PROHIBIDO-NO USAR" inmediato.
+- **Regla ciclo 08.6:** WARMING W2/W3 (Openers & Clickers 14d/30d) infladísimas por Apple Mail — 31%+ open irreal. CTR real 0.48-0.52%, CTOR 1.54-1.65% — segmentos valiosos, pero open rate inutilizable. Reportar SOLO CTR y CTOR en campañas a estos segmentos.
+- **Regla ciclo 08.7:** Educativo comparativo corto ("Antes de elegir un colágeno, leé esto") + segmento alta intención = 37.68% open, 3.85% CTOR. Patrón confirmado por octavo ciclo consecutivo como el más consistente del proyecto.
+- **RÉCORD HISTÓRICO ciclo 08:** Preheader compliance 69% (sube de 59% en ciclo 07, de 0% en ciclos 04-06).
+- **ALERTA CRÍTICA ciclo 08:** 24JUN-04 NeuroCalm a Base Completa — 507 bounces en un envío + 1.35% open rate (record mínimo histórico). Auditar reputación IP antes del próximo envío masivo. No enviar a Base Completa en los próximos 3-5 días.
+- **ALERTA CRÍTICA ciclo 08:** Segmento "Nunca han interaccionado (email)" sigue activo en Klaviyo — eliminar o archivar inmediatamente.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-25
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
