@@ -148,6 +148,18 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **ALERTA CRÍTICA ciclo 08:** Segmento "Nunca han interaccionado (email)" sigue activo en Klaviyo — eliminar o archivar inmediatamente.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-25
 
+## 2026-06-27 · Ciclo 09 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 09.1:** Asunto ultra-corto (22 chars) con evocación estacional a compradores históricos activos = 27.45% open en 2.497 enviados. "Tu piel en invierno" a compradores de Colágeno antiage desde siempre supera benchmarks sin número, sin urgencia y sin emoji. El atajo relacional supera la fórmula transaccional cuando el segmento tiene historial de compra fuerte y la marca comparte contexto con el comprador.
+- **Regla ciclo 09.2:** Dato de bounce en Klaviyo NO es final hasta 72hs post-envío. NeuroCalm reportó 507 bounces (0.75%) a las ~24hs (Ciclo 08) y 722 bounces (1.07%) a las ~72hs (Ciclo 09). Diferencia: 215 bounces adicionales. Para decisiones de reputación IP, nunca usar el bounce rate antes de 72hs del envío.
+- **Regla ciclo 09.3:** NeuroCalm a Base Completa = 722 bounces totales (1.07%), PEOR REGISTRO ABSOLUTO del proyecto en bounces individuales. Validado definitivamente por 5 ciclos consecutivos (06-09). El bloqueo técnico en Klaviyo (archivar segmento BC para NeuroCalm) es obligatorio e impostergable.
+- **Regla ciclo 09.4:** CTOR 0% en Omega 3 PLUS con asunto correcto (45 chars, dato concreto) → segmento "Contactos con actividad" no diferencia comportamiento real de Apple Mail phantom opens. Para campañas de conversión, solo usar segmentos con comportamiento real demostrado (clickers, compradores, vieron producto).
+- **Regla ciclo 09.5:** Pausa post-crisis validada operativamente — 0 envíos el 26-27/06 post-alerta NeuroCalm. Patrón correcto: alerta crítica → pausa 3-5 días → retomar con segmentos chicos (< 3.000) y productos core. No retomar Base Completa sin auditar sender score primero.
+- **Regla ciclo 09.6:** Datos de Klaviyo para envíos grandes pueden subestimar recipients en las primeras 24hs. Email 1 Colágeno: 325 enviados en Ciclo 08 → 2.497 enviados en Ciclo 09. Confirmar siempre con datos de 72hs antes de usar "total enviados" para decisiones de segmentación o proyecciones.
+- **ALERTA CRÍTICA ciclo 09:** Bounce acumulado en IP Vitalis — 722 bounces NeuroCalm (Ciclo 09) + ~550 Ciclo 07 + ~454 Ciclo 04 = patrón de deterioro de reputación IP. Auditar sender score en MxToolbox/Mail-Tester antes del próximo envío masivo. Si sender score < 80, implementar calentamiento gradual.
+- **ALERTA CRÍTICA ciclo 09:** NeuroCalm sigue sin bloqueo técnico después de 6 advertencias (Ciclos 06-09). Único camino efectivo: archivar o etiquetar "PROHIBIDO-NO USAR" en Klaviyo esta semana. Los recordatorios verbales son definitivamente inefectivos.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-27
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
