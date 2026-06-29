@@ -160,6 +160,18 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **ALERTA CRÍTICA ciclo 09:** NeuroCalm sigue sin bloqueo técnico después de 6 advertencias (Ciclos 06-09). Único camino efectivo: archivar o etiquetar "PROHIBIDO-NO USAR" en Klaviyo esta semana. Los recordatorios verbales son definitivamente inefectivos.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-27
 
+## 2026-06-29 · Ciclo 10 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 10.1:** Ángulo "test/elección por objetivo" (educativo + acción de bajo riesgo) genera CTOR ~4.5% en segmentos de intención media — "Elegí tu próximo objetivo" con preheader de test fue la campaña con mejor ratio apertura→click del ciclo (14.18% open, 0.63% CTR, 4.47% CTOR, 4.110 enviados). Proponer una elección reduce fricción del "¿esto es para mí?" y mejora conversión post-apertura.
+- **Regla ciclo 10.2:** El verbo "Volvé" (reconversión de rutina) a segmentos que vieron el producto sin comprar = 19.36% open + 3.67% CTOR (566 enviados). Activar memoria de consideración del comprador supera el ángulo de urgencia en este perfil de segmento.
+- **Regla ciclo 10.3:** Asunto largo (> 55 chars) + oferta directa en asunto = 6.19% open en segmento válido — el peor open rate del ciclo. Empacar toda la información en el asunto elimina la razón de abrir. REGLA BLOQUEANTE: asunto > 55 chars se acorta antes del envío (confirmado desde ciclo 08).
+- **Regla ciclo 10.4:** 5 from_email distintos en un ciclo (hola@, info@, agus@, matias@, tienda@ — todos @vitalisnavitas.com) fragmentan reputación de IP y brand recognition. CONSOLIDAR en máximo 2 remitentes: agus@vitalisnavitas.com para campañas de producto + tienda@vitalisnavitas.com para transaccionales.
+- **Regla ciclo 10.5:** NeuroCalm fue enviado NUEVAMENTE a Base Completa (86.857 enviados, 537 bounces parciales). Este es el SEXTO ciclo consecutivo con esta combinación sin bloqueo técnico. Los recordatorios verbales no funcionan. Único camino: suppression nativa en Klaviyo o archivado del segmento.
+- **Regla ciclo 10.6:** Campaña sin nombre formal ("Campaña del 26 jun 2026, 15:24") = preheader vacío sin excepción (6/6 campañas sin naming tuvieron preheader vacío). El naming es el proxy más confiable de proceso: sin nombre correcto, no pasó por checklist. Naming obligatorio (DDJUN-NN Producto — Ángulo) como requisito de scheduling.
+- **ALERTA CRÍTICA ciclo 10:** NeuroCalm 27JUN-04 a Base Completa — 537 bounces (0.618%) dato PARCIAL (<72hs). Dato final esperado 0.80-1.0%+ según patrón Ciclo 08→09. Bounce acumulado de NeuroCalm en IP de Vitalis supera 1.259 bounces en 3 envíos (Ciclos 08, 09, 10). Auditar sender score ANTES del próximo envío masivo.
+- **NUEVO HALLAZGO ciclo 10:** Fragmentación de from_email — 5 remitentes distintos en 15 campañas. No documentado en ciclos anteriores. Ver alerta crítica 2 en `retroalimentacion-vitalis/2026-06-29-ciclo-10.md`.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-29
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
