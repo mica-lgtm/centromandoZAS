@@ -160,6 +160,18 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **ALERTA CRÍTICA ciclo 09:** NeuroCalm sigue sin bloqueo técnico después de 6 advertencias (Ciclos 06-09). Único camino efectivo: archivar o etiquetar "PROHIBIDO-NO USAR" en Klaviyo esta semana. Los recordatorios verbales son definitivamente inefectivos.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-27
 
+## 2026-07-01 · Ciclo 10 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 10.1:** Variante "Sustantivo: qué [verbo]" y "Sustantivo: cuándo [verbo]" confirmadas como fórmula ganadora — "Omega 3: qué esperar" (CTOR 13.64%, 672 enviados) y "Citrato: cuándo elegirlo" (CTOR 8.11%, 144 enviados). Agregar como variantes válidas de la fórmula "Sustantivo: dato concreto" validada desde ciclo 01.
+- **Regla ciclo 10.2:** Post-purchase educativo = CTOR 13.64% — confirmado por SÉPTIMO ciclo consecutivo como patrón de mayor CTOR con volumen real. "Omega 3: qué esperar" a Compradores recientes de Omega 3 = mejor CTR (2.24%) y CTOR del ciclo. Sistematizar como email obligatorio en secuencia post-compra para TODAS las líneas activas.
+- **Regla ciclo 10.3:** Retargeting Probióticos + número en asunto = CTOR 18.18% (mejor CTOR del ciclo) — "5 señales de que tu digestión pide más atención" a Vieron probióticos (72 enviados). Número + síntomas + categoría en retargeting comportamental = conversión máxima. Replicar con otras líneas.
+- **Regla ciclo 10.4:** Naming formal = 100% preheader, naming genérico "Campaña del XX" = 0% preheader — confirmado DÉCIMO ciclo consecutivo. Series "Email X lunes" y "M30 Email X" tuvieron 8/8 con preheader. "Campaña del XX" tuvo 5/5 sin preheader. Prohibir naming genérico para cualquier campaña sin verificación manual de preheader.
+- **Regla ciclo 10.5:** Base Completa + educativo genérico sin producto específico = 555 bounces + CTR 0.13% — "Cómo elegir suplementos con criterio" a 88,104 enviados. Base Completa solo acepta: (a) producto core con beneficio claro + CTA directo, (b) promo con urgencia real. Nunca educativo genérico sin ancla de producto.
+- **Regla ciclo 10.6:** VIP Champions + asunto genérico/filosófico = 0% CTR — "Una rutina premium también se construye con criterio" a VIP Champions: 0 clicks. Segmento VIP requiere beneficio explícito o descuento real en el asunto para convertir.
+- **RÉCORD HISTÓRICO ciclo 10:** Preheader compliance 62% (8/13 campañas con preheader) — primer ciclo con mayoría de campañas con preheader. Causado por naming de series estructuradas ("Email X lunes", "M30 Email X").
+- **Monitorear ciclo 11:** (a) M30 Email 4 "Encontrá tu fórmula" → 0% open con 58 enviados (datos prematuros, < 18hs). (b) Segmento "Vieron Citrato" reactivado → bounce 1.39% (2/144). Si supera 2% en ciclo 11, retirar nuevamente.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-07-01
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
