@@ -325,6 +325,7 @@ def main():
     print(f"📊 Procesando {len(cuentas)} cuenta(s)...\n")
 
     reports_generated = []
+    now = datetime.now()
 
     for account_cfg in cuentas:
         account = account_cfg.get("code")
