@@ -172,6 +172,19 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - **Monitorear ciclo 11:** (a) M30 Email 4 "Encontrá tu fórmula" → 0% open con 58 enviados (datos prematuros, < 18hs). (b) Segmento "Vieron Citrato" reactivado → bounce 1.39% (2/144). Si supera 2% en ciclo 11, retirar nuevamente.
 - Aplicar en: todas las campañas Vitalis Navitas desde 2026-07-01
 
+## 2026-07-03 · Ciclo 11 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 11.1:** Nueva variante ganadora de asunto: "Producto: qué mirar en [componentes técnicos]" — "Omega 3: qué mirar en EPA y DHA" → CTOR 10% en 365 enviados (Interesados en omega 3). Extensión de la fórmula "Sustantivo: dato concreto" validada desde ciclo 01. Aplicar para comparativas de ingredientes.
+- **Regla ciclo 11.2:** Prueba social (testimonios) FUNCIONA solo en segmento de alta intención — "Lo que otros ya notaron" → 4.48% CTOR en 3.938 Compradores potenciales. Contrasta con ciclo 02 (testimonios a lista genérica = 0.17% CTOR). Regla: testimonios a alta intención = válido; testimonios a listas amplias = prohibido.
+- **Regla ciclo 11.3:** Educativo de acompañamiento alimentario = nuevo eje de contenido — "Alimentos y magnesio" a Interesados en citrato → 5.03% CTOR en 1.164 enviados. Replicar: "Alimentos para el colágeno", "Qué potencia el Omega 3". Bajo riesgo de unsubscribe (0.26%).
+- **Regla ciclo 11.4:** Asunto metafórico sin producto + segmento de interés = CTR < 0.05% — "Tu piel también tiene estructura" en "Interesados en belleza antiage" = 0.034% CTR. La metáfora no activa el clic incluso cuando el interés es real. Mantener fórmula "Ingrediente: [beneficio concreto]".
+- **Regla ciclo 11.5:** Preheader compliance 72.7% (8/11) — récord histórico (↑ de 62% ciclo 10). Series M01 y J02 = 100% preheader. "Campaña del XX" = 0% preheader (11 ciclos de evidencia). Próximo objetivo: 85%+.
+- **Regla ciclo 11.6:** Creatina a WARMING W3 (19k) = 0.096% CTR — cuarta infracción documentada. Regla definitiva: Creatina, NeuroCalm, Cellular NAD+, Melena de León NUNCA a listas > 3.000 sin segmentación de interés. Evaluar bloqueo técnico.
+- **Regla ciclo 11.7:** Segmento "Compradores recientes de Colágeno Antiage" con bounce 1.32% (11/835) — anomalía para compradores. Monitorear ciclo 12. Si > 0.8% otra vez, auditar ventana temporal del segmento.
+- **Nuevo producto:** Vitamina D3 — primera aparición en campaña (M01 Email 2). Verificar SKU en tienda antes de construir secuencia dedicada.
+- **Alerta operativa:** 5 remitentes distintos en un ciclo (hola@, agus@, tienda@, info@, matias@vitalisnavitas.com). Unificar a máximo 2 addresses activos.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-07-03
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
