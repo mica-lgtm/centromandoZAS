@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIMONA · Anuncio Sweaters — Hasta 40% OFF</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  :root{
+    --ink:#2a2a2a; --cream:#f7f1ea; --sand:#efe6dc; --clay:#e4d6ca;
+    --taupe:#70625f; --blush:#fbbfaf; --blush-soft:#fdded5; --blush-deep:#e9a392;
+    --mocha:#9a877f; --white:#fff;
+    --disp:"Red Hat Display", system-ui, sans-serif;
+    --txt:"Red Hat Text","Red Hat Display",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--simona-stone); font-family:var(--txt); color:var(--ink);}
+  .page{padding:34px 22px 70px;}
+  .head{max-width:1040px; margin:0 auto 20px;}
+  .kicker{font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink); opacity:.62;}
+  h1.title{font-family:var(--disp); font-weight:900; font-size:34px; letter-spacing:-0.02em; margin:8px 0 6px; color:var(--ink);}
+  .lede{color:var(--ink); opacity:.72; font-size:14px; max-width:640px; line-height:1.5;}
+  .tabs{display:flex; gap:8px; margin-top:18px; flex-wrap:wrap;}
+  .tab{font-weight:600; font-size:13px; padding:9px 18px; border-radius:999px; border:1.5px solid rgba(42,42,42,.22); background:transparent; color:var(--ink); cursor:pointer; transition:.15s;}
+  .tab.on{background:var(--ink); color:var(--cream); border-color:var(--ink);}
+  .stage{display:flex; gap:46px; flex-wrap:wrap; align-items:flex-start; justify-content:center; margin-top:30px;}
+  .frame{display:none;}
+  .frame.show{display:block;}
+  .holder{border-radius:16px; overflow:hidden; box-shadow:0 26px 64px rgba(42,42,42,.26); background:#fff;}
+  .scaled{transform-origin:top left;}
+  .cap{font-size:12px; color:var(--ink); opacity:.66; margin-top:14px; text-align:center; letter-spacing:.02em;}
+  .cap b{opacity:1; font-weight:700;}
+
+  /* ============ AD PRIMITIVES (native px, mobile-first big type) ============ */
+  .ad{position:relative; overflow:hidden; font-family:var(--txt); color:var(--cream);}
+  .ad img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .grad{position:absolute; inset:0;}
+  .eyebrow{font-family:var(--txt); font-weight:800; text-transform:uppercase; letter-spacing:.18em; color:var(--blush);}
+  .hook{font-family:var(--disp); font-weight:900; letter-spacing:-0.03em; line-height:.9; color:var(--cream);}
+  .hook .num{display:block;}
+  .hook .sweaters{color:var(--blush);}
+  .conds{display:flex; flex-direction:column;}
+  .cond{display:flex; align-items:center; gap:14px; font-weight:600; color:var(--cream);}
+  .cond .dot{flex:none; border-radius:999px; background:var(--blush); }
+  .cond b{font-weight:800;}
+  .pill{display:inline-flex; align-items:center; gap:14px; background:var(--cream); color:var(--ink);
+        font-family:var(--txt); font-weight:800; text-transform:uppercase; letter-spacing:.04em; border-radius:999px;}
+  .pill .arr{font-weight:400;}
+  .transfer{display:inline-flex; align-items:center; gap:10px; background:var(--blush); color:var(--ink);
+        font-weight:800; border-radius:999px; text-transform:uppercase; letter-spacing:.04em;}
+  .wm{font-family:var(--disp); font-weight:900; letter-spacing:-0.01em; color:var(--cream);}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <div class="kicker">Campaña · Meta Ads + Google Ads</div>
+    <h1 class="title">Sweaters · Hasta 40% OFF</h1>
+    <div class="lede">Anuncio de fin de semana largo en 3 formatos. Jerarquía hook → oferta → condición → CTA, tipografía grande y legible para mobile, foto real de producto. Cambiá de formato abajo.</div>
+    <div class="tabs">
+      <button class="tab on" data-f="sq">Cuadrado · 1080×1080</button>
+      <button class="tab" data-f="vt">Vertical · 1080×1920</button>
+      <button class="tab" data-f="hz">Horizontal · 1200×628</button>
+    </div>
+  </div>
+  <div class="stage">
+
+    <!-- ============ CUADRADO 1080×1080 (Meta) ============ -->
+    <div class="frame show" data-frame="sq">
+      <div class="holder"><div class="scaled" data-w="1080" data-h="1080">
+        <div class="ad" style="width:1080px; height:1080px; background:var(--ink);">
+          <img class="bg" src="assets/simona-look-02.webp" alt="Sweater SIMONA" style="object-position:center 22%;">
+          <div class="grad" style="background:linear-gradient(180deg, rgba(20,16,15,.30) 0%, rgba(20,16,15,0) 30%, rgba(20,16,15,0) 42%, rgba(20,16,15,.86) 84%);"></div>
+          <!-- bottom content -->
+          <div style="position:absolute; left:60px; right:60px; bottom:60px;">
+            <div class="eyebrow" style="font-size:26px;">Solo el finde largo</div>
+            <div class="hook" style="font-size:128px; margin-top:14px;">
+              <span class="num">Hasta 40%</span>
+              <span class="num sweaters">OFF en sweaters</span>
+            </div>
+            <div class="conds" style="gap:14px; margin-top:30px;">
+              <div class="cond" style="font-size:27px;"><span class="dot" style="width:11px;height:11px;"></span>15% OFF en toda la categoría <b>Invierno</b></div>
+              <div class="cond" style="font-size:27px;"><span class="dot" style="width:11px;height:11px;"></span><b>12 cuotas</b> sin interés</div>
+            </div>
+            <div style="margin-top:38px;">
+              <span class="pill" style="font-size:28px; padding:24px 46px;">Comprar ahora</span>
+            </div>
+          </div>
+        </div>
+      </div></div>
+      <div class="cap"><b>Cuadrado</b> · 1080 × 1080 px · Meta Ads (feed)</div>
+    </div>
+
+    <!-- ============ VERTICAL 1080×1920 (Meta) — safe zone aware ============ -->
+    <div class="frame" data-frame="vt">
+      <div class="holder"><div class="scaled" data-w="1080" data-h="1920">
+        <div class="ad" style="width:1080px; height:1920px; background:var(--ink);">
+          <img class="bg" src="assets/simona-look-02.webp" alt="Sweater SIMONA" style="object-position:center 18%;">
+          <div class="grad" style="background:linear-gradient(180deg, rgba(20,16,15,.55) 0%, rgba(20,16,15,.05) 22%, rgba(20,16,15,0) 40%, rgba(20,16,15,.55) 64%, rgba(20,16,15,.92) 90%);"></div>
+          <!-- main message: mid-band, away from top & bottom UI -->
+          <div style="position:absolute; left:70px; right:70px; bottom:430px;">
+            <div class="eyebrow" style="font-size:30px;">Solo el finde largo</div>
+            <div class="hook" style="font-size:150px; margin-top:18px;">
+              <span class="num">Hasta 40%</span>
+              <span class="num sweaters">OFF en<br>sweaters</span>
+            </div>
+            <div class="conds" style="gap:18px; margin-top:40px;">
+              <div class="cond" style="font-size:32px;"><span class="dot" style="width:13px;height:13px;"></span>15% OFF en toda la categoría <b>Invierno</b></div>
+              <div class="cond" style="font-size:32px;"><span class="dot" style="width:13px;height:13px;"></span><b>12 cuotas</b> sin interés</div>
+            </div>
+          </div>
+          <!-- CTA sits above the bottom UI safe zone -->
+          <div style="position:absolute; left:70px; right:70px; bottom:300px;">
+            <span class="pill" style="font-size:33px; padding:28px 56px;">Comprar ahora</span>
+          </div>
+        </div>
+      </div></div>
+      <div class="cap"><b>Vertical</b> · 1080 × 1920 px · Meta Ads (stories/reels) · zona segura respetada</div>
+    </div>
+
+    <!-- ============ HORIZONTAL 1200×628 (Google) ============ -->
+    <div class="frame" data-frame="hz">
+      <div class="holder"><div class="scaled" data-w="1200" data-h="628">
+        <div class="ad" style="width:1200px; height:628px; background:var(--cream); display:flex; color:var(--ink);">
+          <!-- text side -->
+          <div style="flex:1; padding:56px 56px; display:flex; flex-direction:column; justify-content:center;">
+            <div style="display:flex; gap:10px; align-items:center; margin-bottom:18px;">
+              <span class="wm" style="color:var(--ink); font-size:30px;">SIMONA</span>
+            </div>
+            <div class="eyebrow" style="color:var(--taupe); font-size:19px;">Solo el finde largo</div>
+            <div class="hook" style="color:var(--ink); font-size:88px; margin-top:12px; line-height:.86;">
+              <span class="num">Hasta 40%</span>
+              <span class="num" style="color:var(--blush-deep);">OFF en sweaters</span>
+            </div>
+            <div class="conds" style="gap:11px; margin-top:24px;">
+              <div class="cond" style="color:var(--ink); font-size:21px;"><span class="dot" style="width:9px;height:9px; background:var(--blush-deep);"></span>15% OFF en toda la categoría <b>Invierno</b></div>
+              <div class="cond" style="color:var(--ink); font-size:21px;"><span class="dot" style="width:9px;height:9px; background:var(--blush-deep);"></span><b>12 cuotas</b> sin interés</div>
+            </div>
+            <div style="margin-top:30px;">
+              <span class="pill" style="background:var(--ink); color:var(--cream); font-size:21px; padding:18px 36px;">Comprar ahora</span>
+            </div>
+          </div>
+          <!-- photo side -->
+          <div style="width:440px; position:relative; flex:none;">
+            <img src="assets/simona-look-02.webp" alt="Sweater SIMONA" style="width:100%; height:100%; object-fit:cover; object-position:center 18%;">
+          </div>
+        </div>
+      </div></div>
+      <div class="cap"><b>Horizontal</b> · 1200 × 628 px · Google Ads (display)</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Scale each frame to fit nicely as a mobile-ish preview.
+  function fitAll(){
+    document.querySelectorAll('.scaled').forEach(function(el){
+      var w = +el.dataset.w, h = +el.dataset.h;
+      // preview caps
+      var capH, capW;
+      if (h > w) { capH = Math.min(760, window.innerHeight - 230); capW = 430; }      // vertical
+      else if (w/h > 1.6) { capH = 360; capW = Math.min(720, window.innerWidth - 80); } // horizontal
+      else { capH = 560; capW = Math.min(560, window.innerWidth - 80); }                // square
+      var s = Math.min(capW / w, capH / h);
+      el.style.transform = 'scale(' + s + ')';
+      var holder = el.parentElement;
+      holder.style.width = (w * s) + 'px';
+      holder.style.height = (h * s) + 'px';
+    });
+  }
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');});
+      t.classList.add('on');
+      var f = t.dataset.f;
+      document.querySelectorAll('.frame').forEach(function(fr){
+        fr.classList.toggle('show', fr.dataset.frame === f);
+      });
+      fitAll();
+    });
+  });
+  window.addEventListener('resize', fitAll);
+  window.addEventListener('load', fitAll);
+  fitAll();
+</script>
+</body>
+</html>

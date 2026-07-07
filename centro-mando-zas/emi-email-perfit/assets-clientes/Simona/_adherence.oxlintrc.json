@@ -1,0 +1,179 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ads3/**",
+              "ui_kits/email/**",
+              "ui_kits/social/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Red Hat Display|Red Hat Text))/i]",
+        "message": "Font not provided by the design system. Available: Red Hat Display, Red Hat Text."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent",
+      "--accent-deep",
+      "--bg",
+      "--bg-alt",
+      "--bg-block",
+      "--bg-dark",
+      "--btn-bg",
+      "--btn-bg-hover",
+      "--btn-fg",
+      "--fg-on-dark",
+      "--fg-on-dark-2",
+      "--fg1",
+      "--fg2",
+      "--fg3",
+      "--font-display",
+      "--font-text",
+      "--line",
+      "--line-strong",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-xl",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-sm",
+      "--simona-blush",
+      "--simona-blush-deep",
+      "--simona-blush-soft",
+      "--simona-clay",
+      "--simona-cream",
+      "--simona-ink",
+      "--simona-mocha",
+      "--simona-sand",
+      "--simona-stone",
+      "--simona-taupe",
+      "--simona-white",
+      "--sp-1",
+      "--sp-2",
+      "--sp-3",
+      "--sp-4",
+      "--sp-5",
+      "--sp-6",
+      "--sp-7",
+      "--sp-8",
+      "--sp-9",
+      "--t-body",
+      "--t-body-lg",
+      "--t-display",
+      "--t-h1",
+      "--t-h2",
+      "--t-h3",
+      "--t-micro",
+      "--t-small",
+      "--track-label",
+      "--track-normal",
+      "--track-tight"
+    ],
+    "tokenKinds": {
+      "--simona-taupe": "color",
+      "--simona-blush": "color",
+      "--simona-ink": "color",
+      "--simona-white": "color",
+      "--simona-cream": "color",
+      "--simona-sand": "color",
+      "--simona-clay": "color",
+      "--simona-stone": "color",
+      "--simona-mocha": "color",
+      "--simona-blush-soft": "color",
+      "--simona-blush-deep": "color",
+      "--bg": "color",
+      "--bg-alt": "color",
+      "--bg-block": "color",
+      "--bg-dark": "color",
+      "--fg1": "color",
+      "--fg2": "color",
+      "--fg3": "color",
+      "--fg-on-dark": "color",
+      "--fg-on-dark-2": "color",
+      "--accent": "color",
+      "--accent-deep": "color",
+      "--line": "color",
+      "--line-strong": "color",
+      "--btn-fg": "color",
+      "--btn-bg": "color",
+      "--btn-bg-hover": "color",
+      "--font-display": "font",
+      "--font-text": "font",
+      "--t-display": "spacing",
+      "--t-h1": "spacing",
+      "--t-h2": "spacing",
+      "--t-h3": "spacing",
+      "--t-body-lg": "spacing",
+      "--t-body": "spacing",
+      "--t-small": "spacing",
+      "--t-micro": "spacing",
+      "--track-tight": "spacing",
+      "--track-normal": "spacing",
+      "--track-label": "spacing",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-xl": "spacing",
+      "--r-pill": "spacing",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--sp-1": "spacing",
+      "--sp-2": "spacing",
+      "--sp-3": "spacing",
+      "--sp-4": "spacing",
+      "--sp-5": "spacing",
+      "--sp-6": "spacing",
+      "--sp-7": "spacing",
+      "--sp-8": "spacing",
+      "--sp-9": "spacing"
+    },
+    "fontFamilies": [
+      "Red Hat Display",
+      "Red Hat Text"
+    ]
+  }
+}

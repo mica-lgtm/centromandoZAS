@@ -12,7 +12,7 @@ Este archivo guarda aprendizajes, correcciones y reglas que Emi debe recordar pa
 - Emi crea campañas aisladas de email marketing, no automatizaciones completas.
 - Puede crear emails puntuales para carrito abandonado y bienvenida si se pide, pero no diseña el flujo completo.
 - Debe buscar contexto de marca en el proyecto principal y en archivos de marca, sin sobrecargar `CLAUDE.md`.
-- Marcas iniciales prioritarias: Vitalis Navitas, Mini Ánima, Simona Shop, Magnolias Deco, Juanitas, Tessel, Living Tree y Zoe Tienda.
+- Marcas iniciales prioritarias: Vitalis Navitas, Simona Shop, Magnolias Deco, Juanitas, Tessel, Living Tree y Zoe Tienda.
 - Siempre debe adaptar tono por marca.
 - Siempre debe proponer segmento recomendado.
 - Siempre debe entregar asunto, preheader y asunto de reenvío.
@@ -41,6 +41,91 @@ Referencia conceptual: email tipo Juanitas. Productos destacados, precios, benef
 
 Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, productos destacados, beneficios comerciales y CTA directo.
 
+## 2026-06-11 · Ciclo 01 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 01.1:** Asunto tipo "Sustantivo: adjetivo/dato concreto" supera preguntas retóricas largas — "Colágeno: tiempos reales" (17%) vs. "¿Qué le pasa a tu piel cuando baja la temperatura?" (7.25%)
+- **Regla ciclo 01.2:** Ángulo educativo-comparativo o desmitificador = open rate 20-37% consistente — "mitos y evidencia", "comparativa", "guía simple", "tiempos reales" funcionan muy bien
+- **Regla ciclo 01.3:** Segmentación comportamental multiplica CTR 18x — segmentos < 600 por intención/comportamiento logran hasta 9.96% CTR vs. 0.14% en listas grandes
+- **Regla ciclo 01.4:** CTOR > 25% señal de match perfecto segmento-contenido — si el segmento ya mostró intención y el email responde exactamente a esa intención, más de 1 de 4 personas que abre hace click
+- **Regla ciclo 01.5:** Preheader vacío en 83% de campañas — implementar como bloqueante obligatorio antes de envío, pasar por QA
+- **Regla ciclo 01.6:** Apple Mail Privacy inflación — segmento "Interacción alta" mostró 81% open (imposible). Usar CTR como KPI primario cuando open rate supere 40%
+- **Regla ciclo 01.7:** Lista VIP Champions (WmEPCF) tiene bounce 0.45-0.50% — necesita auditoría y limpieza antes del próximo envío masivo a ese segmento
+- **Regla ciclo 01.8:** Emoji solo al inicio sin beneficio concreto NO diferencia — "✨" sin promesa real en el asunto = peor performance del ciclo (5.95%)
+- **Regla ciclo 01.9:** QA obligatorio de ortografía en asunto — "Instestino" fue enviado en campaña real sin detectar error
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-11
+
+## 2026-06-13 · Ciclo 02 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 02.1:** Cross-sell post-compra = mayor CTR del ciclo — compradores recientes de un producto con email sobre producto complementario: CTR 2.63-2.77%, CTOR 8-10%. Sistematizar para todas las líneas.
+- **Regla ciclo 02.2:** Testimonios como email standalone no convierte — CTOR 0.17% (peor del ciclo). Integrar testimonios DENTRO de emails de venta o educativos, nunca como tipo único de email.
+- **Regla ciclo 02.3:** Segmentos "Vieron pero no compraron" tienen riesgo de bounce elevado (hasta 3.13%) — pueden incluir emails temporales o spam traps. Filtrar o limpiar antes de enviar.
+- **Regla ciclo 02.4:** Preheader vacío sigue sin resolverse — 80% de campañas sin preheader en ciclo 02 (era 83% en ciclo 01). Necesita proceso bloqueante real, no solo recordatorio.
+- **Regla ciclo 02.5:** VIP Champions (WmEPCF) con open rate 8.54% en 6,753 enviados — tercer ciclo con baja performance. Lista urgentemente degradada, requiere segmentación interna o limpieza total antes del próximo envío masivo.
+- **Regla ciclo 02.6:** Segmentos dormidos (91-180 días sin actividad) + asunto genérico = 0% apertura y 0% CTR. Si se reactiva segmento dormido, usar asunto de alto impacto con beneficio o promo muy concreta.
+- **Regla ciclo 02.7:** El patrón "Asunto: dato educativo" es el más consistente en open rate real por tercer ciclo consecutivo — "Colágeno: tiempos reales" (22.40%), confiable incluso en segmentos medianos (3,252 enviados).
+- **Regla ciclo 02.8:** Preheader con 3 beneficios claros potencia CTOR — "Menos tensión, mejor sueño, más energía sostenida" acompañando asunto educativo logró 9.09% CTOR en segmento de intención.
+- **Alerta CRÍTICA ciclo 02:** Bounce 3.13% en segmento "Vieron Citrato y no compraron" (64 enviados) — supera umbral de 2%. Auditar ese segmento antes del próximo envío.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-13
+
+## 2026-06-15 · Ciclo 03 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 03.1:** Reconexión emocional en segmento dormido (91-180d) = mejor performance del ciclo — "Volvé a elegir bienestar" logró 17.43% open + 3.57% CTOR en 482 contactos. Sistematizar emails de reconexión mensuales para este segmento.
+- **Regla ciclo 03.2:** Asunto filosófico/metafórico sin beneficio ("Desconectá para reconectar") = 6.61% open en lista grande (9,674). Nunca usar asuntos que no respondan "¿qué voy a encontrar si abro?".
+- **Regla ciclo 03.3:** Email de fidelización a compradores recientes con 0 clicks (14.4% open) → CTA debe ser explícito y comercial incluso en emails de valor. Sin CTA claro, el contenido no convierte.
+- **Regla ciclo 03.4:** Lista inactivos (90-365d) + asunto educativo suave = apertura <8%. Para reactivar inactivos: beneficio concreto + urgencia real, no educativo genérico.
+- **Regla ciclo 03.5:** Segmento "Vieron Citrato y no compraron" RETIRADO — bounce 3.13% (ciclo 02) + unsubscribe 2.63% (ciclo 03). No usar hasta limpieza y auditoría completa.
+- **Regla ciclo 03.6:** Producto de nicho (Creatina) enviado a Base Completa Marketing = unsubscribe 0.36%. Siempre segmentar por interés/comportamiento para productos con target específico.
+- **Regla ciclo 03.7:** CTOR del 3.57% en dormidos reactivados confirma que segmento con intención latente + asunto correcto = alta conversión dentro del email. Usar CTOR como señal de calidad de contenido.
+- **Regla ciclo 03.8:** Preheader vacío empeoró a 100% en ciclo 03 (era 80% en ciclo 02). Se necesita proceso BLOQUEANTE real: checklist pre-envío o campo obligatorio en Klaviyo — los recordatorios no funcionan.
+- **ALERTA CRÍTICA ciclo 03:** Segmento "Vieron Citrato y no compraron" — unsubscribe 2.63% (1 de 38 contactos). Combinado con bounce 3.13% del ciclo anterior, este segmento está dañado. No usar hasta auditoría.
+- **Nuevo producto:** Primera campaña de Creatina para mujeres detectada. A seguir en próximos ciclos.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-15
+
+## 2026-06-17 · Ciclo 04 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 04.1:** Segmento "Nunca han interaccionado (email)" es TÓXICO — 0.89% open rate + 1.01% bounce en 44.949 envíos. Riesgo real de reputación de IP. No usar en campañas estándar. Si se usa alguna vez, máximo 5.000 contactos con asunto de alto impacto + incentivo concreto.
+- **Regla ciclo 04.2:** Cross-sell post-compra confirmado por TERCER ciclo consecutivo como patrón de mayor CTR — Compradores de Citrato + email Omega 3: 1.43% CTR, 8.70% CTOR. Sistematizar para todas las líneas: Citrato→Omega3, Colágeno→Magnesio, Omega3→NeuroCalm.
+- **Regla ciclo 04.3:** Segmentos "Interacción alta/media/baja" en Klaviyo están completamente distorsionados por Apple Mail Privacy. Open rates 44-70% son imposibles. Para CUALQUIER campaña a estos segmentos, usar SOLO CTR y CTOR como KPIs. Ignorar open rate.
+- **Regla ciclo 04.4:** Asunto emoji + adjetivo genérico sin número ("Belleza desde adentro ✨", "Energía desde tus células ⚡") → open rate bajo umbral (8-10%). La fórmula ganadora sigue siendo: Sustantivo concreto + beneficio + número/timeframe (confirmado desde ciclo 01).
+- **Regla ciclo 04.5:** Preheader vacío al 100% por CUARTO ciclo consecutivo. Recordatorios verbales inútiles. Requiere proceso bloqueante real: QA checklist con campo obligatorio antes de schedule.
+- **Regla ciclo 04.6:** Ángulo educativo pre-decisión ("Antes de elegir un suplemento, leé esto") logró CTOR 25% en suscriptores recientes (muestra pequeña, 40 contactos). Escalar con mayor volumen en ciclo 05.
+- **Nuevo producto:** Cellular NAD+ detectado en primer lanzamiento. Asunto débil en debut ("Energía desde tus células ⚡💪🏻") sin número ni beneficio concreto. Próxima campaña debe usar fórmula validada: "Cellular NAD+: [beneficio] en [N] días".
+- **ALERTA CRÍTICA ciclo 04:** Segmento "Nunca han interaccionado (email)" — 1.01% bounce en 44.949 enviados (454 rebotes). Combinado con 0.89% open rate, este segmento debe retirarse de rotación inmediatamente.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-17
+
+## 2026-06-11 · Corrección de Mica · Botones de producto
+
+- Corrección recibida: los botones de los productos siempre deben ser redondeados, negros y con letra blanca.
+- Regla nueva: en todas las campañas, cada CTA dentro de una card o módulo de producto debe usar fondo negro, texto blanco y borde tipo pill.
+- Aplicar en: todas las marcas y campañas, salvo indicación explícita de Mica.
+
+## 2026-06-11 · Corrección de Mica · Magnolias identidad y precios
+
+- Tipografía oficial de Magnolias: `Elms Sans`. Usarla en todos los diseños con fallback `Arial, sans-serif`.
+- Familia completa validada: Regular, Medium, SemiBold, Bold, ExtraBold, Black, pesos livianos, itálicas y fuentes variables.
+- Todos los logos deben verse redondeados en las piezas de Magnolias.
+- El Instagram de Magnolias es referencia visual prioritaria para diseñar emails. Pedir capturas a Mica cuando sean necesarias.
+- Los precios deben aparecer en los emails comerciales de Magnolias.
+- Destacar en rojo el precio pagando con efectivo.
+- Validar siempre el precio principal y el precio con efectivo antes de cerrar el HTML.
+- No entregar emails comerciales de Magnolias sin precios ni usar otra tipografía como identidad principal.
+
+## 2026-06-22 · Corrección de Mica · Magnolias no repetir mails ni imágenes
+
+- Corrección recibida: en la campaña de Magnolias para martes se reutilizó una imagen que ya se había usado.
+- Aprendizaje: antes de crear piezas nuevas para Magnolias hay que revisar campañas recientes para evitar repetir imagen protagonista, hero o estructura.
+- Regla nueva: no repetir mails, imágenes protagonistas ni assets visuales recientes de Magnolias, salvo pedido explícito de Mica.
+- Aplicar en: todas las campañas nuevas de Magnolias Deco.
+- Revisión obligatoria: buscar campañas Magnolias recientes y chequear que el hero/imagen principal no esté repetido antes de cerrar el HTML.
+
+## 2026-06-12 · Corrección de Mica · Asunto y preheader sin repeticiones
+
+- Corrección recibida: nunca repetir palabras relevantes entre el asunto y el preheader.
+- Regla nueva: asunto y preheader deben complementarse y aportar información diferente.
+- Evitar repetir especialmente: marca, promoción, beneficio, urgencia, producto y verbo principal.
+- Las palabras funcionales inevitables pueden aparecer, pero no se debe duplicar el mensaje central.
+- Aplicar en: todas las marcas y todas las campañas de Emi.
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
@@ -62,6 +147,63 @@ Formato sugerido:
 - Regla nueva: priorizar `templates/estilo-captura-producto-protagonista.md` sobre `templates/estilo-2-promo-grilla.md` cuando haya duda.
 - Aplicar en: especialmente Simona Shop, pero tambien en cualquier marca cuando Mica pida producto protagonista con venta + valor.
 - No repetir: no usar hero generico, alerta de promo ni grilla de productos si Mica pide el estilo de captura.
+
+## 2026-06-23 · Corrección de Mica · Fotos de producto y orden de bloques
+
+- Corrección recibida: los productos siempre van con su foto real dentro de cada bloque.
+- Aprendizaje: no entregar cards de producto solo con texto; cada producto debe mostrar imagen, nombre, precio y CTA.
+- Regla nueva: en Simona, la estructura debe ir en una sola secuencia continua, sin partir el hero en dos bloques laterales.
+- Regla nueva: usar bloques apilados y legibles en orden lineal: header, hero, beneficios, cards de producto con foto, cierre y footer.
+- Aplicar en: todas las próximas campañas de Simona y en cualquier pieza donde Mica pida una estructura similar.
+
+## 2026-06-23 · Corrección de Mica · Segmentación semanal sin solaparse
+
+- Corrección recibida: en la semana, los envíos de Simona no deben ir a toda la base ni repetir a los mismos usuarios.
+- Aprendizaje: las campañas del mismo día o de días distintos tienen que repartirse por audiencias complementarias para cuidar reputación.
+- Regla nueva: cuando un mail va a compradores prioritarios, el siguiente mail debe ir a leads, incentivo o carritos, con exclusión explícita de las listas ya usadas.
+- Regla nueva: siempre revisar include/exclude antes de subir un borrador para confirmar que no se repite la base ya impactada.
+- Aplicar en: toda la planificación semanal de Simona.
+
+## 2026-06-24 · Corrección de Mica · Simona jueves cupón ARGENTINA
+
+- Corrección recibida: para la secuencia del jueves, los dos mails de Simona tienen que usar bases diferentes y no pisarse entre sí.
+- Aprendizaje: sweaters puede trabajar con señal reciente y blazers con una base de mayor valor/afinidad, pero siempre con exclusiones cruzadas.
+- Regla nueva: si una campaña usa listas `22` y `49`, la otra debe excluirlas; si una usa `20`, `21` y `23`, la otra debe excluirlas.
+- Regla nueva: documentar la separación de audiencias en el resumen de campaña antes de cargar a Perfit.
+- Aplicar en: secuencias semanales de Simona con más de un mail el mismo día.
+
+## 2026-06-24 · Corrida Perfit · Simona jueves cupón ARGENTINA
+
+- Resultado: se crearon dos campañas como borrador en Perfit.
+- ID sweaters: `1346`.
+- ID blazers: `1347`.
+- Regla confirmada: mantener la segmentación separada entre ambas campañas antes de programar o enviar.
+- Aplicar en: seguimiento final y QA de la secuencia del jueves de Simona.
+
+## 2026-06-24 · Corrida Perfit · Simona secuencia jueves cupón ARGENTINA
+
+- Resultado: se crearon dos campañas como borrador en Perfit para la secuencia exacta del folder `simona-secuencia-jueves-cupon-argentina-2026-06-25`.
+- ID mail 1 sweaters: `1348`.
+- ID mail 2 camperas: `1349`.
+- Regla nueva: no confundir esta secuencia con la variante de blazer; son dos pares distintos y deben quedar documentados por separado.
+- Aplicar en: próximas subidas de secuencias Simona con naming parecido.
+
+## 2026-07-01 · Corrección de Mica · Simona Fest precios
+
+- Corrección recibida: en Simona Fest los precios estaban mal porque se mostraba el precio original como precio web y se calculaba transferencia sobre ese valor.
+- Aprendizaje: en Simona Fest hay que respetar la lógica real de tienda: primero se aplica el descuento del Fest al precio original y después el 20% OFF por transferencia se calcula sobre el precio ya rebajado.
+- Regla nueva: cada producto de Simona Fest debe mostrar `Antes $X` tachado, `Ahora $Y` con descuento Fest aplicado y `Transferencia $Z` calculado como 20% OFF sobre `Ahora`.
+- Regla nueva: si la web muestra una etiqueta tipo `-30% OFF` o `-20% OFF`, esa etiqueta debe ir en la card del producto; no usar una etiqueta genérica de transferencia como descuento principal.
+- Ejemplo validado: Sweater Riz: Antes `$89.900`, Ahora `$62.930` (-30% OFF), Transferencia `$50.344`.
+- Aplicar en: todas las campañas de Simona Fest y cualquier promo Simona donde convivan descuento de producto + transferencia.
+
+## 2026-06-23 · Corrección de Mica · Mobile sin cortes
+
+- Corrección recibida: en mobile el mail se veía cortado y eso no puede volver a pasar.
+- Aprendizaje: no basta con que el HTML se vea bien en desktop; hay que validar explícitamente un ancho angosto antes de subirlo.
+- Regla nueva: en Simona, si un bloque puede desbordar o quedar apretado en móvil, debe apilarse en vertical y ocupar ancho completo.
+- Regla nueva: revisar siempre la versión mobile antes de subir el borrador a Perfit, especialmente hero, CTA y módulos de producto.
+- Aplicar en: todas las campañas nuevas y rearmados de Simona.
 
 ## 2026-06-03 · Instalacion de herramientas · Skill find-skills
 
@@ -169,8 +311,13 @@ python3 batch_create_campaigns.py --config batch_config_example.json
 - **Herramienta:** Agente cloud vía `/schedule`, cron cada 2 días a las 9am Argentina (12:00 UTC)
 - **Almacenamiento:** `retroalimentacion-perfit/{account}-AAAA-MM-DD-ciclo-N.md` (uno por cuenta, por ciclo)
 - **Cuentas monitoreadas:** Se leen desde `retroalimentacion-perfit/cuentas.json`
-- **Cuentas iniciales:**
+- **Cuentas activas en la rutina (2026-07-07):**
   - simonashop (Simona Shop)
+  - juanitas (Juanitas)
+  - magnolias (Magnolias Deco)
+  - zoetienda (Tienda ZOE)
+  - tessel (Tessel Home)
+- **Excluidas a pedido de Mica:** Living Tree y ERJ (instagrammyh) — quedan fuera de la rutina automática hasta nuevo aviso.
 - **Benchmarks internos Perfit** (referencias, no absolutos):
   - Open Rate mínimo aceptable: 5%
   - Open Rate bueno: 10%+
@@ -190,6 +337,19 @@ python3 batch_create_campaigns.py --config batch_config_example.json
   - API keys en `cuentas.json` NO commitear a git
   - Archivo está en `.gitignore`
 - **Próximo paso:** Agregar más cuentas a `cuentas.json` (una por cliente Perfit), leer reportes después de cada ciclo
+
+## 2026-06-10 · CRÍTICO · Klaviyo MCP es obligatorio
+
+- **Regla:** SOLO usar MCP de Klaviyo para crear campañas, templates y actualizaciones
+- **NO usar:** API requests directos, curl, tokens, ni scripts de requests
+- **Por qué:** MCP maneja autenticación, formato de payload y versionado automáticamente
+- **Flujo correcto:**
+  1. Crear template con `mcp__claude_ai_Klaviyo__klaviyo_create_email_template`
+  2. Crear campaña con `mcp__claude_ai_Klaviyo__klaviyo_create_campaign` (incluye campaignMessages)
+  3. Asignar template con `mcp__claude_ai_Klaviyo__klaviyo_assign_template_to_campaign_message`
+  4. NO crear scripts con requests — el MCP es la única interfaz válida
+- **Documentación:** Ver `KLAVIYO-MCP-PROCEDURE.md` en carpeta de marcas (global, no por campaña)
+- **Aplicar en:** Todos los clientes que usen Klaviyo (Vitalis, futuros)
 
 ## 2026-06-09 · Sistema Completo · Análisis → Propuestas → Creación → Envío
 
@@ -246,3 +406,46 @@ Lanza campañas → Monitorear performance
 - Script para que Emi agregue HTML automáticamente (`subir_html_a_campanas_creadas.py`)
 - Integración con `/schedule` para programar rutina automática
 - Dashboard para visualizar propuestas y performance ciclo a ciclo
+
+## 2026-06-23 · Magnolias · Caja Seagrass
+- Se validó en la ficha pública que `Caja Seagrass Santi` cambió respecto del valor anterior.
+- Regla nueva: revalidar precio y efectivo justo antes de cerrar el HTML cuando el producto es mail de venta directa.
+- Regla nueva: si la ficha muestra "último" o stock no consolidado, no prometer cantidad exacta en el email.
+- Aplicar en: campañas de venta directa de Magnolias y rearmados de piezas con producto protagonista.
+
+## 2026-06-23 · Magnolias · Financiación
+- Corrección recibida: Magnolias no tiene 12 cuotas y no debe mencionarse.
+- Regla nueva: no poner `12 cuotas` ni equivalentes en Magnolias salvo confirmación explícita y actual de Mica o de la tienda.
+- Regla nueva: si no hay financiación validada, comunicar solo precio publicado, efectivo destacado y beneficios reales de la ficha.
+- Aplicar en: todas las campañas nuevas y rearmados de Magnolias Deco.
+
+## 2026-06-23 · Magnolias · Mobile layout
+- Corrección recibida: algunos bloques de Magnolias se veían descentrados o cortados en celular.
+- Regla nueva: en Magnolias, las cards apiladas deben llevar reset de paddings en mobile para que imagen, copy y CTA queden centrados y sin cortes.
+- Regla nueva: revisar siempre la vista mobile antes de cerrar el HTML y antes de sincronizarlo en Perfit.
+- Aplicar en: todas las campañas nuevas de Magnolias Deco.
+
+## 2026-06-23 · Juanitas · Últimos 7 envíos y split de bases
+
+- Últimos 7 envíos reales detectados en Perfit al 2026-06-23: `765`, `764`, `763`, `762`, `761`, `759`, `758`.
+- Hallazgo: `764` a `758` fueron envíos amplios a `i18n_masterlist` / lista `0`, mientras que `765` sí salió segmentado a compradores y actividad alta.
+- Regla nueva: en Juanitas, si el último envío ya fue segmentado, el siguiente split debe separar compradores vs. leads/actividad y evitar repetir el mismo universo.
+- Regla nueva: revisar include/exclude antes de subir un draft para no volver a impactar los mismos contactos.
+- Drafts creados en Perfit el 2026-06-23:
+  - `768` · `[EMI] Juanitas - Corpiño taza soft - 23/06` · incluye `2, 9, 11, 12` y excluye `6, 7, 28, 29, 31, 34, 41, 43, 44, 45`.
+  - `769` · `[EMI] Juanitas - Colaless tiro alto - 23/06` · incluye `28, 31, 34, 44, 45` y excluye `2, 6, 7, 9, 11, 12, 29, 41, 43`.
+- Aplicar en: próximas secuencias dobles de Juanitas y cualquier split de buyer/lead que siga a un envío segmentado reciente.
+
+## 2026-07-07 · Verificación de conexión · Campaña de prueba en borrador en 6 cuentas
+
+- Contexto: Mica pidió confirmar que Perfit y Klaviyo estaban conectados para crear/programar campañas, y probarlo con una campaña técnica en borrador (no comercial, sin promociones) en todas las cuentas activas.
+- HTML de prueba: `campanas/test-conexion-2026-07-07/test-tecnico-emi.html` (versión Perfit con `${urls.unsubscribe}`; versión Klaviyo con `{% unsubscribe 'Desuscribirse' %}`).
+- Resultado — todas quedaron en DRAFT, ninguna programada ni enviada:
+  - Simona Shop: campaign id `1379`, template `tpl_cmrarkzxu9c1x0996uo05rm9y`, lista `20` (Campeones).
+  - Juanitas: campaign id `790`, template `tpl_cmrarl45d9bt20a04vtb79vdc`, lista `5` (Campeones).
+  - Magnolias Deco: campaign id `904`, template `tpl_cmrarl7qn9bn40978qc3oltcj`, lista `10` (Campeones).
+  - Tienda ZOE: campaign id `55`, template `tpl_cmrarlbgo9bt40a04q7k3s7yp`, lista `3` (Campeones).
+  - Tessel Home: campaign id `37`, template `tpl_cmrarlfu69bnd0978s4nxy5ap`, lista `5` (Campeones).
+  - Vitalis Navitas (Klaviyo): campaign id `01KWYGY5C1QYSMH4PP2P9GCRJA`, template `V7MwS2`, segmento `QZCHsg` (Vieron Bisglicinato y no compraron).
+- Regla nueva: el campo `name` de campaña en Perfit tiene máximo 50 caracteres — validar longitud antes de crear (error `VALIDATION_ERROR` si se excede).
+- Aplicar en: cualquier verificación futura de conexión o test técnico multi-cuenta.

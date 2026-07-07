@@ -1,0 +1,33 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Product card" subtitle="Portada · título · precio · CTA — sin deformar imagen" -->
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;font-family:var(--font-body);background:var(--paper);padding:20px;display:flex;gap:18px;}
+.zoe-card{width:240px;}
+.cover{height:170px;background:linear-gradient(135deg,var(--green-200),var(--sand));display:flex;align-items:center;justify-content:center;position:relative;}
+.cover img{height:90px;opacity:.85;}
+.pad{padding:14px 16px 18px;}
+.t{font-weight:700;font-size:19px;color:var(--fg);line-height:1.15;}
+.a{font-size:14px;color:var(--fg-subtle);font-weight:600;margin-top:2px;}
+.price{font-weight:800;font-size:24px;color:var(--fg);margin-top:10px;}
+.tag{position:absolute;top:10px;left:10px;}
+.cta{margin-top:14px;width:100%;}</style></head>
+<body>
+  <div class="zoe-card">
+    <div class="cover"><span class="zoe-badge zoe-badge--offer tag">-20%</span><img src="../assets/zoe-leaf-color.png" alt=""></div>
+    <div class="pad">
+      <div class="t">Título del libro</div>
+      <div class="a">Nombre del autor</div>
+      <div class="price">$XX.XXX</div>
+      <button class="zoe-btn zoe-btn--primary cta">Comprar</button>
+    </div>
+  </div>
+  <div class="zoe-card" style="background:var(--green-50)">
+    <div class="cover" style="background:var(--paper-2)"><img src="../assets/zoe-leaf-color.png" alt=""></div>
+    <div class="pad">
+      <span class="zoe-badge">Novedad</span>
+      <div class="t" style="margin-top:8px">Otro título</div>
+      <div class="a">Autora invitada</div>
+      <div class="price">$XX.XXX</div>
+      <button class="zoe-btn zoe-btn--outline cta">Ver más</button>
+    </div>
+  </div>
+</body></html>

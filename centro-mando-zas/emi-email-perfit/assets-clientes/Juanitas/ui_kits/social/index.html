@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- @dsCard group="UI Kit — Social" name="UI Kit · Plantillas comerciales" subtitle="Promo, producto, historia, anuncio, email" viewport="1180x620" --><html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juanitas · Plantillas comerciales</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--rosa-nube);font-family:var(--font);color:var(--tinta)}
+  .page{max-width:1180px;margin:0 auto;padding:56px 40px 100px}
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+  header img{height:46px}
+  .kicker{font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--bordo)}
+  h1.title{font-weight:800;font-size:40px;letter-spacing:-.02em;margin:6px 0 4px}
+  .intro{font-weight:500;font-size:17px;color:var(--fg2);max-width:640px;margin:0 0 8px}
+  .grid{display:flex;flex-wrap:wrap;gap:48px;margin-top:40px;align-items:flex-start}
+  .item .cap{display:flex;align-items:baseline;gap:10px;margin:0 0 14px}
+  .item .fmt{font-weight:700;font-size:18px}
+  .item .dim{font-weight:600;font-size:13px;color:var(--fg3)}
+  .frame{border-radius:18px;overflow:hidden;box-shadow:var(--sh-lg);background:#fff}
+  .note{margin-top:8px;font-size:13px;color:var(--fg3);max-width:var(--w)}
+  .hint{margin-top:48px;background:#fff;border-radius:18px;padding:20px 24px;box-shadow:var(--sh-sm);font-size:14px;color:var(--fg2);max-width:760px}
+  .hint b{color:var(--bordo)}
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <img src="../../assets/juanitas-logo.png" alt="juanitas">
+      <span class="kicker">UI Kit · Social</span>
+    </header>
+    <h1 class="title">Plantillas comerciales</h1>
+    <p class="intro">Piezas reales listas para usar, armadas con la paleta, el resaltador, el lettering manuscrito y <b>fotos reales del catálogo</b>. Editá textos y datos en <code>templates.jsx</code>.</p>
+    <div class="hint"><b>Cómo usar:</b> cada plantilla es un componente reutilizable con datos reales de juanitas.ar. Para cambiar la foto, reemplazá el archivo en <code>assets/productos/</code> o la ruta en el componente. Mantené la jerarquía hook → beneficio → CTA y dejá que el producto o la promo sean protagonistas.</div>
+    <div id="root" class="grid"></div>
+  </div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="templates.jsx"></script>
+  <script type="text/babel">
+    function Frame({ w, h, targetW, label, dim, note, children }) {
+      const scale = targetW / w;
+      return (
+        <div className="item">
+          <div className="cap"><span className="fmt">{label}</span><span className="dim">{dim}</span></div>
+          <div className="frame" style={{ width: targetW, height: h * scale }}>
+            <div style={{ width: w, height: h, transform: `scale(${scale})`, transformOrigin: "top left" }}>
+              {children}
+            </div>
+          </div>
+          {note && <p className="note" style={{ "--w": targetW + "px" }}>{note}</p>}
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <>
+          <Frame w={1080} h={1080} targetW={400} label="Promo cuadrada" dim="1080×1080" note="HOT DAYS, fondo coral, oferta protagonista.">
+            <PromoSquare />
+          </Frame>
+          <Frame w={1080} h={1080} targetW={400} label="Producto cuadrado" dim="1080×1080" note="Fondo claro, producto protagonista.">
+            <ProductSquare />
+          </Frame>
+          <Frame w={1080} h={1920} targetW={300} label="Historia / Reel" dim="1080×1920" note="Zona segura central, CTA en el tercio inferior.">
+            <StoryPiece />
+          </Frame>
+          <Frame w={1200} h={628} targetW={520} label="Anuncio horizontal" dim="1200×628" note="Split producto / oferta. Meta y display.">
+            <HorizontalAd />
+          </Frame>
+          <Frame w={600} h={718} targetW={420} label="Banner email" dim="600px ancho" note="Banner + beneficios + CTA. Mobile y desktop.">
+            <EmailBanner />
+          </Frame>
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body></html>

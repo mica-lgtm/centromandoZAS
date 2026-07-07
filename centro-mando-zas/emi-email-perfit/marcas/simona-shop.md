@@ -1,8 +1,23 @@
 # Simona Shop
 
+## Design system
+
+**Leer antes de arrancar cualquier email de Simona:**
+`/Users/mica/Desktop/ZAS-AGENT/madame-social-content-manager/assets-clientes/Simona/README.md`
+`/Users/mica/Desktop/ZAS-AGENT/madame-social-content-manager/assets-clientes/Simona/CLAUDE.md`
+
+Incluye: paleta exacta (taupe `#70625f`, blush `#fbbfaf`, negro suave `#2a2a2a`, fondos cálidos), tipografía Red Hat Display/Text, fotografía de campaña en `assets/`, reglas validadas por el cliente (wordmark, CTAs, zona segura, copy, descuentos).
+
 ## Estado de contexto
 
-Archivo inicial creado para Emi. Antes de trabajar esta marca, leer el contexto disponible en el proyecto principal de ZAS y completar este archivo con información validada.
+Archivo con reglas de marca activas. Design system completo disponible en madame (ver arriba).
+
+## Performance histórica y contexto de cuenta
+
+Leer antes de proponer asuntos, segmentos o estructura de campaña:
+`retroalimentacion-perfit/simonashop-2026-06-18-contexto-inicial.md`
+
+Incluye: 20 campañas con métricas reales, benchmarks internos, patrones de asuntos ganadores, listas disponibles con IDs y sender verificado.
 
 ## Tono de voz
 
@@ -47,6 +62,23 @@ Pendiente de completar según manual de marca, emails previos o referencias envi
 ## Aprendizajes
 
 Registrar aprendizajes de campañas y correcciones.
+
+### 2026-07-01 · Simona Fest · Diseño y precios
+
+- Simona Fest usa una estetica especial validada por Mica para esta promo: blanco, negro y rojo `#e9261d`, con header negro, banner principal de Fest, bloques de beneficios oscuros y CTA final rojo/negro.
+- Modelo base validado: `/Users/denisepenna/Downloads/simona_fest_4_productos.html`.
+- En Simona Fest las cards de producto deben incluir foto real, nombre, descripcion corta, descuento Fest, precio anterior tachado, precio actual y precio por transferencia.
+- Regla de calculo: `Antes` = precio original, `Ahora` = precio con descuento Simona Fest aplicado, `Transferencia` = 20% OFF adicional calculado sobre `Ahora`.
+- No calcular transferencia sobre el precio original cuando el producto ya tiene descuento Fest.
+- Si el producto muestra `-30% OFF` o `-20% OFF` en la web, usar esa etiqueta en la card.
+- Ejemplo validado por captura de tienda: Sweater Riz muestra Antes `$89.900`, Ahora `$62.930` (-30% OFF) y Transferencia `$50.344`.
+
+### 2026-07-02 · Simona Fest · Centrados y bloques redondeados
+
+- Correccion visual de Mica: en emails de Simona Fest, centrar el bloque del medio cuando sea encabezado/introduccion de la promo.
+- Los bloques principales deben tener terminaciones redondeadas: contenedor general, bloque de beneficios, cards de producto e imagenes superiores de las cards.
+- Mantener CTAs de producto siempre negros, con letra blanca y bien redondeados tipo pill (`border-radius:999px`).
+- Evitar bloques demasiado rectos o duros visualmente; la pieza debe verse mas suave y terminada en mobile y desktop.
 
 ## Datos a validar
 

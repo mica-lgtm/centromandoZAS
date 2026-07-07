@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Escala tipográfica" subtitle="d1 → xs" viewport="700x260" --><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font);background:var(--blanco);padding:22px 28px;color:var(--fg1)}
+  .lead{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--bordo);margin:0 0 16px}
+  .r{display:flex;align-items:baseline;gap:18px;padding:7px 0;border-bottom:1px solid var(--linea)}
+  .r:last-child{border-bottom:0}
+  .tok{width:120px;font-size:12px;font-weight:600;color:var(--fg3);font-variant-numeric:tabular-nums}
+  .spec{flex:1;line-height:1.05}
+</style></head>
+<body>
+  <p class="lead">Escala tipográfica</p>
+  <div class="r"><span class="tok">d1 · 88 / 800</span><span class="spec" style="font-size:40px;font-weight:800;letter-spacing:-.02em">Display</span></div>
+  <div class="r"><span class="tok">h1 · 48 / 700</span><span class="spec" style="font-size:30px;font-weight:700;letter-spacing:-.01em">Título de placa</span></div>
+  <div class="r"><span class="tok">h3 · 28 / 600</span><span class="spec" style="font-size:22px;font-weight:600">Subtítulo / beneficio</span></div>
+  <div class="r"><span class="tok">body · 20 / 400</span><span class="spec" style="font-size:18px;font-weight:400">Texto de cuerpo, bajadas y descripciones.</span></div>
+  <div class="r"><span class="tok">xs · 13 / 500</span><span class="spec" style="font-size:13px;font-weight:500;color:var(--fg2)">Legales y metadatos</span></div>
+</body></html>

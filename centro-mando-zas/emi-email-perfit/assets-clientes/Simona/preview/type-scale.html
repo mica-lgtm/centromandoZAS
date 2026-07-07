@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Type scale" subtitle="H1–H3, body, small" viewport="700x280" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--bg); }
+  .wrap { padding: 22px 30px; display:flex; flex-direction:column; gap:12px; }
+  .line { display:flex; align-items:baseline; gap:16px; border-bottom:1px solid var(--line); padding-bottom:11px; }
+  .line:last-child { border-bottom:0; }
+  .lbl { font-family:var(--font-text); font-size:11px; color:var(--fg3); width:118px; flex:none; letter-spacing:.02em; }
+  .spec { color:var(--fg1); }
+  .h1 { font-family:var(--font-display); font-weight:800; font-size:40px; letter-spacing:-0.02em; line-height:1; }
+  .h2 { font-family:var(--font-display); font-weight:700; font-size:30px; letter-spacing:-0.02em; }
+  .h3 { font-family:var(--font-display); font-weight:600; font-size:22px; }
+  .body { font-family:var(--font-text); font-weight:400; font-size:16px; color:var(--fg2); }
+  .small { font-family:var(--font-text); font-weight:500; font-size:13px; color:var(--fg3); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="line"><div class="lbl">H1 · Display 800</div><div class="spec h1">Nueva colección</div></div>
+    <div class="line"><div class="lbl">H2 · Display 700</div><div class="spec h2">Camperas y tapados</div></div>
+    <div class="line"><div class="lbl">H3 · Display 600</div><div class="spec h3">Talles del 1 al 4</div></div>
+    <div class="line"><div class="lbl">Body · Text 400</div><div class="spec body">Prendas cómodas y cancheras para usar todos los días.</div></div>
+    <div class="line"><div class="lbl">Small · Text 500</div><div class="spec small">Hasta 30% OFF · 3 cuotas sin interés</div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Paleta principal" subtitle="Violeta · Bordó · Rosado — los tres colores de marca" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--crema); }
+  .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 18px; }
+  .sw { border-radius: 16px; padding: 16px; height: 116px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; box-shadow: var(--shadow-md); }
+  .name { font-weight: 800; font-size: 16px; letter-spacing: -0.01em; }
+  .hex { font-weight: 600; font-size: 13px; opacity: .85; font-variant-numeric: tabular-nums; }
+  .role { font-weight: 600; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .7; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="sw" style="background:#21014d">
+      <div class="role">Primario</div>
+      <div class="name">Violeta</div>
+      <div class="hex">#21014D</div>
+    </div>
+    <div class="sw" style="background:#72113e">
+      <div class="role">Secundario</div>
+      <div class="name">Bordó</div>
+      <div class="hex">#72113E</div>
+    </div>
+    <div class="sw" style="background:#f35980">
+      <div class="role">Acento</div>
+      <div class="name">Rosado</div>
+      <div class="hex">#F35980</div>
+    </div>
+  </div>
+</body>
+</html>

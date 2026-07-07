@@ -1,0 +1,40 @@
+<!-- @dsCard group="Colors" viewport="700x130" name="Neutros + Semánticos" subtitle="Blancos cálidos, grises violáceos y tinta" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--crema); }
+  .wrap { padding: 18px; }
+  .row { display: flex; gap: 0; }
+  .step { flex: 1; height: 70px; display: flex; flex-direction: column; justify-content: flex-end; padding: 7px; }
+  .step:first-child { border-radius: 10px 0 0 10px; }
+  .step:last-child { border-radius: 0 10px 10px 0; }
+  .k { font-weight: 700; font-size: 10px; }
+  .h { font-weight: 500; font-size: 8.5px; opacity: .75; font-variant-numeric: tabular-nums; }
+  .tags { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .tag { font-size: 11px; font-weight: 600; color: var(--gris-500); display: flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 4px; border: 1px solid rgba(0,0,0,.08); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row">
+      <div class="step" style="background:#ffffff;color:#1c0d31;border:1px solid #ece7f0"><span class="k">Blanco</span><span class="h">FFFFFF</span></div>
+      <div class="step" style="background:#fbf8fc;color:#1c0d31"><span class="k">Crema</span><span class="h">FBF8FC</span></div>
+      <div class="step" style="background:#f4eff7;color:#1c0d31"><span class="k">Niebla</span><span class="h">F4EFF7</span></div>
+      <div class="step" style="background:#d8d1de;color:#1c0d31"><span class="k">Gris 200</span><span class="h">D8D1DE</span></div>
+      <div class="step" style="background:#8d8499;color:#fff"><span class="k">Gris 400</span><span class="h">8D8499</span></div>
+      <div class="step" style="background:#645b70;color:#fff"><span class="k">Gris 500</span><span class="h">645B70</span></div>
+      <div class="step" style="background:#1c0d31;color:#fff"><span class="k">Tinta</span><span class="h">1C0D31</span></div>
+    </div>
+    <div class="tags">
+      <span class="tag"><span class="dot" style="background:#1c0d31"></span>fg1 · texto principal</span>
+      <span class="tag"><span class="dot" style="background:#645b70"></span>fg2 · secundario</span>
+      <span class="tag"><span class="dot" style="background:#f35980"></span>accent · CTA</span>
+      <span class="tag"><span class="dot" style="background:#8a1a4d"></span>link</span>
+    </div>
+  </div>
+</body>
+</html>

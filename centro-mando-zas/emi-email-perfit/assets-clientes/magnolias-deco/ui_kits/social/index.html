@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- @dsCard group="UI Kit — Social" name="Kit Social — Showcase" subtitle="Galería interactiva: feed, stories, carrusel, anuncios, email, WhatsApp" viewport="1180x560" -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magnolias Deco · Kit Social</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font-sans); background: var(--offwhite); color: var(--fg1); }
+  .app { max-width: 1180px; margin: 0 auto; padding: 0 28px 80px; }
+
+  header.top { display: flex; align-items: center; justify-content: space-between; padding: 26px 0 22px; }
+  .brand { display: flex; align-items: baseline; gap: 12px; }
+  .brand .wm { font-weight: 900; font-size: 26px; letter-spacing: -0.03em; }
+  .brand .wm span { color: var(--red); }
+  .brand .sub { font-size: 11px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--wood); }
+
+  nav.tabs { display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1.5px solid var(--border); margin-bottom: 30px; }
+  .tab { font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--fg3); background: none; border: none; cursor: pointer; padding: 12px 16px; border-bottom: 2.5px solid transparent; margin-bottom: -1.5px; transition: color .15s; }
+  .tab:hover { color: var(--fg1); }
+  .tab.active { color: var(--black); border-bottom-color: var(--red); font-weight: 700; }
+
+  .sect-head { margin-bottom: 22px; }
+  .sect-head .eb { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); }
+  .sect-head h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; margin: 6px 0 4px; }
+  .sect-head p { font-size: 15px; color: var(--fg2); margin: 0; max-width: 640px; line-height: 1.5; }
+
+  .gallery { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+  .frame-wrap { }
+  .frame { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-md); background: #fff; }
+  .frame-label { font-size: 12px; font-weight: 600; color: var(--fg3); margin-top: 10px; letter-spacing: 0.02em; }
+  .frame-label b { color: var(--fg1); font-weight: 700; display: block; font-size: 13px; }
+
+  /* carousel demo */
+  .car-stage { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .car-controls { display: flex; align-items: center; gap: 16px; }
+  .car-btn { width: 46px; height: 46px; border-radius: 999px; border: 1.5px solid var(--border-strong); background: #fff; cursor: pointer; font-size: 20px; color: var(--black); display: flex; align-items: center; justify-content: center; transition: all .15s; }
+  .car-btn:hover { background: var(--black); color: #fff; }
+  .car-dots { display: flex; gap: 7px; }
+  .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--border); cursor: pointer; transition: all .15s; }
+  .dot.on { background: var(--red); width: 26px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="Primitives.jsx"></script>
+<script type="text/babel" src="Pieces.jsx"></script>
+<script type="text/babel">
+const { useState } = React;
+
+// scales a native-size piece into a fixed display width
+function Frame({ nativeW, nativeH, displayW, label, sublabel, children }) {
+  const scale = displayW / nativeW;
+  return (
+    <div className="frame-wrap">
+      <div className="frame" style={{ width: displayW, height: nativeH * scale }}>
+        <div style={{ width: nativeW, height: nativeH, transform: `scale(${scale})`, transformOrigin: "top left" }}>
+          {children}
+        </div>
+      </div>
+      {label && <div className="frame-label"><b>{label}</b>{sublabel}</div>}
+    </div>
+  );
+}
+
+const TABS = ["Feed", "Stories", "Carrusel", "Anuncios", "Email y WhatsApp"];
+
+function CarouselDemo() {
+  const [i, setI] = useState(0);
+  const plates = [
+    <CarouselCover />,
+    <CarouselPlate n="01" title="Sumá textiles" img="../../assets/img-detail-3.webp"
+      body="Una manta de lino o un almohadón con textura cambian la temperatura visual de cualquier sofá." />,
+    <CarouselPlate n="02" title="Luz cálida" img="../../assets/img-nightstand.webp"
+      body="Cambiá la luz fría por una lámpara de fibra natural. El ambiente se siente al instante." />,
+    <CarouselPlate n="03" title="Sumá una planta" img="../../assets/img-coffee-table.webp"
+      body="El verde da vida. Una sola planta grande ordena y llena el espacio sin recargarlo." />,
+    <StatementPost kicker="Cierre" line1="No hace falta" line2="cambiar todo." bg="var(--red)" />,
+  ];
+  return (
+    <div className="car-stage">
+      <Frame nativeW={1080} nativeH={1350} displayW={400}>{plates[i]}</Frame>
+      <div className="car-controls">
+        <button className="car-btn" onClick={() => setI((i - 1 + plates.length) % plates.length)}>‹</button>
+        <div className="car-dots">
+          {plates.map((_, k) => <div key={k} className={"dot" + (k === i ? " on" : "")} onClick={() => setI(k)} />)}
+        </div>
+        <button className="car-btn" onClick={() => setI((i + 1) % plates.length)}>›</button>
+      </div>
+    </div>
+  );
+}
+
+function SectHead({ eb, title, desc }) {
+  return (
+    <div className="sect-head">
+      <div className="eb">{eb}</div>
+      <h1>{title}</h1>
+      <p>{desc}</p>
+    </div>
+  );
+}
+
+function App() {
+  const [tab, setTab] = useState("Feed");
+  return (
+    <div className="app">
+      <header className="top">
+        <div className="brand">
+          <span className="wm">Magnolias<span>.</span></span>
+          <span className="sub">Kit Social</span>
+        </div>
+      </header>
+      <nav className="tabs">
+        {TABS.map(t => (
+          <button key={t} className={"tab" + (t === tab ? " active" : "")} onClick={() => setTab(t)}>{t}</button>
+        ))}
+      </nav>
+
+      {tab === "Feed" && <>
+        <SectHead eb="4:5 · 1080×1350" title="Posts de feed"
+          desc="Producto protagonista con etiqueta comercial, precio y CTA rojo. Y placas statement para contenido de valor en amarillo de alto impacto." />
+        <div className="gallery">
+          <Frame nativeW={1080} nativeH={1350} displayW={400} label="Post producto" sublabel="Oferta + precio + CTA"><FeedPost /></Frame>
+          <Frame nativeW={1080} nativeH={1350} displayW={400} label="Post statement" sublabel="Frase fuerte · amarillo impacto"><StatementPost /></Frame>
+        </div>
+      </>}
+
+      {tab === "Stories" && <>
+        <SectHead eb="9:16 · 1080×1920" title="Stories"
+          desc="Foto a sangre con gradiente de protección, título grande y CTA. Acento amarillo sobre la base oscura." />
+        <div className="gallery">
+          <Frame nativeW={1080} nativeH={1920} displayW={290} label="Story · nuevo ingreso"><Story /></Frame>
+          <Frame nativeW={1080} nativeH={1920} displayW={290} label="Story · alternativa"
+            ><Story img="../../assets/img-tv-console.webp" kicker="Renová el living" title="Orden que se ve lindo" cta="Descubrí más" /></Frame>
+        </div>
+      </>}
+
+      {tab === "Carrusel" && <>
+        <SectHead eb="4:5 · 1080×1350 por placa" title="Carrusel"
+          desc="Portada con hook fuerte → desarrollo simple numerado → cierre claro. Deslizá para recorrer las placas." />
+        <CarouselDemo />
+      </>}
+
+      {tab === "Anuncios" && <>
+        <SectHead eb="1:1 · 1080×1080 · Meta" title="Anuncios"
+          desc="Mensaje legible en menos de 2 segundos. Producto protagonista, hook directo, descuento y CTA rojo sobre bloque negro." />
+        <div className="gallery">
+          <Frame nativeW={1080} nativeH={1080} displayW={420} label="Anuncio · baño"><AdPlate /></Frame>
+          <Frame nativeW={1080} nativeH={1080} displayW={420} label="Anuncio · textiles"
+            ><AdPlate img="../../assets/img-cushion-quote.webp" hook="Textiles que abrigan" benefit="Mantas, fundas y almohadones de fibras naturales" disc="3 cuotas sin interés" cta="Verlos" /></Frame>
+        </div>
+      </>}
+
+      {tab === "Email y WhatsApp" && <>
+        <SectHead eb="Email · banners + WhatsApp" title="Email y WhatsApp"
+          desc="Banner de email prolijo con botón rojo, y placa de WhatsApp liviana y directa con beneficio protagonista." />
+        <div className="gallery">
+          <Frame nativeW={1200} nativeH={520} displayW={640} label="Banner de email"><EmailBanner /></Frame>
+          <Frame nativeW={800} nativeH={800} displayW={360} label="Placa WhatsApp"><WhatsAppCard /></Frame>
+        </div>
+      </>}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

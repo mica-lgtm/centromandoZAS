@@ -21,7 +21,6 @@ emi-email-perfit/
 ├── marcas/
 │   ├── README.md
 │   ├── vitalis-navitas.md
-│   ├── mini-anima.md
 │   ├── simona-shop.md
 │   ├── magnolias-deco.md
 │   ├── juanitas.md

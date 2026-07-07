@@ -1,0 +1,29 @@
+<!-- @dsCard group="Components" viewport="700x250" name="Tarjeta de evento" subtitle="Imagen capsulada, eyebrow, título y CTA" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--niebla); padding: 22px; }
+  .card { background: #fff; border-radius: 24px; box-shadow: var(--shadow-md); overflow: hidden; width: 360px; display: flex; flex-direction: column; }
+  .ph { height: 150px; background-size: cover; background-position: center 30%; }
+  .body { padding: 18px 20px 20px; }
+  .eyebrow { font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--rosa-500); }
+  .title { font-weight: 800; font-size: 22px; color: var(--violeta-900); margin: 6px 0 4px; letter-spacing: -0.01em; }
+  .meta { font-size: 14px; color: var(--gris-500); margin-bottom: 14px; }
+  .cta { display:inline-flex; align-items:center; gap:8px; font-weight: 700; font-size: 14px; color: var(--bordo-700); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="ph" style="background-image:url('../assets/fotos/erj-19.png')"></div>
+    <div class="body">
+      <div class="eyebrow">Encuentro de jóvenes</div>
+      <div class="title">Noche de Adoración</div>
+      <div class="meta">Viernes 20 · 20:00 h · Auditorio central</div>
+      <span class="cta">Reservá tu lugar →</span>
+    </div>
+  </div>
+</body>
+</html>

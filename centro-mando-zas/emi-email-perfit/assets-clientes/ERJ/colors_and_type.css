@@ -1,0 +1,365 @@
+/* ===========================================================================
+   ERJ — El Rey Jesús · Iglesia Cristiana
+   Typography + Color Foundations
+   Font: Montserrat (self-hosted, full weight range)
+   =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   @font-face — Montserrat (self-hosted TTF/OTF)
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-ThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-ExtraLightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-RegularItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-SemiBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Montserrat-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Montserrat-BlackItalic.ttf") format("truetype");
+}
+
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
+:root {
+  /* ---- Brand core palette --------------------------------------------- */
+  --erj-violeta:    #21014d; /* Violeta profundo — primario, titulares, fondos */
+  --erj-bordo:      #72113e; /* Bordó — secundario, degradados, acentos cálidos */
+  --erj-rosa:       #f35980; /* Rosado — acento, CTAs, detalles, vitalidad */
+
+  /* ---- Violeta scale (primary) ---------------------------------------- */
+  --violeta-950: #14002f;
+  --violeta-900: #21014d; /* base */
+  --violeta-800: #2f0a63;
+  --violeta-700: #3f1a7a;
+  --violeta-600: #533394;
+  --violeta-500: #6b4faf;
+  --violeta-400: #8b74c4;
+  --violeta-300: #b09ed8;
+  --violeta-200: #d2c6ea;
+  --violeta-100: #e9e3f4;
+  --violeta-50:  #f5f2fa;
+
+  /* ---- Bordó scale (secondary / warm) --------------------------------- */
+  --bordo-900: #4d0a29;
+  --bordo-800: #5e0e33;
+  --bordo-700: #72113e; /* base */
+  --bordo-600: #8a1a4d;
+  --bordo-500: #a3275e;
+  --bordo-400: #c04576;
+  --bordo-300: #d97a9c;
+  --bordo-200: #ecb3c7;
+  --bordo-100: #f6dde6;
+
+  /* ---- Rosa scale (accent) -------------------------------------------- */
+  --rosa-700: #c5305c;
+  --rosa-600: #e1426f;
+  --rosa-500: #f35980; /* base */
+  --rosa-400: #f77a99;
+  --rosa-300: #fa9db4;
+  --rosa-200: #fcc4d2;
+  --rosa-100: #fde4ea;
+  --rosa-50:  #fef3f6;
+
+  /* ---- Neutrals (warm off-whites & inks) ------------------------------ */
+  --blanco:    #ffffff;
+  --crema:     #fbf8fc; /* warm light background */
+  --niebla:    #f4eff7; /* soft violet-tinted surface */
+  --gris-100:  #ece7f0;
+  --gris-200:  #d8d1de;
+  --gris-300:  #b8afc1;
+  --gris-400:  #8d8499;
+  --gris-500:  #645b70;
+  --gris-600:  #443c52;
+  --tinta:     #1c0d31; /* near-black text on light, violet-tinted */
+
+  /* ---- Semantic surface / text ---------------------------------------- */
+  --bg:           var(--crema);
+  --bg-elevated:  var(--blanco);
+  --bg-violeta:   var(--violeta-900);
+  --bg-bordo:     var(--bordo-700);
+
+  --fg1: var(--tinta);        /* primary text on light */
+  --fg2: var(--gris-500);     /* secondary text on light */
+  --fg3: var(--gris-400);     /* tertiary / captions */
+  --fg-on-dark1: #ffffff;     /* primary text on violet/bordó */
+  --fg-on-dark2: #d2c6ea;     /* secondary text on dark */
+
+  --accent:       var(--rosa-500);
+  --accent-press: var(--rosa-700);
+  --link:         var(--bordo-600);
+
+  --border:       var(--gris-200);
+  --border-soft:  var(--gris-100);
+  --border-dark:  rgba(255,255,255,0.16);
+
+  /* ---- Signature gradients --------------------------------------------- */
+  --grad-bordo-violeta: linear-gradient(135deg, #72113e 0%, #21014d 100%); /* @kind color */
+  --grad-rosa-bordo:    linear-gradient(135deg, #f35980 0%, #72113e 100%); /* @kind color */
+  --grad-violeta-noche: linear-gradient(160deg, #2f0a63 0%, #14002f 100%); /* @kind color */
+  --grad-amanecer:      linear-gradient(120deg, #f35980 0%, #a3275e 45%, #21014d 100%); /* @kind color */
+
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+  --font-sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+
+  /* weights */
+  --w-thin: 100;       /* @kind font */
+  --w-extralight: 200; /* @kind font */
+  --w-light: 300;      /* @kind font */
+  --w-regular: 400;    /* @kind font */
+  --w-medium: 500;     /* @kind font */
+  --w-semibold: 600;   /* @kind font */
+  --w-bold: 700;       /* @kind font */
+  --w-extrabold: 800;  /* @kind font */
+  --w-black: 900;      /* @kind font */
+
+  /* type scale (modular ~1.25) */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   22px;
+  --text-xl:   28px;
+  --text-2xl:  36px;
+  --text-3xl:  46px;
+  --text-4xl:  60px;
+  --text-5xl:  78px;
+  --text-6xl:  104px;
+
+  --leading-tight: 1.04;   /* @kind font */
+  --leading-snug: 1.18;    /* @kind font */
+  --leading-normal: 1.5;   /* @kind font */
+  --leading-relaxed: 1.65; /* @kind font */
+
+  --tracking-tighter: -0.03em; /* @kind font */
+  --tracking-tight: -0.015em;  /* @kind font */
+  --tracking-normal: 0;        /* @kind font */
+  --tracking-wide: 0.04em;     /* @kind font */
+  --tracking-wider: 0.12em;    /* @kind font */
+  --tracking-widest: 0.22em;   /* @kind font */
+
+  /* ==========================================================================
+     SPACING · RADII · SHADOWS
+     ========================================================================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(33,1,77,0.06), 0 1px 3px rgba(33,1,77,0.08);
+  --shadow-md: 0 4px 12px rgba(33,1,77,0.08), 0 2px 4px rgba(33,1,77,0.06);
+  --shadow-lg: 0 12px 32px rgba(33,1,77,0.12), 0 4px 8px rgba(33,1,77,0.06);
+  --shadow-xl: 0 24px 60px rgba(33,1,77,0.18), 0 8px 16px rgba(33,1,77,0.08);
+  --shadow-rosa: 0 10px 30px rgba(243,89,128,0.35);
+  --shadow-violeta: 0 14px 40px rgba(33,1,77,0.30);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast: 140ms; /* @kind other */
+  --dur-base: 240ms; /* @kind other */
+  --dur-slow: 420ms; /* @kind other */
+}
+
+/* ==========================================================================
+   SEMANTIC TYPE CLASSES
+   ========================================================================== */
+.erj-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--w-bold);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.erj-display {
+  font-family: var(--font-display);
+  font-weight: var(--w-black);
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.erj-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--w-extrabold);
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.erj-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.erj-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--w-bold);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--fg1);
+}
+.erj-lead {
+  font-family: var(--font-sans);
+  font-weight: var(--w-regular);
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+  color: var(--fg2);
+}
+.erj-body {
+  font-family: var(--font-sans);
+  font-weight: var(--w-regular);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--fg1);
+}
+.erj-small {
+  font-family: var(--font-sans);
+  font-weight: var(--w-medium);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--fg2);
+}
+.erj-label {
+  font-family: var(--font-sans);
+  font-weight: var(--w-semibold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg3);
+}

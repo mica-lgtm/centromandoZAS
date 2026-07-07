@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Botones" subtitle="Pill: primario, sale, ghost, light" viewport="700x150" --><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font);background:var(--blanco);padding:22px 28px;color:var(--fg1);box-sizing:border-box}
+  .lead{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 16px}
+  .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .btn{font-family:var(--font);font-weight:700;font-size:16px;border:none;border-radius:999px;padding:14px 28px;cursor:pointer}
+  .primary{background:var(--coral);color:#fff}
+  .dark{background:var(--tinta);color:#fff}
+  .soft{background:var(--rosa);color:var(--tinta)}
+  .ghost{background:transparent;color:var(--coral);border:2px solid var(--coral);padding:12px 26px}
+  .light{background:#fff;color:var(--tinta);box-shadow:var(--sh-sm)}
+  .arrow{margin-left:8px}
+</style></head>
+<body>
+  <p class="lead">Botones · Pill</p>
+  <div class="row">
+    <button class="btn primary">Conseguilo ahora<span class="arrow">→</span></button>
+    <button class="btn dark">Ver colección</button>
+    <button class="btn soft">Lo quiero</button>
+    <button class="btn ghost">Más info</button>
+    <button class="btn light">Pedí por WhatsApp</button>
+  </div>
+</body></html>

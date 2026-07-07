@@ -1,0 +1,55 @@
+<!-- @dsCard group="Brand" viewport="1280x720" name="Plantillas de slides" subtitle="Título, versículo, sección y evento — 16:9" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERJ · Slides</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--niebla); font-family: var(--font-sans); }
+  .scaler { display: flex; justify-content: center; padding: 24px; }
+  .deck { display: flex; flex-direction: column; gap: 24px; }
+  .frame { transform-origin: top left; box-shadow: var(--shadow-xl); border-radius: 14px; overflow: hidden; }
+</style>
+</head>
+<body>
+  <div class="scaler"><div class="deck" id="deck"></div></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../assets/photo-engine.js"></script>
+  <script type="text/babel" src="Slides.jsx"></script>
+  <script type="text/babel">
+    function ScaledSlide({ children }) {
+      const ref = React.useRef(null);
+      const [scale, setScale] = React.useState(1);
+      React.useLayoutEffect(() => {
+        function fit() {
+          const avail = Math.min(window.innerWidth - 48, 1100);
+          setScale(avail / 1280);
+        }
+        fit();
+        window.addEventListener("resize", fit);
+        return () => window.removeEventListener("resize", fit);
+      }, []);
+      return (
+        <div style={{ width: 1280 * scale, height: 720 * scale }}>
+          <div className="frame" style={{ transform: `scale(${scale})`, width: 1280, height: 720 }}>{children}</div>
+        </div>
+      );
+    }
+    function Deck() {
+      return (
+        <>
+          <ScaledSlide><TitleSlide photo="../assets/fotos/erj-19.png" /></ScaledSlide>
+          <ScaledSlide><VerseSlide /></ScaledSlide>
+          <ScaledSlide><SectionSlide /></ScaledSlide>
+          <ScaledSlide><EventSlide photo="../assets/fotos/erj-65.png" /></ScaledSlide>
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("deck")).render(<Deck />);
+  </script>
+</body>
+</html>

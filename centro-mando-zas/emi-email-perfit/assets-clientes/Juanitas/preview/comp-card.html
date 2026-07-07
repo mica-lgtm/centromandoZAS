@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Card de producto" subtitle="Foto real + precio + badge" viewport="700x210" --><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{min-height:100vh;box-sizing:border-box}
+  body{font-family:var(--font);background:var(--rosa-nube);padding:22px 28px;color:var(--fg1);display:flex;gap:18px}
+  .lead{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--bordo);margin:0 0 6px}
+  .sub{font-size:13px;color:var(--fg2);max-width:200px;margin:0}
+  .card{width:210px;background:#fff;border-radius:24px;box-shadow:var(--sh-md);overflow:hidden}
+  .ph{height:150px;background:repeating-linear-gradient(45deg,#F0E6DD,#F0E6DD 12px,#F6EFE9 12px,#F6EFE9 24px);display:flex;align-items:center;justify-content:center;color:var(--gris);font-size:12px;font-weight:600;position:relative}
+  .tag{position:absolute;top:12px;left:12px;background:var(--rojo);color:#fff;font-weight:800;font-size:13px;padding:5px 12px;border-radius:999px}
+  .body{padding:14px 16px 18px}
+  .name{font-weight:700;font-size:17px;margin:0}
+  .desc{font-size:13px;color:var(--fg2);margin:3px 0 10px}
+  .price{display:flex;align-items:baseline;gap:8px}
+  .now{font-weight:900;font-size:22px;color:var(--bordo)}
+  .was{font-weight:600;font-size:14px;color:var(--fg3);text-decoration:line-through}
+</style></head>
+<body>
+  <div>
+    <p class="lead">Card de producto</p>
+    <p class="sub">Foto real, esquinas 24px, sombra cálida. Badge de oferta arriba a la izquierda.</p>
+  </div>
+  <div class="card">
+    <div class="ph"><span class="tag">30% OFF</span>foto de producto</div>
+    <div class="body">
+      <p class="name">Pack x3 Bombis</p>
+      <p class="desc">Algodón suave · talles S a XL</p>
+      <div class="price"><span class="now">$8.900</span><span class="was">$12.900</span></div>
+    </div>
+  </div>
+</body></html>

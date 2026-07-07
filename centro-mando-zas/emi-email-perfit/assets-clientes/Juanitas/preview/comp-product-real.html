@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{min-height:100vh;box-sizing:border-box;font-family:var(--font);background:var(--rosa-soft);padding:22px 28px;color:var(--tinta);display:flex;gap:22px;align-items:center}
+  .lead{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 6px}
+  .sub{font-size:13px;color:var(--fg2);max-width:210px;margin:0}
+  .card{width:230px;background:#fff;border-radius:24px;box-shadow:var(--sh-md);overflow:hidden}
+  .ph{position:relative;height:230px;background:#f3ece6}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .badge{position:absolute;top:12px;left:12px;background:var(--coral);color:#fff;font-weight:800;font-size:13px;padding:6px 13px;border-radius:999px}
+  .free{position:absolute;top:12px;right:12px;background:var(--azul);color:#fff;font-weight:700;font-size:11px;padding:6px 11px;border-radius:999px}
+  .body{padding:14px 16px 18px}
+  .name{font-weight:700;font-size:16px;margin:0;letter-spacing:-.01em}
+  .desc{font-size:12px;color:var(--fg2);margin:3px 0 10px}
+  .price{display:flex;align-items:baseline;gap:8px}
+  .now{font-weight:900;font-size:23px;color:var(--coral)}
+  .was{font-weight:600;font-size:13px;color:var(--fg3);text-decoration:line-through}
+</style></head>
+<body>
+  <div>
+    <p class="lead">Card de producto</p>
+    <p class="sub">Foto real, badge de OFF, envío gratis, precio actual + tachado. Esquinas 24px, sombra suave.</p>
+  </div>
+  <div class="card">
+    <div class="ph">
+      <img src="../assets/productos/colaless-pack-hero.webp" alt="Pack x3">
+      <span class="badge">-22% OFF</span>
+      <span class="free">Envío gratis</span>
+    </div>
+    <div class="body">
+      <p class="name">Colaless Tiro Alto Algodón</p>
+      <p class="desc">Pack x3 · talles 2 a 7</p>
+      <div class="price"><span class="now">$25.900</span><span class="was">$33.000</span></div>
+    </div>
+  </div>
+</body></html>

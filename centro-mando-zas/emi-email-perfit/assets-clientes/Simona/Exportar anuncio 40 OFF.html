@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIMONA · Exportar anuncio 40 OFF</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
+<style>
+  :root{
+    --ink:#2a2a2a; --cream:#f7f1ea; --sand:#efe6dc; --clay:#e4d6ca;
+    --taupe:#70625f; --blush:#fbbfaf; --blush-soft:#fdded5; --blush-deep:#e9a392;
+    --mocha:#9a877f; --white:#fff;
+    --disp:"Red Hat Display", system-ui, sans-serif;
+    --txt:"Red Hat Text","Red Hat Display",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--simona-stone); font-family:var(--txt); color:var(--ink);}
+  .wrap{max-width:820px; margin:0 auto; padding:48px 24px 80px;}
+  .kicker{font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; opacity:.62;}
+  h1{font-family:var(--disp); font-weight:900; font-size:34px; letter-spacing:-0.02em; margin:8px 0 6px;}
+  .lede{opacity:.74; font-size:15px; line-height:1.5; max-width:600px;}
+  .btn{margin-top:24px; display:inline-flex; align-items:center; gap:12px; border:0; cursor:pointer; background:var(--ink); color:var(--cream); font-family:var(--txt); font-weight:700; font-size:16px; letter-spacing:.03em; padding:18px 34px; border-radius:999px;}
+  .btn:disabled{opacity:.5; cursor:default;}
+  .status{margin-top:16px; font-size:14px; opacity:.7; min-height:20px;}
+  .grid{margin-top:40px; display:flex; gap:18px; flex-wrap:wrap;}
+  .cell{background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 8px 24px rgba(42,42,42,.14);}
+  .cell .ph{position:relative; background:#f0e8e0;}
+  .cell .sc{transform-origin:top left;}
+  .cell .lbl{padding:10px 12px; font-size:11.5px;}
+  .cell .lbl b{font-family:var(--disp); font-weight:800; font-size:13px; display:block;}
+  .cell .lbl span{opacity:.6;}
+  #stage{position:fixed; left:-99999px; top:0;}
+
+  /* ad primitives */
+  .ad{position:relative; overflow:hidden; font-family:var(--txt); color:var(--cream);}
+  .ad img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .grad{position:absolute; inset:0;}
+  .eyebrow{font-family:var(--txt); font-weight:800; text-transform:uppercase; letter-spacing:.18em; color:var(--blush);}
+  .hook{font-family:var(--disp); font-weight:900; letter-spacing:-0.03em; line-height:.9; color:var(--cream);}
+  .hook .num{display:block;}
+  .hook .sweaters{color:var(--blush);}
+  .conds{display:flex; flex-direction:column;}
+  .cond{display:flex; align-items:center; gap:14px; font-weight:600; color:var(--cream);}
+  .cond .dot{flex:none; border-radius:999px; background:var(--blush);}
+  .cond b{font-weight:800;}
+  .pill{display:inline-flex; align-items:center; gap:14px; background:var(--cream); color:var(--ink);
+        font-family:var(--txt); font-weight:800; text-transform:uppercase; letter-spacing:.04em; border-radius:999px;}
+  .wm{font-family:var(--disp); font-weight:900; letter-spacing:-0.01em; color:var(--cream);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Campaña Sweaters · Hasta 40% OFF</div>
+  <h1>Exportar anuncio</h1>
+  <div class="lede">Las 3 placas del anuncio original a tamaño real: Cuadrado 1080×1080, Vertical 1080×1920 y Horizontal 1200×628. Descargá todo en un ZIP con PNG nativos.</div>
+  <button class="btn" id="dl">Descargar PNGs (ZIP)</button>
+  <div class="status" id="status"></div>
+  <div class="grid" id="grid"></div>
+</div>
+<div id="stage"></div>
+
+<!-- ===== Native-size ad templates (cloned at export time) ===== -->
+<template id="tpl-sq">
+  <div class="ad" style="width:1080px; height:1080px; background:var(--ink);">
+    <img class="bg" src="assets/simona-look-02.webp" alt="Sweater SIMONA" style="object-position:center 22%;">
+    <div class="grad" style="background:linear-gradient(180deg, rgba(20,16,15,.30) 0%, rgba(20,16,15,0) 30%, rgba(20,16,15,0) 42%, rgba(20,16,15,.86) 84%);"></div>
+    <div style="position:absolute; left:60px; right:60px; bottom:60px;">
+      <div class="eyebrow" style="font-size:26px;">Solo el finde largo</div>
+      <div class="hook" style="font-size:128px; margin-top:14px;">
+        <span class="num">Hasta 40%</span>
+        <span class="num sweaters">OFF en sweaters</span>
+      </div>
+      <div class="conds" style="gap:14px; margin-top:30px;">
+        <div class="cond" style="font-size:27px;"><span class="dot" style="width:11px;height:11px;"></span>15% OFF en toda la categoría <b>Invierno</b></div>
+        <div class="cond" style="font-size:27px;"><span class="dot" style="width:11px;height:11px;"></span><b>12 cuotas</b> sin interés</div>
+      </div>
+      <div style="margin-top:38px;">
+        <span class="pill" style="font-size:28px; padding:24px 46px;">Comprar ahora</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-vt">
+  <div class="ad" style="width:1080px; height:1920px; background:var(--ink);">
+    <img class="bg" src="assets/simona-look-02.webp" alt="Sweater SIMONA" style="object-position:center 18%;">
+    <div class="grad" style="background:linear-gradient(180deg, rgba(20,16,15,.55) 0%, rgba(20,16,15,.05) 22%, rgba(20,16,15,0) 40%, rgba(20,16,15,.55) 64%, rgba(20,16,15,.92) 90%);"></div>
+    <div style="position:absolute; left:70px; right:70px; bottom:430px;">
+      <div class="eyebrow" style="font-size:30px;">Solo el finde largo</div>
+      <div class="hook" style="font-size:150px; margin-top:18px;">
+        <span class="num">Hasta 40%</span>
+        <span class="num sweaters">OFF en<br>sweaters</span>
+      </div>
+      <div class="conds" style="gap:18px; margin-top:40px;">
+        <div class="cond" style="font-size:32px;"><span class="dot" style="width:13px;height:13px;"></span>15% OFF en toda la categoría <b>Invierno</b></div>
+        <div class="cond" style="font-size:32px;"><span class="dot" style="width:13px;height:13px;"></span><b>12 cuotas</b> sin interés</div>
+      </div>
+    </div>
+    <div style="position:absolute; left:70px; right:70px; bottom:300px;">
+      <span class="pill" style="font-size:33px; padding:28px 56px;">Comprar ahora</span>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-hz">
+  <div class="ad" style="width:1200px; height:628px; background:var(--cream); display:flex; color:var(--ink);">
+    <div style="flex:1; padding:56px 56px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="display:flex; gap:10px; align-items:center; margin-bottom:18px;">
+        <span class="wm" style="color:var(--ink); font-size:30px;">SIMONA</span>
+      </div>
+      <div class="eyebrow" style="color:var(--taupe); font-size:19px;">Solo el finde largo</div>
+      <div class="hook" style="color:var(--ink); font-size:88px; margin-top:12px; line-height:.86;">
+        <span class="num">Hasta 40%</span>
+        <span class="num" style="color:var(--blush-deep);">OFF en sweaters</span>
+      </div>
+      <div class="conds" style="gap:11px; margin-top:24px;">
+        <div class="cond" style="color:var(--ink); font-size:21px;"><span class="dot" style="width:9px;height:9px; background:var(--blush-deep);"></span>15% OFF en toda la categoría <b>Invierno</b></div>
+        <div class="cond" style="color:var(--ink); font-size:21px;"><span class="dot" style="width:9px;height:9px; background:var(--blush-deep);"></span><b>12 cuotas</b> sin interés</div>
+      </div>
+      <div style="margin-top:30px;">
+        <span class="pill" style="background:var(--ink); color:var(--cream); font-size:21px; padding:18px 36px;">Comprar ahora</span>
+      </div>
+    </div>
+    <div style="width:440px; position:relative; flex:none;">
+      <img src="assets/simona-look-02.webp" alt="Sweater SIMONA" style="width:100%; height:100%; object-fit:cover; object-position:center 18%;">
+    </div>
+  </div>
+</template>
+
+<script>
+  var ITEMS = [
+    { id:'sq', w:1080, h:1080, name:'cuadrado-1080x1080' },
+    { id:'vt', w:1080, h:1920, name:'vertical-1080x1920' },
+    { id:'hz', w:1200, h:628,  name:'horizontal-1200x628' }
+  ];
+  var stage = document.getElementById('stage');
+
+  function nodeFor(id){
+    var tpl = document.getElementById('tpl-' + id);
+    return tpl.content.firstElementChild.cloneNode(true);
+  }
+
+  // thumbnails
+  (function buildThumbs(){
+    var grid = document.getElementById('grid');
+    ITEMS.forEach(function(it){
+      var s = Math.min(150/it.w, 200/it.h);
+      var cell = document.createElement('div'); cell.className='cell';
+      var ph = document.createElement('div'); ph.className='ph';
+      ph.style.width=(it.w*s)+'px'; ph.style.height=(it.h*s)+'px';
+      var sc = document.createElement('div'); sc.className='sc';
+      sc.style.width=it.w+'px'; sc.style.height=it.h+'px'; sc.style.transform='scale('+s+')';
+      sc.appendChild(nodeFor(it.id));
+      ph.appendChild(sc); cell.appendChild(ph);
+      var lbl=document.createElement('div'); lbl.className='lbl';
+      lbl.innerHTML='<b>'+it.id+'</b><span>'+it.name+'</span>';
+      cell.appendChild(lbl); grid.appendChild(cell);
+    });
+  })();
+
+  function renderNative(id){
+    return new Promise(function(resolve){
+      stage.innerHTML='';
+      var n = nodeFor(id);
+      n.id='shot';
+      stage.appendChild(n);
+      // wait for images inside to load, then a tick
+      var imgs = n.querySelectorAll('img');
+      var pending = imgs.length;
+      function go(){ setTimeout(function(){ resolve(n); }, 250); }
+      if(!pending) return go();
+      imgs.forEach(function(im){
+        if(im.complete) { if(--pending===0) go(); }
+        else { im.addEventListener('load', function(){ if(--pending===0) go(); });
+               im.addEventListener('error', function(){ if(--pending===0) go(); }); }
+      });
+    });
+  }
+
+  async function toPng(it){
+    var node = await renderNative(it.id);
+    return await htmlToImage.toPng(node, { width: it.w, height: it.h, pixelRatio: 1 });
+  }
+
+  var statusEl = document.getElementById('status');
+  var btn = document.getElementById('dl');
+  btn.addEventListener('click', async function(){
+    btn.disabled = true;
+    var zip = new JSZip();
+    try {
+      for (var i=0; i<ITEMS.length; i++){
+        var it = ITEMS[i];
+        statusEl.textContent = 'Generando '+(i+1)+'/3 · '+it.name+'…';
+        var dataUrl = await toPng(it);
+        zip.file('simona-sweaters-40off-'+it.name+'.png', dataUrl.split(',')[1], { base64:true });
+      }
+      statusEl.textContent = 'Comprimiendo ZIP…';
+      var blob = await zip.generateAsync({ type:'blob' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href=url; a.download='SIMONA-anuncio-sweaters-40off.zip';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+      statusEl.textContent = '✓ Listo. Se descargaron las 3 placas en PNG.';
+    } catch(e){ statusEl.textContent = 'Error: ' + e.message; }
+    finally { btn.disabled = false; }
+  });
+</script>
+</body>
+</html>

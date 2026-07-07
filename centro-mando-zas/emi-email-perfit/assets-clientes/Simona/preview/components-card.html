@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Product card" subtitle="E-commerce product tile" viewport="700x330" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--bg); font-family: var(--font-text); }
+  .wrap { padding: 24px 30px; display:flex; gap:18px; }
+  .card { width:200px; background:var(--simona-white); border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-md); }
+  .ph { position:relative; aspect-ratio:4/5; background-size:cover; background-position:center top; }
+  .tag { position:absolute; top:10px; left:10px; background:var(--simona-ink); color:var(--simona-cream); font-weight:700; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:5px 10px; border-radius:6px; }
+  .body { padding:13px 15px 16px; }
+  .nm { font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--fg1); letter-spacing:-0.01em; }
+  .pr { font-weight:700; font-size:14px; color:var(--fg1); margin-top:6px; }
+  .pr span { color:var(--fg3); font-weight:500; font-size:12px; }
+  .cuo { font-size:11.5px; color:var(--fg2); margin-top:3px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="ph" style="background-image:url('../assets/simona-look-01.webp')"><span class="tag">NUEVO</span></div>
+      <div class="body">
+        <div class="nm">Campera shearling</div>
+        <div class="pr">$89.900</div>
+        <div class="cuo">3 cuotas de $29.966</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ph" style="background-image:url('../assets/simona-look-03.webp')"><span class="tag" style="background:var(--accent);color:var(--simona-ink)">−30%</span></div>
+      <div class="body">
+        <div class="nm">Tapado de cuero</div>
+        <div class="pr">$72.000 <span style="text-decoration:line-through">$103.000</span></div>
+        <div class="cuo">Talles del 1 al 4</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,8 +1,15 @@
 # Juanitas
 
+## Design system
+
+**Leer antes de arrancar cualquier email de Juanitas:**
+`/Users/mica/Desktop/ZAS-AGENT/madame-social-content-manager/assets-clientes/Juanitas/README.md`
+
+Incluye: paleta, tipografía, fotografía disponible en `assets/` y reglas visuales de la marca.
+
 ## Estado de contexto
 
-Archivo inicial creado para Emi. Antes de trabajar esta marca, leer el contexto disponible en el proyecto principal de ZAS y completar este archivo con información validada.
+Archivo inicial. Design system completo disponible en madame (ver arriba).
 
 ## Tono de voz
 
@@ -19,6 +26,10 @@ Pendiente de completar.
 ## Promociones confirmadas
 
 No usar promociones si no están confirmadas para la campaña actual.
+
+## Beneficios confirmados
+
+- Envío gratis a partir de $50.000.
 
 ## Links importantes
 

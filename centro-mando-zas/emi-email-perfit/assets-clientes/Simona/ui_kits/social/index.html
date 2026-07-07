@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- @dsCard group="UI Kit — Social" name="Social placas kit" subtitle="Feed, square, story, ad — interactive gallery" viewport="940x620" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIMONA · Placas para redes</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  body { margin: 0; background: var(--bg); font-family: var(--font-text); color: var(--fg1); }
+  .top { padding: 40px 48px 8px; }
+  .kicker { font-weight:700; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--fg2); }
+  h1 { font-family:var(--font-display); font-weight:900; font-size:40px; letter-spacing:-0.02em; margin:8px 0 6px; }
+  .lede { color:var(--fg2); font-size:15px; max-width:620px; }
+  .tabs { display:flex; gap:8px; padding: 18px 48px 0; flex-wrap:wrap; }
+  .tab { font-weight:600; font-size:13px; padding:9px 18px; border-radius:999px; border:1.5px solid var(--line-strong); background:transparent; color:var(--fg1); cursor:pointer; }
+  .tab.on { background:var(--btn-bg); color:var(--btn-fg); border-color:var(--btn-bg); }
+  .stage { padding: 28px 48px 64px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start; }
+  .frame { }
+  .frame .lbl { font-size:12px; color:var(--fg3); margin-top:14px; letter-spacing:.02em; }
+  .frame .lbl b { color:var(--fg1); font-weight:700; }
+  .holder { border-radius:18px; overflow:hidden; box-shadow:var(--shadow-md); background:#fff; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="Placas.jsx"></script>
+  <script type="text/babel">
+    const { useState } = React;
+
+    // [native width, native height, scale, label, sublabel, Component]
+    const FORMATS = {
+      feed:   { w:1080, h:1350, label:'Feed orgánico', sub:'1080 × 1350 · IG/FB', C: ()=> <FeedPlaca img={5}/> },
+      square: { w:1080, h:1080, label:'Cuadrado',       sub:'1080 × 1080', C: ()=> <SquarePlaca img={1}/> },
+      story:  { w:1080, h:1920, label:'Historia / Reel', sub:'1080 × 1920 · zona segura', C: ()=> <StoryPlaca img={3}/> },
+      ad:     { w:1200, h:628,  label:'Ad horizontal',  sub:'1200 × 628', C: ()=> <AdPlaca img={6}/> },
+    };
+
+    function Frame({ fmt, scale }) {
+      const f = FORMATS[fmt];
+      return (
+        <div className="frame">
+          <div className="holder" style={{ width: f.w*scale, height: f.h*scale }}>
+            <div style={{ width:f.w, height:f.h, transform:`scale(${scale})`, transformOrigin:'top left' }}>
+              <f.C/>
+            </div>
+          </div>
+          <div className="lbl"><b>{f.label}</b> · {f.sub}</div>
+        </div>
+      );
+    }
+
+    function App() {
+      const [view, setView] = useState('all');
+      const order = ['feed','square','story','ad'];
+      const shown = view === 'all' ? order : [view];
+      // scale each format to a comfortable preview height band
+      const scaleFor = (fmt) => {
+        const f = FORMATS[fmt];
+        const cap = fmt === 'story' ? 620 : (fmt === 'ad' ? 300 : 540);
+        return Math.min(cap / f.h, 460 / f.w);
+      };
+      return (
+        <div>
+          <div className="top">
+            <div className="kicker">UI Kit · Redes</div>
+            <h1>Placas para redes</h1>
+            <div className="lede">Plantillas comerciales con jerarquía hook → producto → info → CTA. Fotografía real de campaña, paleta cálida y mucho aire. Cambiá de formato abajo.</div>
+          </div>
+          <div className="tabs">
+            <button className={'tab'+(view==='all'?' on':'')} onClick={()=>setView('all')}>Todos</button>
+            {order.map(k => <button key={k} className={'tab'+(view===k?' on':'')} onClick={()=>setView(k)}>{FORMATS[k].label}</button>)}
+          </div>
+          <div className="stage">
+            {shown.map(k => <Frame key={k} fmt={k} scale={scaleFor(k)} />)}
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>

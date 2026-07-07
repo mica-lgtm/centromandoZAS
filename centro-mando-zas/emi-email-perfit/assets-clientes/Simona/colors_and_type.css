@@ -1,0 +1,193 @@
+/* ============================================================
+   SIMONA — Colors & Type foundations
+   Marca de moda femenina argentina · estética editorial, cálida, limpia
+   ============================================================ */
+
+/* ----- Self-hosted display face (provided by brand) ----- */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-Light.ttf") format("truetype");
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-Italic.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-Medium.ttf") format("truetype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-SemiBold.ttf") format("truetype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-ExtraBold.ttf") format("truetype");
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-Black.ttf") format("truetype");
+  font-weight: 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-BlackItalic.ttf") format("truetype");
+  font-weight: 900; font-style: italic; font-display: swap;
+}
+
+/* Body / UI face — Red Hat Text was specified by the brand but no files
+   were provided, so it is loaded from Google Fonts. Self-host if needed. */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+:root {
+  /* ---------- BRAND PALETTE ---------- */
+  --simona-taupe:      #70625f;  /* taupe / gris cálido — color firma */
+  --simona-blush:      #fbbfaf;  /* rosa cálido / piel — acento */
+  --simona-ink:        #2a2a2a;  /* negro suave — texto y fondos oscuros */
+  --simona-white:      #ffffff;
+
+  /* Warm neutrals (derived, harmonious with taupe) */
+  --simona-cream:      #f7f1ea;  /* off-white cálido — fondo principal */
+  --simona-sand:       #efe6dc;  /* bloque secundario claro */
+  --simona-clay:       #e4d6ca;  /* bloque neutro medio-claro */
+  --simona-stone:      #c9bab0;  /* neutro medio */
+  --simona-mocha:      #9a877f;  /* taupe claro */
+  --simona-blush-soft: #fdded5;  /* blush tenue para fondos */
+  --simona-blush-deep: #e9a392;  /* blush para hover / detalle */
+
+  /* ---------- SEMANTIC ROLES ---------- */
+  --bg:            var(--simona-cream);
+  --bg-alt:        var(--simona-sand);
+  --bg-block:      var(--simona-clay);
+  --bg-dark:       var(--simona-ink);
+
+  --fg1:           var(--simona-ink);     /* texto principal */
+  --fg2:           var(--simona-taupe);   /* texto secundario */
+  --fg3:           var(--simona-mocha);   /* texto terciario / metadatos */
+  --fg-on-dark:    var(--simona-cream);   /* texto sobre fondo oscuro */
+  --fg-on-dark-2:  #b9ada6;
+
+  --accent:        var(--simona-blush);
+  --accent-deep:   var(--simona-blush-deep);
+  --line:          #e2d7cd;               /* hairlines / divisores */
+  --line-strong:   #cbbcb0;
+
+  --btn-fg:        var(--simona-cream);
+  --btn-bg:        var(--simona-ink);
+  --btn-bg-hover:  #3a3836;
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: "Red Hat Display", system-ui, sans-serif; /* títulos */
+  --font-text:    "Red Hat Text", "Red Hat Display", system-ui, sans-serif; /* cuerpo, UI, CTA */
+
+  /* ---------- TYPE SCALE (display) ---------- */
+  --t-display:  clamp(48px, 7vw, 88px); /* @kind spacing */ /* hero / hook */
+  --t-h1:       clamp(36px, 4.5vw, 56px); /* @kind spacing */
+  --t-h2:       clamp(28px, 3vw, 38px); /* @kind spacing */
+  --t-h3:       22px;
+  --t-body-lg:  18px;
+  --t-body:     16px;
+  --t-small:    14px;
+  --t-micro:    12px;
+
+  /* tracking */
+  --track-tight:  -0.02em;
+  --track-normal: 0; /* @kind spacing */
+  --track-label:  0.14em;  /* eyebrows / labels en mayúsculas */
+
+  /* ---------- RADII ---------- */
+  --r-sm:   8px;
+  --r-md:   14px;
+  --r-lg:   22px;
+  --r-xl:   32px;
+  --r-pill: 999px;
+
+  /* ---------- SHADOWS (suaves, nunca duras) ---------- */
+  --shadow-sm: 0 1px 2px rgba(42,42,42,.05), 0 2px 6px rgba(42,42,42,.04);
+  --shadow-md: 0 6px 20px rgba(112,98,95,.10), 0 2px 6px rgba(42,42,42,.05);
+  --shadow-lg: 0 20px 50px rgba(112,98,95,.16);
+
+  /* ---------- SPACING (escala base 4) ---------- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT DEFAULTS
+   ============================================================ */
+.simona-display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--t-display);
+  line-height: .98;
+  letter-spacing: var(--track-tight);
+  color: var(--fg1);
+  text-wrap: balance;
+}
+h1, .simona-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--t-h1);
+  line-height: 1.04;
+  letter-spacing: var(--track-tight);
+  color: var(--fg1);
+}
+h2, .simona-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--t-h2);
+  line-height: 1.08;
+  letter-spacing: var(--track-tight);
+  color: var(--fg1);
+}
+h3, .simona-h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--t-h3);
+  line-height: 1.2;
+  color: var(--fg1);
+}
+.simona-eyebrow {
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--fg2);
+}
+p, .simona-body {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: var(--t-body);
+  line-height: 1.55;
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+.simona-small {
+  font-family: var(--font-text);
+  font-size: var(--t-small);
+  line-height: 1.5;
+  color: var(--fg3);
+}
+.simona-cta {
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: var(--t-small);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

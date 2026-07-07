@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Tags & chips" subtitle="Tags, filters, talles" viewport="700x190" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--bg); font-family: var(--font-text); }
+  .wrap { padding: 26px 30px; display:flex; flex-direction:column; gap:16px; }
+  .row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .lbl { font-size:11px; color:var(--fg3); width:78px; flex:none; }
+  .chip { font-weight:600; font-size:12.5px; padding:7px 15px; border-radius:var(--r-pill); }
+  .tag { font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; padding:6px 12px; border-radius:6px; }
+  .ink { background:var(--simona-ink); color:var(--simona-cream); }
+  .blush { background:var(--accent); color:var(--simona-ink); }
+  .soft { background:var(--simona-blush-soft); color:var(--simona-blush-deep); }
+  .sand { background:var(--simona-sand); color:var(--fg2); }
+  .out { background:transparent; border:1.5px solid var(--line-strong); color:var(--fg1); }
+  .disc { font-weight:800; font-size:12px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row"><span class="lbl">Tags</span><span class="tag ink">NUEVO</span><span class="tag blush">OTOÑO 25</span><span class="tag disc soft">−30%</span><span class="tag sand">ENVÍO GRATIS</span></div>
+    <div class="row"><span class="lbl">Filtros</span><span class="chip ink">Todo</span><span class="chip out">Camperas</span><span class="chip out">Tapados</span><span class="chip out">Sweaters</span></div>
+    <div class="row"><span class="lbl">Talles</span><span class="chip out">1</span><span class="chip out">2</span><span class="chip ink">3</span><span class="chip out">4</span></div>
+  </div>
+</body>
+</html>

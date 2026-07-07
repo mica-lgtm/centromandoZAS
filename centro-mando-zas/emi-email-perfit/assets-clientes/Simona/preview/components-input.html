@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Inputs" subtitle="Field, focus, newsletter" viewport="700x200" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--bg); font-family: var(--font-text); }
+  .wrap { padding: 24px 30px; display:grid; grid-template-columns:1fr 1fr; gap:16px 22px; align-items:end; }
+  .f { }
+  .flbl { font-size:11px; letter-spacing:.04em; color:var(--fg2); font-weight:600; margin-bottom:7px; }
+  .input { width:100%; box-sizing:border-box; background:var(--simona-white); border:1.5px solid var(--line); border-radius:var(--r-md); padding:13px 15px; font-family:var(--font-text); font-size:14px; color:var(--fg1); }
+  .input.focus { border-color:var(--simona-taupe); box-shadow:0 0 0 3px rgba(112,98,95,.12); }
+  .ph { color:var(--fg3); }
+  .nl { display:flex; gap:8px; }
+  .nl .input { border-radius:var(--r-pill) 0 0 var(--r-pill); }
+  .nl button { border:0; background:var(--btn-bg); color:var(--btn-fg); font-weight:700; font-size:12px; letter-spacing:.04em; text-transform:uppercase; padding:0 22px; border-radius:0 var(--r-pill) var(--r-pill) 0; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="f"><div class="flbl">Email</div><div class="input ph">tu@email.com</div></div>
+    <div class="f"><div class="flbl">Email · focus</div><div class="input focus">vos@simona.com</div></div>
+    <div class="f" style="grid-column:1/3"><div class="flbl">Suscripción newsletter</div><div class="nl"><div class="input ph" style="flex:1">Dejanos tu email</div><button>Sumarme</button></div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!-- @dsCard group="Components" viewport="1120x620" name="UI Kit · Redes sociales" subtitle="Placas: feed, story, carrusel, anuncio" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoe Tienda · UI Kit — Redes sociales</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--paper-2); font-family: var(--font-body); color: var(--fg); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 40px 28px 80px; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 16px; }
+  .top h1 { font-size: 30px; font-weight: 800; margin: 0; }
+  .sub { color: var(--fg-muted); font-weight: 500; margin: 0 0 28px; }
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tab {
+    font-family: var(--font-body); font-weight: 700; font-size: 14px; letter-spacing: .02em;
+    padding: 10px 18px; border-radius: var(--radius-pill); border: 1.5px solid var(--border-strong);
+    background: #fff; color: var(--fg-muted); cursor: pointer; transition: all var(--dur) var(--ease-out);
+  }
+  .tab[aria-selected="true"] { background: var(--zoe-ink); color: #fff; border-color: var(--zoe-ink); }
+  .stage { margin-top: 28px; display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+  .frame { background: #fff; border-radius: 22px; box-shadow: var(--shadow-md); overflow: hidden; flex: none; }
+  .meta { display: flex; flex-direction: column; gap: 14px; max-width: 280px; padding-top: 6px; }
+  .meta h3 { font-size: 20px; font-weight: 800; margin: 0; }
+  .meta p { color: var(--fg-muted); font-weight: 500; margin: 0; font-size: 15px; line-height: 1.5; }
+  .dim { font-size: 13px; font-weight: 700; color: var(--zoe-green); letter-spacing: .04em; }
+  .toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; cursor: pointer; color: var(--fg-muted); }
+  .toggle input { accent-color: var(--zoe-green); width: 17px; height: 17px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>UI Kit · Redes sociales</h1>
+      </div>
+      <img src="../../assets/zoe-logo-color.png" alt="Zoe Tienda" style="height:38px">
+    </div>
+    <p class="sub">Placas comerciales y editoriales — feed, historias, carrusel y anuncios.</p>
+    <div class="tabs" id="tabs"></div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="Primitives.jsx"></script>
+  <script type="text/babel" src="Placas.jsx"></script>
+  <script type="text/babel">
+    const { useState } = React;
+    const FORMATS = [
+      { id: "feed", label: "Feed 1:1", w: 540, h: 540, dim: "1080 × 1080", comp: "FeedPlaca",
+        desc: "Placa cuadrada para feed. Producto visible, beneficio claro y CTA directo." },
+      { id: "story", label: "Story 9:16", w: 338, h: 600, dim: "1080 × 1920", comp: "StoryPlaca",
+        desc: "Historia vertical. Respetá las zonas seguras: nada importante arriba ni abajo." },
+      { id: "carousel", label: "Carrusel", w: 540, h: 540, dim: "1080 × 1080", comp: "CarouselHook",
+        desc: "Primera placa de carrusel: hook fuerte que invita a deslizar y guardar." },
+      { id: "ad", label: "Anuncio", w: 540, h: 540, dim: "1080 × 1080", comp: "AdPlaca",
+        desc: "Anuncio de performance. Alto contraste, promo destacada y CTA fuerte para CTR." },
+    ];
+
+    function App() {
+      const [active, setActive] = useState("feed");
+      const [safe, setSafe] = useState(true);
+      const fmt = FORMATS.find(f => f.id === active);
+      const Comp = window[fmt.comp];
+      return (
+        <React.Fragment>
+          <div className="tabs">
+            {FORMATS.map(f => (
+              <button key={f.id} className="tab" aria-selected={f.id === active} onClick={() => setActive(f.id)}>{f.label}</button>
+            ))}
+          </div>
+          <div className="stage">
+            <div className="frame" style={{ width: fmt.w, height: fmt.h }}>
+              <Comp safe={active === "story" ? safe : false} />
+            </div>
+            <div className="meta">
+              <span className="dim">{fmt.dim} px</span>
+              <h3>{fmt.label}</h3>
+              <p>{fmt.desc}</p>
+              {active === "story" && (
+                <label className="toggle"><input type="checkbox" checked={safe} onChange={e => setSafe(e.target.checked)} />Mostrar zonas seguras</label>
+              )}
+            </div>
+          </div>
+        </React.Fragment>
+      );
+    }
+    // Render into a container that replaces tabs+stage
+    const root = document.createElement("div");
+    document.querySelector(".wrap").appendChild(root);
+    document.getElementById("tabs").remove();
+    document.getElementById("stage").remove();
+    ReactDOM.createRoot(root).render(<App />);
+  </script>
+</body>
+</html>

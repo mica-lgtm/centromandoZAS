@@ -217,6 +217,9 @@ def run(args):
 
     # 4. Set recipients.
     print("[4/11] Setting recipients...")
+    exclude = {}
+    if args.exclude_list_ids:
+        exclude["lists"] = [str(x) for x in args.exclude_list_ids]
     client._request(
         "PUT",
         client._pem(f"/campaigns/{campaign_id}"),
@@ -224,7 +227,7 @@ def run(args):
             "include": {"lists": [str(x) for x in args.list_ids]},
             "ignoreLastMailedDays": args.ignore_last_mailed_days,
             "options": {"EXCLUDE_INACTIVE": "1" if args.exclude_inactive else "0"},
-            "exclude": {},
+            "exclude": exclude,
         },
     )
 
@@ -298,7 +301,15 @@ def run(args):
     )
     _check_validation(validation, args.dry_run)
 
-    # 11. Launch (SCHEDULED if a date was given, else NOW).
+    # 11. Launch (SCHEDULED if a date was given, else NOW). Skipped if --draft.
+    if args.draft:
+        print("[11/11] Skipped — campaign saved as DRAFT (--draft flag set).")
+        print("\nDone.")
+        print(f"  campaign id : {campaign_id}")
+        print(f"  template id : {tpl_id}")
+        print(f"  launch mode : DRAFT")
+        return
+
     if args.schedule_date:
         mode, form = "SCHEDULED", {
             "launchMode": "SCHEDULED",
@@ -386,6 +397,12 @@ def build_parser():
         nargs="+",
         help="One or more recipient list ids.",
     )
+    p.add_argument(
+        "--exclude-list-ids",
+        nargs="*",
+        default=[],
+        help="Optional recipient list ids to exclude from the campaign.",
+    )
     p.add_argument("--description", default="", help="Campaign description / comments.")
     p.add_argument(
         "--tags", nargs="*", default=[], help="Campaign tags (space separated)."
@@ -417,6 +434,11 @@ def build_parser():
     )
     p.add_argument(
         "--reply-to", help="Override reply-to (otherwise derived from sender)."
+    )
+    p.add_argument(
+        "--draft",
+        action="store_true",
+        help="Create and populate the campaign but skip launch (leave as draft).",
     )
     p.add_argument(
         "--dry-run",

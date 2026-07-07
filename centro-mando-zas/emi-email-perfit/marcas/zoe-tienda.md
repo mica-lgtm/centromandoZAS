@@ -1,8 +1,15 @@
 # Zoe Tienda
 
+## Design system
+
+**Leer antes de arrancar cualquier email de Zoe Tienda:**
+`/Users/mica/Desktop/ZAS-AGENT/madame-social-content-manager/assets-clientes/zoe-tienda/README.md`
+
+Incluye: paleta, tipografía, fotografía disponible en `assets/` y reglas visuales de la marca.
+
 ## Estado de contexto
 
-Archivo inicial creado para Emi. Antes de trabajar esta marca, leer el contexto disponible en el proyecto principal de ZAS y completar este archivo con información validada.
+Archivo inicial. Design system completo disponible en madame (ver arriba).
 
 ## Tono de voz
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- @dsCard group="UI Kit — Email" name="Email marketing kit" subtitle="Responsive newsletter, dark-mode safe" viewport="940x640" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIMONA · Email marketing</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  body { margin: 0; background: var(--simona-stone); font-family: var(--font-text); color: var(--fg1); }
+  .page { padding: 40px 20px 64px; }
+  .head { max-width: 600px; margin: 0 auto 22px; }
+  .kicker { font-weight:700; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--simona-ink); opacity:.7; }
+  h1 { font-family:var(--font-display); font-weight:900; font-size:34px; letter-spacing:-0.02em; margin:8px 0 6px; color:var(--simona-ink); }
+  .lede { color:var(--simona-ink); opacity:.72; font-size:14px; max-width:560px; }
+  .toggle { display:flex; gap:8px; margin-top:16px; }
+  .tg { font-weight:600; font-size:13px; padding:8px 16px; border-radius:999px; border:1.5px solid rgba(42,42,42,.25); background:transparent; color:var(--simona-ink); cursor:pointer; }
+  .tg.on { background:var(--simona-ink); color:var(--simona-cream); border-color:var(--simona-ink); }
+  .client { max-width: 600px; margin: 0 auto; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 24px 60px rgba(42,42,42,.22); }
+  /* dark-mode preview */
+  .page.dark { background:#15110f; }
+  .page.dark .kicker, .page.dark h1, .page.dark .lede { color:#f0e8e0; }
+  .page.dark .tg { color:#f0e8e0; border-color:rgba(240,232,224,.3); }
+  .page.dark .tg.on { background:#f0e8e0; color:#15110f; border-color:#f0e8e0; }
+  .meta-row { max-width:600px; margin:0 auto 10px; background:rgba(255,255,255,.55); border-radius:12px; padding:12px 16px; display:flex; gap:10px; align-items:center; }
+  .page.dark .meta-row { background:rgba(255,255,255,.07); }
+  .av { width:34px; height:34px; border-radius:999px; background:var(--simona-ink); color:var(--simona-cream); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:900; font-size:14px; flex:none; }
+  .subj { font-weight:700; font-size:13.5px; color:var(--simona-ink); }
+  .from { font-size:11.5px; color:var(--simona-taupe); margin-top:1px; }
+  .page.dark .subj { color:#f0e8e0; } .page.dark .from { color:#b9ada6; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="Email.jsx"></script>
+  <script type="text/babel">
+    const { useState } = React;
+    function App() {
+      const [dark, setDark] = useState(false);
+      return (
+        <div className={'page'+(dark?' dark':'')}>
+          <div className="head">
+            <div className="kicker">UI Kit · Email marketing</div>
+            <h1>Newsletter SIMONA</h1>
+            <div className="lede">Email responsive, mobile-first y dark-mode safe. Bloques claros, jerarquía, botones de alto contraste e imágenes reales. Columna de 600px.</div>
+            <div className="toggle">
+              <button className={'tg'+(!dark?' on':'')} onClick={()=>setDark(false)}>Modo claro</button>
+              <button className={'tg'+(dark?' on':'')} onClick={()=>setDark(true)}>Modo oscuro</button>
+            </div>
+          </div>
+          <div className="meta-row">
+            <div className="av">S</div>
+            <div><div className="subj">El abrigo que no te vas a sacar 🤎</div><div className="from">SIMONA · hola@simona.com</div></div>
+          </div>
+          <div className="client">
+            <EmailHeader/>
+            <EmailHero img={5}/>
+            <CommercialBar/>
+            <EmailIntro/>
+            <ProductGrid/>
+            <EditorialBlock img={6}/>
+            <EmailFooter/>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>

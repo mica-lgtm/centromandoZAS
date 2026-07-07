@@ -1,0 +1,27 @@
+<!-- @dsCard group="Brand" viewport="700x230" name="Tratamiento de foto" subtitle="Gradiente de protección violeta para texto blanco legible" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--crema); padding: 18px; display: flex; gap: 16px; }
+  .frame { position: relative; width: 240px; height: 192px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); }
+  .frame img { width: 100%; height: 100%; object-fit: cover; }
+  .grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(33,1,77,0) 30%, rgba(33,1,77,.86) 100%); }
+  .cap { position: absolute; left: 16px; bottom: 14px; right: 16px; color: #fff; }
+  .eb { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--rosa-300); }
+  .tt { font-size: 22px; font-weight: 800; line-height: 1.05; letter-spacing: -0.01em; margin-top: 4px; }
+  .note { align-self: center; max-width: 200px; font-size: 13px; line-height: 1.5; color: var(--gris-500); }
+  .note b { color: var(--violeta-900); }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <img src="../assets/fotos/erj-50.png" alt="">
+    <div class="grad"></div>
+    <div class="cap"><div class="eb">Domingo</div><div class="tt">Vení como estás</div></div>
+  </div>
+  <div class="note"><b>Gradiente de protección:</b> violeta de 0 → 86% de abajo hacia arriba. Garantiza contraste para texto blanco sobre cualquier foto cálida.</div>
+</body>
+</html>

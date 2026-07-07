@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Botones / CTA" subtitle="Primary rojo, dark, outline, ghost + hover" viewport="700x130" -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--offwhite); }
+  .wrap { padding: 24px 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 16px; }
+  .btn { font-family: var(--font-sans); font-weight: 700; font-size: 15px; border: none; cursor: pointer; border-radius: 8px; padding: 13px 26px; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 8px; }
+  .primary { background: var(--red); color: #fff; }
+  .primary-hover { background: var(--red-dark); color: #fff; }
+  .dark { background: var(--black); color: #fff; }
+  .outline { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+  .ghost { background: transparent; color: var(--red); padding-left: 4px; padding-right: 4px; }
+  .lbl { width: 100%; font-size: 10px; font-weight: 700; color: var(--fg3); letter-spacing: 0.12em; text-transform: uppercase; }
+  .state { font-size: 9.5px; color: var(--fg3); font-weight: 600; margin-left: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="lbl">Botones / CTA</span>
+  <button class="btn primary">Comprá ahora</button>
+  <button class="btn primary-hover">Comprá ahora<span class="state" style="color:#fff;opacity:.6;">hover</span></button>
+  <button class="btn dark">Ver colección</button>
+  <button class="btn outline">Descubrí más</button>
+  <button class="btn ghost">Renová hoy →</button>
+</div>
+</body>
+</html>

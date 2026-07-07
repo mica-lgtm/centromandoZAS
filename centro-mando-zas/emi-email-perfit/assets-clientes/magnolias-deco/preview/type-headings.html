@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Tipografía — Encabezados" subtitle="H1 / H2 / H3" viewport="700x200" -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--offwhite); }
+  .wrap { padding: 22px 28px; }
+  .line { display: flex; align-items: baseline; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .line:last-child { border-bottom: 0; }
+  .lbl { width: 56px; flex-shrink: 0; font-size: 10px; font-weight: 700; color: var(--fg3); letter-spacing: 0.1em; text-transform: uppercase; }
+  .ex { color: var(--fg1); }
+  .h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+  .h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.015em; }
+  .h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+  .sz { margin-left: auto; font-size: 10px; color: var(--fg3); font-weight: 500; align-self: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="line"><span class="lbl">H1</span><span class="ex h1">Renová tu ambiente</span><span class="sz">48 · 800</span></div>
+  <div class="line"><span class="lbl">H2</span><span class="ex h2">Textiles que abrigan</span><span class="sz">34 · 700</span></div>
+  <div class="line"><span class="lbl">H3</span><span class="ex h3">Detalles que cambian todo</span><span class="sz">24 · 700</span></div>
+</div>
+</body>
+</html>

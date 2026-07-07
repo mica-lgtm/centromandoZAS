@@ -1,0 +1,230 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/social/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Elms Sans))/i]",
+        "message": "Font not provided by the design system. Available: Elms Sans."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent",
+      "--accent-hover",
+      "--beige",
+      "--bg",
+      "--bg-alt",
+      "--black",
+      "--body-lg-lh",
+      "--body-lg-size",
+      "--body-lg-weight",
+      "--body-lh",
+      "--body-size",
+      "--body-weight",
+      "--border",
+      "--border-strong",
+      "--charcoal",
+      "--display-1-lh",
+      "--display-1-ls",
+      "--display-1-size",
+      "--display-1-weight",
+      "--display-2-lh",
+      "--display-2-ls",
+      "--display-2-size",
+      "--display-2-weight",
+      "--fg-on-dark",
+      "--fg1",
+      "--fg2",
+      "--fg3",
+      "--font-sans",
+      "--h1-lh",
+      "--h1-ls",
+      "--h1-size",
+      "--h1-weight",
+      "--h2-lh",
+      "--h2-ls",
+      "--h2-size",
+      "--h2-weight",
+      "--h3-lh",
+      "--h3-ls",
+      "--h3-size",
+      "--h3-weight",
+      "--highlight",
+      "--label-lh",
+      "--label-ls",
+      "--label-size",
+      "--label-weight",
+      "--offwhite",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xl",
+      "--red",
+      "--red-dark",
+      "--red-soft",
+      "--sand",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-sm",
+      "--small-lh",
+      "--small-size",
+      "--small-weight",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--surface",
+      "--w-black",
+      "--w-bold",
+      "--w-light",
+      "--w-med",
+      "--w-reg",
+      "--w-semi",
+      "--w-xbold",
+      "--w-xlight",
+      "--warm-gray",
+      "--white",
+      "--wood",
+      "--yellow",
+      "--yellow-dark"
+    ],
+    "tokenKinds": {
+      "--red": "color",
+      "--red-dark": "color",
+      "--red-soft": "color",
+      "--yellow": "color",
+      "--yellow-dark": "color",
+      "--black": "color",
+      "--charcoal": "color",
+      "--white": "color",
+      "--offwhite": "color",
+      "--beige": "color",
+      "--sand": "color",
+      "--wood": "color",
+      "--warm-gray": "color",
+      "--bg": "color",
+      "--bg-alt": "color",
+      "--surface": "color",
+      "--fg1": "color",
+      "--fg2": "color",
+      "--fg3": "color",
+      "--fg-on-dark": "color",
+      "--accent": "color",
+      "--accent-hover": "color",
+      "--highlight": "color",
+      "--border": "color",
+      "--border-strong": "color",
+      "--font-sans": "font",
+      "--w-xlight": "font",
+      "--w-light": "font",
+      "--w-reg": "font",
+      "--w-med": "font",
+      "--w-semi": "font",
+      "--w-bold": "font",
+      "--w-xbold": "font",
+      "--w-black": "font",
+      "--display-1-size": "spacing",
+      "--display-1-weight": "font",
+      "--display-1-lh": "other",
+      "--display-1-ls": "other",
+      "--display-2-size": "spacing",
+      "--display-2-weight": "font",
+      "--display-2-lh": "other",
+      "--display-2-ls": "other",
+      "--h1-size": "spacing",
+      "--h1-weight": "font",
+      "--h1-lh": "other",
+      "--h1-ls": "other",
+      "--h2-size": "spacing",
+      "--h2-weight": "font",
+      "--h2-lh": "other",
+      "--h2-ls": "other",
+      "--h3-size": "spacing",
+      "--h3-weight": "font",
+      "--h3-lh": "other",
+      "--h3-ls": "other",
+      "--body-lg-size": "spacing",
+      "--body-lg-weight": "font",
+      "--body-lg-lh": "other",
+      "--body-size": "spacing",
+      "--body-weight": "font",
+      "--body-lh": "other",
+      "--small-size": "spacing",
+      "--small-weight": "font",
+      "--small-lh": "other",
+      "--label-size": "spacing",
+      "--label-weight": "font",
+      "--label-lh": "other",
+      "--label-ls": "other",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-xl": "radius",
+      "--radius-pill": "radius",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow"
+    },
+    "fontFamilies": [
+      "Elms Sans"
+    ]
+  }
+}

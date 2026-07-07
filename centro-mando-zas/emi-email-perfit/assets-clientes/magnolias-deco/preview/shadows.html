@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Spacing" name="Sombras / elevación" subtitle="Suaves, tono cálido, baja elevación" viewport="700x170" -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--offwhite); }
+  .wrap { padding: 26px; display: flex; gap: 26px; }
+  .unit { text-align: center; }
+  .box { width: 130px; height: 78px; background: #fff; border-radius: 12px; }
+  .nm { font-size: 11px; font-weight: 700; color: var(--fg1); margin-top: 14px; }
+  .vl { font-size: 10px; color: var(--fg3); font-weight: 500; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="unit"><div class="box" style="box-shadow:var(--shadow-sm);"></div><div class="nm">shadow-sm</div><div class="vl">cards en reposo</div></div>
+  <div class="unit"><div class="box" style="box-shadow:var(--shadow-md);"></div><div class="nm">shadow-md</div><div class="vl">hover / elevación</div></div>
+  <div class="unit"><div class="box" style="box-shadow:var(--shadow-lg);"></div><div class="nm">shadow-lg</div><div class="vl">modal / overlay</div></div>
+</div>
+</body>
+</html>

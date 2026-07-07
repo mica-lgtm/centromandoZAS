@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Badges de oferta & precio" subtitle="Círculo OFF, pill, tag, precio" viewport="700x180" --><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{min-height:100vh;box-sizing:border-box}
+  body{font-family:var(--font);background:var(--crema);padding:24px 28px;color:var(--fg1)}
+  .lead{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--bordo);margin:0 0 18px}
+  .row{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  /* círculo de OFF */
+  .circle{width:104px;height:104px;border-radius:999px;background:var(--rojo);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:var(--sh-md)}
+  .circle b{font-weight:900;font-size:34px}
+  .circle small{font-weight:700;font-size:14px;letter-spacing:.08em}
+  /* pill de promo */
+  .pill{background:var(--bordo);color:#FBE9F0;font-weight:800;font-size:18px;padding:12px 22px;border-radius:999px}
+  /* etiqueta NEW */
+  .tag{background:var(--rosa);color:var(--bordo-deep);font-weight:700;font-size:14px;padding:8px 16px;border-radius:999px}
+  /* precio */
+  .price{display:flex;align-items:baseline;gap:10px}
+  .now{font-weight:900;font-size:34px;color:var(--bordo)}
+  .was{font-weight:600;font-size:18px;color:var(--fg3);text-decoration:line-through}
+</style></head>
+<body>
+  <p class="lead">Badges de oferta &amp; precio</p>
+  <div class="row">
+    <div class="circle"><b>3x2</b><small>EN BOMBIS</small></div>
+    <div class="pill">2da unidad 70% OFF</div>
+    <div class="tag">NUEVO</div>
+    <div class="price"><span class="now">$8.900</span><span class="was">$14.900</span></div>
+  </div>
+</body></html>

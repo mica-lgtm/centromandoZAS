@@ -425,35 +425,151 @@ Ejemplo:
 - Texto secundario: #666
 - Dividers: #e0e0e0
 
+**NUEVO — Paleta general de marca (2026-06-10, documento oficial identidad visual):**
+- Negro profundo: #111111 (header, footer, bloques de cierre)
+- Naranja principal (referencia oficial): #E87817 (CTA, highlights, links activos)
+- Naranja claro/soft: #FFF3EA (fondo de pills, íconos circulares)
+- Crema página: #F4F1EC (fondo outer wrapper)
+- Crema suave: #F7F5F1 (secciones alternadas)
+- Negro texto: #0B0B0F (títulos, subtítulos)
+- Gris texto: #62666B (párrafos, descripciones)
+- Gris claro: #9B9B9B / #9F9F9F (metadatos, disclaimers)
+- Borde contenedor: #ECE6DE (cards, borders)
+
+**NOTA SOBRE CONFLICTO NARANJA:** Documento oficial propone #E87817. Líneas de producto (Colágeno, Magnesio, Omega 3) usan #f39c12 validado en campañas. **MANTENER #f39c12 en líneas de producto** por consistencia. Usar #E87817 solo si nueva campaña requiere posicionamiento diferente.
+
 ### Tipografía
 
-- Font family principal: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif
-- Hero text: 28px, bold, line-height 1.2 (responsive a 22px en mobile)
-- Section title: 20px, bold
-- Body text: 15px, line-height 1.6
-- Footer: 12px
+**Font family:**
+- Campañas de venta: Arial, Helvetica, sans-serif
+- Emails editorial/blog: Montserrat (primera opción), luego Arial
+- Fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif
 
-### Estructura de emails
+**Jerarquía tipográfica (según documento oficial 2026-06-10):**
+- **Hero title (H1):** 41-44px (desktop) / 32px (mobile), weight 900, letter-spacing -1.4px, line-height 50px/38px
+  - Última palabra clave en color naranja (#E87817 o #f39c12 según línea) + punto dentro del span
+- **Section title (H2):** 29-32px (desktop) / 25-27px (mobile), weight 900, letter-spacing -0.6px
+- **Card/benefit title (H3):** 23px (desktop) / 21px (mobile), weight 900
+- **Lead / bajada:** 17-19px (desktop) / 16px (mobile), weight 400, line-height 28-31px / 26px
+- **Body text:** 16px (desktop) / 15px (mobile), weight 400, line-height 25px / 24px
+- **Pill/etiqueta:** 14px, weight 900, letter-spacing 1px, UPPERCASE
+- **CTA botón:** 16-17px, weight 800-900
+- **Footer:** 13px (principal) / 11px (legal, disclaimer)
 
-**Template base:**
-1. Header con logo blanco sobre gradiente de la línea
-2. Hero section con gradiente suave + imagen de producto + subtítulo
-3. Content section con benefit boxes (4 beneficios con checkmark)
-4. Ingredientes/fórmula en badges coloreados
-5. Modo de uso
-6. Divider
-7. Precio y promoción (center aligned)
-8. CTA principal (botón gradiente con hover opacity 0.9)
-9. Bloque de compra: cuotas, descuento transferencia, envío gratis
-10. Footer con links: web, desuscribirse, disclaimer (si aplica)
+**Aplicar en campañas actuales:**
+- Hero text: 28px, bold, line-height 1.2 (responsive a 22px en mobile) — MANTENER (validado)
+- Section title: 20px, bold — MANTENER
+- Body text: 15px, line-height 1.6 — MANTENER
+- Footer: 12px — MANTENER
 
-**Elementos clave:**
+### Estructura de emails — COMPROBADA (TOP 3 PERFORMANCE)
+
+**Template base (validado en 100 campañas, data 2026-04-30 a 2026-06-09):**
+
+**Estructura ganadora (orden crítico):**
+1. **Header** — Logo blanco sobre gradiente de línea (#111111 o color primario)
+   - Padding: 24px top/bottom, 24px lateral
+   - Logo: 160px ancho, centrado
+
+2. **Preheader oculto** — Display none, max-height 0, overflow hidden
+   - Texto invisible que complementa asunto (+ 1-2% open rate)
+   - Debe traer dato nuevo, no repetir asunto
+
+3. **Hero section** — Gradiente suave + imagen producto + beneficio
+   - Pill/etiqueta con emoji + categoría en MAYÚSCULA (e.g., ⚡ ENERGÍA)
+   - H1 (44px desktop / 32px mobile) — Beneficio + número + urgencia
+   - Última palabra en color naranja + punto dentro del span
+   - Bajada (19px, gris #62666B) — Fluida, sin tecnicismos
+   - Imagen: border-radius 8px, max-width 280px
+   - CTA primario: Gradiente, border-radius 999px, box-shadow
+
+4. **Benefit boxes** — Máximo 4 bloques
+   - Fondo #f9f9f9, border-left 4px coloreado, padding 15px, border-radius 4px
+   - Icono: ✓ checkmark o emoji relevante
+   - Título: 16px bold, color principal (#0B0B0F)
+   - Descripción: 15px gris (#62666B)
+
+5. **Divider** — height 1px, background #e0e0e0, margin 30px 0
+
+6. **Bloque de compra** — Centro aligned
+   - Icono + beneficio en tabla 3 columnas
+   - 💳 Cuotas sin interés
+   - 🏦 10% OFF con transferencia
+   - 📦 Envío gratis desde $60k
+
+7. **Bloque cierre (Negro)** — Fondo #111111, border-radius 22px
+   - H2 blanco (29px, weight 900): Llamada a acción final
+   - Párrafo blanco (#EDEDED, 16px, line-height 26px)
+   - CTA repetido (mismo botón gradiente)
+   - Padding: 30px 24px
+   - Margin-top: 30px en CTA
+
+8. **Footer** — Fondo #111111
+   - Padding: 26px 24px 30px 24px
+   - Tagline: "Vitalis Navitas · bienestar desde adentro" (blanco, 13px)
+   - Disclaimer legal: #9F9F9F, 11px (obligatorio: "Los suplementos dietarios...")
+   - Desuscripción: color naranja, underline, 11px
+
+**Elementos clave (comprobados):**
 - Max-width: 600px (centrado)
-- CTA button: padding 14px 40px, border-radius 30px, font-weight bold, gradiente de línea
-- Benefit boxes: background #f9f9f9, border-left 4px coloreado, padding 15px, border-radius 4px
-- Ingredient badges: background claro, color de línea, padding 6px 12px, border-radius 20px, font-size 12px
-- Divider: height 1px, background #e0e0e0, margin 30px 0
-- Responsive: hero 22px en mobile, CTA padding 12px 30px en mobile
+- CTA button: padding 17px 42px, border-radius 999px, font-weight 900, box-shadow naranja
+- Responsive breakpoint: max-width 620px (mobile: hero 32px, body 15px, CTA 100% width)
+- Tablas para layout, border-collapse collapse
+- Dark mode: `!important` en todos los colores + `-webkit-text-fill-color`
+- Imágenes: display block, height auto, sin border
+
+**PATRONES GANADORES (data histórica):**
+- ✅ Asunto "Beneficio + Número + Urgencia" = 14.26% open rate
+  - Ejemplo ganador: "Piel firme desde adentro en 90 días"
+  - Largo óptimo: 50-55 caracteres
+- ✅ Preheader que COMPLEMENTA (no repite) asunto
+  - +1-2% open rate vs sin preheader
+  - Ejemplo: Asunto "Piel firme...", Preheader "Blend antiage 5 en 1 con 15% OFF"
+- ✅ CTA activos y cortos
+  - "Probá ahora" — 0.63% CTR
+  - "Descubrí" — 0.39% CTR
+  - "Mirá el producto" — hasta 8.7% en segmentos pequeños
+- ✅ Segmentación específica (no base completa)
+  - Base 60k+: 9-14% open rate
+  - Segmento < 1k: 20%+ open rate
+- ✅ Emojis en asunto (oportunidad, solo 15% los usan)
+  - 💜 bienestar, ⚡ energía, 🧠 cerebro, 🦴 articulaciones
+
+### Componentes específicos (2026-06-10)
+
+**Pill / Etiqueta de categoría:**
+- Fondo: #FFF3EA, border-radius 999px
+- Padding: 13px 28px
+- Texto: color naranja (#E87817 o #f39c12), 14px, weight 900, letter-spacing 1px, UPPERCASE
+- Con emoji temático (⚡ energía, 🌙 descanso, 🦴 articulaciones, ☀️ bienestar)
+
+**Botón CTA:**
+- Gradiente: linear-gradient(90deg, #F29331 0%, #E87817 45%, #DF6E00 100%) — O usar colores de línea si aplica
+- Color texto: #FFFFFF
+- Padding: 17px 42px
+- Border-radius: 999px
+- Box-shadow: 0 0 24px rgba(232,120,23,0.42)
+- Mobile: display block, width 100%, box-sizing border-box
+
+**Cards de producto:**
+- Fondo: #FFFFFF, border 1px #ECE6DE, border-radius 20px
+- Ícono: círculo 52x52px, fondo #FFF3EA, emoji 24px centrado
+- H3 producto: 23px, weight 900, color #0B0B0F
+- Descripción: 16px, color #62666B
+- Link: color naranja, weight 900, termina en " →"
+
+**Bloque de cierre (fondo negro):**
+- Fondo: #111111, border-radius 22px
+- Padding: 30px 24px
+- H2: #FFFFFF, 29px, weight 900
+- Párrafo: #EDEDED, 16px, line-height 26px
+- CTA: igual al principal, margin-top 30px
+
+**Footer:**
+- Fondo: #111111
+- Tagline: "Vitalis Navitas · bienestar desde adentro"
+- Disclaimer legal: #9F9F9F, 11px — incluir siempre: "Los suplementos dietarios no reemplazan una alimentación equilibrada ni la consulta con un profesional de la salud."
+- Desuscripción: color naranja, underline, 11px
 
 ### Estética general
 
@@ -466,6 +582,21 @@ Ejemplo:
 - Para suplementos, destacar ingrediente / objetivo / modo de uso solo si está validado.
 - Mantener coherencia de gradientes y colores por línea de producto.
 - Las imágenes hero son del CDN de Mitiendanube con border-radius 8px.
+
+### REGLA CRÍTICA — Tracking de UTMs
+
+**⚠️ NO AGREGAR UTMs MANUALMENTE EN HTML**
+
+Klaviyo gestiona el tracking de UTMs de forma nativa desde su configuración de campaña. Agregar parámetros UTM manualmente en el HTML rompe el tracking.
+
+**URLs deben ir limpias:**
+- ✅ `https://vitalisnavitas.digital/producto/colageno-antiage`
+- ❌ `https://vitalisnavitas.digital/producto/colageno-antiage?utm_source=klaviyo&utm_medium=email&utm_campaign=bestsellers`
+
+Klaviyo agregará los UTMs automáticamente en envío. No tocar.
+
+**Logo CDN:** `https://cdn.myperfit.net/1780404101793-vitalis-logo-white_9824c7b9.webp`
+**Web principal:** `https://vitalisnavitas.digital/`
 
 ---
 
@@ -514,6 +645,32 @@ Productos saludables y científicamente formulados para potenciar bienestar, ene
 
 ---
 
+## Asuntos + Preheaders Ganadores (data comprobada 2026-06-09)
+
+### Fórmula: Beneficio + Número + Urgencia (50-55 caracteres)
+
+| Asunto | Preheader | Tipo | Performance |
+|--------|-----------|------|-------------|
+| **Piel firme desde adentro en 90 días** | Blend antiage 5 en 1 con 15% OFF | Recompra | 14.26% open, 0.23% CTR ✅ GANADOR |
+| Esta noche es clave | Zzz, energía, calmtus... | Producto (NeuroCalm) | 10.62% open |
+| Mové tu cuerpo sin dolor | Colágeno + flexibilidad | Producto (FLEX) | 10.34% open |
+| Colágeno: resultados visibles en 30 días | 10% OFF con transferencia | Recompra (PROPUESTO) | — (a probar) |
+| Energía real sin caídas — Magnesio + B6 | Últimas 48 horas de promo | Producto | — (a probar) |
+| Omega 3: corazón + memoria en 90 días | EPA 500 + DHA 200 | Producto | — (a probar) |
+
+**Reglas de asunto:**
+- Incluir un número (52% de 100 campañas lo hacen, +2% open rate)
+- Beneficio concreto (no "nuevo lanzamiento", no "esta semana")
+- Urgencia o razón de ahora (no fake, debe tener contexto)
+- 50-55 caracteres (< 50 mejor mobile, > 60 riesgo corte Outlook)
+
+**Reglas de preheader:**
+- Complementa asunto, no repite
+- Trae dato nuevo: promoción, beneficio adicional, número
+- Nunca vacío (15 campañas lo tenían, -1-2% open rate)
+
+---
+
 ## Preguntas frecuentes y objeciones
 
 ### Productos
@@ -550,6 +707,36 @@ Productos saludables y científicamente formulados para potenciar bienestar, ene
 
 **Pregunta:** ¿Puedo tomarlo si tengo una condición médica, estoy embarazada, lactando o tomo medicación?  
 **Respuesta sugerida:** Para cualquier condición de salud, embarazo, lactancia o medicación, recomendamos consultar con un profesional antes de consumir suplementos.
+
+---
+
+## Cómo crear campañas en Klaviyo (2026-06-10)
+
+**REGLA OBLIGATORIA:** Todas las campañas se crean SOLO con MCP, nunca con API requests.
+
+Procedimiento global: `../KLAVIYO-MCP-PROCEDURE.md`
+
+Flujo:
+1. Crear template con `mcp__claude_ai_Klaviyo__klaviyo_create_email_template`
+2. Crear campaign con `mcp__claude_ai_Klaviyo__klaviyo_create_campaign` (incluye campaignMessages)
+3. Asignar template con `mcp__claude_ai_Klaviyo__klaviyo_assign_template_to_campaign_message`
+
+Ver documento global para detalles y ejemplos.
+
+---
+
+## Segmentos Klaviyo
+
+| Producto | Nombre Segmento | ID Klaviyo | Tipo | Uso |
+|---|---|---|---|---|
+| **Colágeno Antiage** | **Compradores de Colágeno hace 90d** | **TnRf72** | **Recompra + Cross-sell** | Email 1: recompra directa; Emails 2-4: cross-sell progresivo |
+| Probióticos | Vieron pero no compraron últimos 30d | VuEpqE | Reconversión | Recuperación de interesados sin compra |
+| Melena de León | Compradores recientes | TZqYjG | Recompra | Recompra y reenganche |
+| Colágeno FLEX | Compradores recientes | VGBnUr | Recompra | Recompra y cross-sell a otras líneas |
+| Omega 3 | Compradores recientes | XWMNkK | Recompra | Recompra y aislado |
+| NeuroCalm | Compradores recientes | Y3r4G9 | Recompra | Recompra y cross-sell |
+
+**Nota:** El segmento TnRf72 es el usado para la secuencia Bestsellers (2026-06-10). Otros segmentos disponibles para futuras campañas según objetivo.
 
 ---
 
@@ -675,10 +862,37 @@ Productos saludables y científicamente formulados para potenciar bienestar, ene
 
 5. **Test:** Agregar 1-2 emojis relevantes (💜 bienestar, ⚡ energía, 🧠 cerebro) — medir en próximo ciclo
 
+### Ciclo 01 — Hallazgos nuevos (2026-06-11, 12 campañas)
+
+**Ángulos ganadores confirmados:**
+- ✅ "Educativo comparativo" ("No todos son iguales", "Creatina: mitos y evidencia") → 21-22% open en segmentos medios
+- ✅ "Producto + área corporal" ("Articulaciones desde adentro") → 37.46% open en segmento intención
+- ✅ "Guía + sustantivo concreto" ("Instestino sano: guía simple") → 35% open + 9.96% CTR
+- ✅ "Producto: adjetivo/expectativa" ("Colágeno: tiempos reales") → 17.13% open, 0.74% CTR
+
+**Asuntos perdedores confirmados:**
+- ❌ Preguntas retóricas largas + emoji inicial ("✨ ¿Qué le pasa a tu piel...") → 7.25% open
+- ❌ Frase genérica de continuidad sin urgencia ("✨ Ya elegiste Vitalis. Ahora sumá...") → 5.95% open
+
+**Segmentación: multiplicador de CTR**
+- Segmentos < 600 por comportamiento: CTR 2.12% a 9.96%
+- Segmentos > 5,000 lista amplia: CTR 0.13% a 0.55%
+
+**Alerta técnica — Apple Mail Privacy:**
+- Segmento "Interacción alta" muestra open rate imposibles (> 100% total opens/enviados)
+- Usar CTR como KPI primario para cualquier campaña enviada a ese segmento
+
+**Problema sistémico — Preheader:**
+- 83% de las campañas enviadas sin preheader en ciclo 01
+- Implementar como campo obligatorio y verificado antes de cada envío
+
 ### Historial y seguimiento
 
 - **Ciclo 00 (2026-06-09):** Análisis base histórico — 100 campañas
-- **Ciclo 01 (2026-06-11):** Próximo análisis automático (cada 48hs)
+- **Ciclo 01 (2026-06-11):** 12 campañas, ángulo educativo confirmado, preheader sistémicamente vacío, Apple Mail distorsión detectada
+- **Ciclo 02 (2026-06-13):** 15 campañas (48-72hs). Nuevo patrón ganador: cross-sell post-compra (CTR 2.63-2.77%, CTOR 8-10%). Alerta crítica: bounce 3.13% en segmento "Vieron Citrato". VIP Champions degradada (8.54% open). Preheader vacío: 80% de campañas. Testimonios standalone: 0.17% CTOR. Ver: `retroalimentacion-vitalis/2026-06-13-ciclo-02.md`
+- **Ciclo 03 (2026-06-15):** 7 campañas (48hs). Mejor performance: reconexión emocional en dormidos 91-180d (17.43% open, 3.57% CTOR). Alerta crítica: segmento "Vieron Citrato" con unsubscribe 2.63% — RETIRADO. Preheader vacío 100% (peor ciclo). "Creatina para mujeres" a Base Completa = unsubscribe 0.36% (producto de nicho requiere segmentación). Ver: `retroalimentacion-vitalis/2026-06-15-ciclo-03.md`
+- **Ciclo 04 (2026-06-17):** 12 campañas (48hs), 79.831 enviados. Cross-sell Citrato→Omega3: 1.43% CTR, 8.70% CTOR (patrón ganador 3er ciclo consecutivo). ALERTA CRÍTICA: "Nunca han interaccionado" — 1.01% bounce en 44.949 envíos — RETIRADO. Apple Mail Privacy confirma distorsión total en segmentos "Interacción alta/media/baja". Preheader vacío 100% (4to ciclo). Nuevo producto: Cellular NAD+ (primer lanzamiento con asunto débil). Ver: `retroalimentacion-vitalis/2026-06-17-ciclo-04.md`
 - Ver: `retroalimentacion-vitalis/` para reportes detallados
 
 ---
@@ -866,4 +1080,30 @@ Criterios de calidad:
 - Coherente con la marca.
 - Sin datos inventados.
 - Optimizado para conversión.
+
+## Checklist de calidad antes de entregar (2026-06-10)
+
+- [ ] Colores respetan paleta exacta (sin aproximaciones)
+  - [ ] Línea Colágeno: #f39c12 / #e67e22 (mantener, validado)
+  - [ ] Línea Magnesio: #7b5ba3 / #6b4c94 (mantener, validado)
+  - [ ] Línea Omega 3: #4a7c9e / #3a6b8e (mantener, validado)
+  - [ ] Si nueva campaña fuera de líneas: usar #E87817 (oficial)
+- [ ] Pill/etiqueta visible con emoji y texto en mayúsculas
+- [ ] H1 con última palabra clave en naranja + punto dentro del span
+- [ ] Bajada en gris (#62666B), fluida y sin tecnicismos
+- [ ] CTA con gradiente, border-radius 999px, box-shadow
+- [ ] Cards de producto con ícono circular en fondo claro
+- [ ] Bloque de cierre en negro (#111111) con CTA repetido
+- [ ] Footer con disclaimer legal obligatorio + desuscripción en naranja
+- [ ] Preheader oculto + caracteres invisibles de relleno
+- [ ] Mobile responsive (breakpoint max-width 620px)
+- [ ] Metadatos del asunto en comentarios HTML
+- [ ] **CRÍTICO: URLs sin UTMs manuales** (Klaviyo gestiona)
+- [ ] Dark mode con `!important` y `-webkit-text-fill-color`
+- [ ] Imágenes con display block, height auto, sin border
+- [ ] Tablas para layout, border-collapse collapse
+- [ ] Tono argentino voseo, sin tecnicismos
+- [ ] No inventar datos, promociones, precios, stock
+- [ ] No hacer claims médicos no validados
+- [ ] Disclaimer legal presente en footer
 ```

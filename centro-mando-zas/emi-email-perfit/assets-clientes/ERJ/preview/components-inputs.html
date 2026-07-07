@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x180" name="Campos de formulario" subtitle="Inputs redondeados para inscripciones y contacto" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--crema); padding: 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 560px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gris-500); }
+  input { font-family: var(--font-sans); font-size: 14px; padding: 12px 16px; border-radius: 12px; border: 1.5px solid var(--gris-200); background: #fff; color: var(--tinta); outline: none; }
+  input:focus { border-color: var(--rosa-500); box-shadow: 0 0 0 3px var(--rosa-100); }
+  input.filled { border-color: var(--violeta-400); }
+  .full { grid-column: 1 / -1; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="field"><label>Nombre</label><input class="filled" value="María González"></div>
+    <div class="field"><label>Teléfono</label><input placeholder="+54 9 ..."></div>
+    <div class="field full"><label>Email (foco)</label><input value="maria@" style="border-color:var(--rosa-500);box-shadow:0 0 0 3px var(--rosa-100)"></div>
+  </div>
+</body>
+</html>

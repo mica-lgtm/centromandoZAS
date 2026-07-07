@@ -1,0 +1,78 @@
+<!-- @dsCard group="Components" viewport="640x720" name="UI Kit · Email" subtitle="Newsletter institucional ERJ — ordenado y confiable" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERJ · Email</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--niebla); font-family: var(--font-sans); padding: 28px 0; }
+  .email { width: 580px; margin: 0 auto; background: #fff; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg); }
+  .head { background: var(--violeta-900); padding: 24px 32px; }
+  .head img { height: 40px; }
+  .hero { position: relative; height: 220px; }
+  .hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .hero .grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(33,1,77,0) 40%, rgba(33,1,77,.85) 100%); }
+  .hero .cap { position: absolute; left: 32px; bottom: 20px; right: 32px; }
+  .hero .eb { color: var(--rosa-300); font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+  .hero .tt { color: #fff; font-weight: 900; font-size: 30px; line-height: 1.02; letter-spacing: -0.02em; margin-top: 6px; }
+  .body { padding: 28px 32px 8px; }
+  .body p { font-size: 15px; line-height: 1.65; color: var(--gris-600); margin: 0 0 16px; }
+  .body .greet { font-weight: 700; color: var(--violeta-900); font-size: 16px; }
+  .btn { display: inline-block; background: var(--rosa-500); color: #fff; font-weight: 800; font-size: 15px; text-decoration: none; padding: 13px 28px; border-radius: 999px; }
+  .divider { height: 1px; background: var(--gris-100); margin: 24px 0; }
+  .agenda { padding: 0 32px 28px; }
+  .agenda h3 { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gris-400); margin: 0 0 14px; }
+  .item { display: flex; gap: 14px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gris-100); }
+  .item:last-child { border-bottom: none; }
+  .date { width: 52px; height: 52px; border-radius: 14px; background: var(--violeta-100); color: var(--violeta-800); display: flex; flex-direction: column; align-items: center; justify-content: center; flex: none; }
+  .date .d { font-weight: 900; font-size: 18px; line-height: 1; }
+  .date .m { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+  .item .t { font-weight: 700; font-size: 15px; color: var(--violeta-900); }
+  .item .s { font-size: 13px; color: var(--gris-500); }
+  .foot { background: var(--violeta-950); color: var(--violeta-200); padding: 24px 32px; text-align: center; font-size: 12px; line-height: 1.6; }
+  .foot a { color: var(--rosa-300); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="email">
+    <div class="head"><img src="../../assets/erj-logo-white.png" alt="El Rey Jesús"></div>
+    <div class="hero">
+      <img src="../../assets/fotos/erj-50.png" alt="">
+      <div class="grad"></div>
+      <div class="cap">
+        <div class="eb">Carta semanal</div>
+        <div class="tt">Esta semana en la iglesia</div>
+      </div>
+    </div>
+    <div class="body">
+      <p class="greet">Hola, familia 👋</p>
+      <p>Queremos que sepas que tenés un lugar acá. Esta semana preparamos encuentros para cada edad y un domingo especial para recibir a quienes nos visitan por primera vez.</p>
+      <p>Te invitamos a sumarte, traer a alguien y vivir juntos lo que Dios está haciendo en nuestra comunidad.</p>
+      <a class="btn" href="#">Planificá tu visita</a>
+      <div class="divider"></div>
+    </div>
+    <div class="agenda">
+      <h3>Agenda de la semana</h3>
+      <div class="item">
+        <div class="date"><span class="d">20</span><span class="m">Jun</span></div>
+        <div><div class="t">Noche de Jóvenes</div><div class="s">Viernes · 20:00 h · Auditorio central</div></div>
+      </div>
+      <div class="item">
+        <div class="date"><span class="d">22</span><span class="m">Jun</span></div>
+        <div><div class="t">Reunión general</div><div class="s">Domingo · 10:30 h · Presencial y online</div></div>
+      </div>
+      <div class="item">
+        <div class="date"><span class="d">25</span><span class="m">Jun</span></div>
+        <div><div class="t">Grupo de oración</div><div class="s">Miércoles · 19:30 h · Salón 2</div></div>
+      </div>
+    </div>
+    <div class="foot">
+      El Rey Jesús · Iglesia Cristiana<br>
+      Av. Siempre Viva 1234, CABA · <a href="#">Ver en el mapa</a><br>
+      <a href="#">Instagram</a> · <a href="#">YouTube</a> · <a href="#">Darse de baja</a>
+    </div>
+  </div>
+</body>
+</html>

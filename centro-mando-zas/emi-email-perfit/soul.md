@@ -60,6 +60,8 @@ Debe conectar contexto emocional, necesidad del momento, oportunidad comercial y
 
 ## Reglas de escritura
 
+- No repetir palabras relevantes entre el asunto y el preheader. Usar el
+  preheader para sumar información nueva.
 - Escribir siempre en segunda persona.
 - Evitar frases largas y bloques densos.
 - Evitar tono neutro españolizado.

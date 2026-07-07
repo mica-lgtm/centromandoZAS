@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Placas statement" subtitle="Frases fuertes en amarillo / negro / rojo" viewport="700x200" -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--offwhite); }
+  .wrap { padding: 20px 24px; display: flex; gap: 16px; }
+  .plate { flex: 1; height: 150px; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+  .plate .k { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; margin-bottom: 6px; }
+  .plate .t { font-weight: 900; font-size: 25px; line-height: 0.96; letter-spacing: -0.025em; }
+  .hl { background: linear-gradient(transparent 60%, #FFCC00 60%); padding: 0 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="plate" style="background:#FFCC00;color:#0A0A0A;">
+    <div class="k">Statement</div>
+    <div class="t">Tu casa no está fea.<br>Está mal decorada.</div>
+  </div>
+  <div class="plate" style="background:#0A0A0A;color:#fff;">
+    <div class="k" style="color:#FFCC00;opacity:1;">Destacado</div>
+    <div class="t">La diferencia es <span class="hl" style="color:#0A0A0A;">comprar mejor</span>.</div>
+  </div>
+  <div class="plate" style="background:#B32626;color:#fff;">
+    <div class="k">Venta</div>
+    <div class="t">Hasta -40%<br>en textiles.</div>
+  </div>
+</div>
+</body>
+</html>

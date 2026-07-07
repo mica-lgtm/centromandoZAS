@@ -1,0 +1,101 @@
+/* ===========================================================================
+   ERJ — El Rey Jesús · Design System root stylesheet
+   The compiler reads this file and its @import closure for tokens + fonts.
+   =========================================================================== */
+@import url("colors_and_type.css");
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--fg1);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Reusable component utilities ------------------------------------- */
+
+/* Buttons */
+.erj-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-weight: var(--w-bold);
+  font-size: var(--text-base);
+  letter-spacing: 0.01em;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out),
+              background var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+  text-decoration: none;
+}
+.erj-btn:active { transform: translateY(1px) scale(0.985); }
+
+.erj-btn--primary {
+  background: var(--rosa-500);
+  color: #fff;
+  box-shadow: var(--shadow-rosa);
+}
+.erj-btn--primary:hover { background: var(--rosa-600); }
+.erj-btn--primary:active { background: var(--accent-press); }
+
+.erj-btn--violeta {
+  background: var(--violeta-900);
+  color: #fff;
+}
+.erj-btn--violeta:hover { background: var(--violeta-800); }
+
+.erj-btn--ghost {
+  background: transparent;
+  color: var(--violeta-900);
+  box-shadow: inset 0 0 0 2px var(--violeta-900);
+}
+.erj-btn--ghost:hover { background: var(--violeta-900); color: #fff; }
+
+.erj-btn--on-dark {
+  background: #fff;
+  color: var(--violeta-900);
+}
+.erj-btn--on-dark:hover { background: var(--rosa-100); }
+
+/* Pills / chips / tags */
+.erj-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: var(--w-semibold);
+  font-size: var(--text-sm);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--rosa-100);
+  color: var(--bordo-700);
+}
+.erj-chip--violeta { background: var(--violeta-100); color: var(--violeta-800); }
+.erj-chip--solid   { background: var(--violeta-900); color: #fff; }
+
+/* Cards */
+.erj-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+}
+
+/* Eyebrow accent line */
+.erj-accent-line {
+  width: 48px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--rosa-500);
+}

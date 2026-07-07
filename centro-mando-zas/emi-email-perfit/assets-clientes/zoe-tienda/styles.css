@@ -1,0 +1,367 @@
+/* ============================================================
+   ZOE TIENDA — Design System core stylesheet
+   Editorial · cálida · clara · comercial
+   ============================================================ */
+
+/* ---------- Fonts: Dosis (self-hosted) ---------- */
+@font-face {
+  font-family: "Dosis";
+  src: url("fonts/Dosis-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dosis";
+  src: url("fonts/Dosis-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dosis";
+  src: url("fonts/Dosis-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dosis";
+  src: url("fonts/Dosis-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dosis";
+  src: url("fonts/Dosis-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dosis";
+  src: url("fonts/Dosis-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dosis";
+  src: url("fonts/Dosis-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+/* Variable axis — full 200–800 range from one file */
+@font-face {
+  font-family: "Dosis Variable";
+  src: url("fonts/Dosis-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ====================================================
+     BRAND PALETTE
+     ==================================================== */
+  --zoe-ink: #222222;        /* texto principal, títulos */
+  --zoe-green: #78ac5e;      /* color de marca, CTAs, acentos */
+  --zoe-white: #ffffff;      /* fondos, texto sobre verde/ink */
+
+  /* Green scale — derived from the brand green for tints & states */
+  --green-900: #3f5d30;
+  --green-700: #547a40;
+  --green-600: #66954f;
+  --green-500: #78ac5e;      /* = brand green */
+  --green-400: #93bf7e;
+  --green-300: #b4d3a4;
+  --green-200: #d6e7cc;
+  --green-100: #eaf2e3;
+  --green-50:  #f4f8f0;
+
+  /* Warm neutrals — editorial paper tones, NOT pure greys */
+  --paper:      #fbf9f4;     /* fondo cálido base */
+  --paper-2:    #f4efe6;     /* bloques / tarjetas suaves */
+  --paper-3:    #ece5d8;     /* bordes cálidos, separadores */
+  --sand:       #e7dcc8;     /* bloque destacado neutro */
+
+  /* Ink scale — texto y grises cálidos */
+  --ink-900: #222222;        /* = brand ink */
+  --ink-700: #4a4843;
+  --ink-500: #76726a;        /* texto secundario */
+  --ink-400: #9b968c;        /* texto terciario / captions */
+  --ink-300: #c4beb2;        /* placeholders */
+
+  /* Accent — cálido complementario para ofertas/precios */
+  --accent-terracotta: #d98559;
+  --accent-cream:      #f6efe0;
+
+  /* ====================================================
+     SEMANTIC SURFACES & TEXT
+     ==================================================== */
+  --bg:            var(--paper);
+  --bg-elevated:   var(--zoe-white);
+  --bg-soft:       var(--paper-2);
+  --bg-brand:      var(--zoe-green);
+  --bg-brand-soft: var(--green-100);
+
+  --fg:            var(--ink-900);
+  --fg-muted:      var(--ink-500);
+  --fg-subtle:     var(--ink-400);
+  --fg-on-brand:   var(--zoe-white);
+  --fg-on-ink:     var(--zoe-white);
+
+  --border:        var(--paper-3);
+  --border-strong: var(--ink-300);
+  --ring:          color-mix(in srgb, var(--zoe-green) 45%, transparent);
+
+  /* ====================================================
+     TYPOGRAPHY
+     ==================================================== */
+  --font-display: "Dosis", "Trebuchet MS", system-ui, sans-serif;
+  --font-body:    "Dosis", "Trebuchet MS", system-ui, sans-serif;
+
+  --fw-light: 300;       /* @kind font */
+  --fw-regular: 400;     /* @kind font */
+  --fw-medium: 500;      /* @kind font */
+  --fw-semibold: 600;    /* @kind font */
+  --fw-bold: 700;        /* @kind font */
+  --fw-extrabold: 800;   /* @kind font */
+
+  /* Type scale (px) — Dosis runs small, so scale up */
+  --fs-display: 72px;
+  --fs-h1: 52px;
+  --fs-h2: 40px;
+  --fs-h3: 30px;
+  --fs-h4: 24px;
+  --fs-lead: 22px;
+  --fs-body: 18px;
+  --fs-small: 16px;
+  --fs-caption: 14px;
+  --fs-overline: 13px;
+
+  --lh-tight: 1.05;      /* @kind font */
+  --lh-snug: 1.2;        /* @kind font */
+  --lh-normal: 1.45;     /* @kind font */
+  --lh-relaxed: 1.6;     /* @kind font */
+
+  --ls-tight: -0.01em;   /* @kind font */
+  --ls-normal: 0;        /* @kind font */
+  --ls-wide: 0.04em;     /* @kind font */
+  --ls-overline: 0.16em; /* @kind font */
+
+  /* ====================================================
+     SPACING — 4px base
+     ==================================================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* ====================================================
+     RADII — soft, friendly editorial corners
+     ==================================================== */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* ====================================================
+     SHADOWS — soft, warm, low-contrast
+     ==================================================== */
+  --shadow-xs: 0 1px 2px rgba(34, 34, 34, 0.06);
+  --shadow-sm: 0 2px 8px rgba(34, 34, 34, 0.07);
+  --shadow-md: 0 8px 24px rgba(34, 34, 34, 0.09);
+  --shadow-lg: 0 18px 48px rgba(34, 34, 34, 0.12);
+  --shadow-brand: 0 12px 28px rgba(120, 172, 94, 0.28);
+
+  /* ====================================================
+     MOTION
+     ==================================================== */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);  /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);  /* @kind other */
+  --dur-fast: 120ms;     /* @kind other */
+  --dur: 200ms;          /* @kind other */
+  --dur-slow: 320ms;     /* @kind other */
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   ============================================================ */
+.zoe-display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-extrabold);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg);
+}
+.zoe-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg);
+}
+.zoe-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  color: var(--fg);
+}
+.zoe-h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  color: var(--fg);
+}
+.zoe-h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+  color: var(--fg);
+}
+.zoe-lead {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-muted);
+}
+.zoe-body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg);
+}
+.zoe-small {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-small);
+  line-height: var(--lh-normal);
+  color: var(--fg-muted);
+}
+.zoe-caption {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-caption);
+  line-height: var(--lh-normal);
+  color: var(--fg-subtle);
+}
+.zoe-overline {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-overline);
+  line-height: 1;
+  letter-spacing: var(--ls-overline);
+  text-transform: uppercase;
+  color: var(--zoe-green);
+}
+
+/* ============================================================
+   PRIMITIVES
+   ============================================================ */
+.zoe-btn {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-small);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out),
+              background var(--dur) var(--ease-out),
+              box-shadow var(--dur) var(--ease-out);
+  text-decoration: none;
+  line-height: 1;
+}
+.zoe-btn--primary {
+  background: var(--zoe-green);
+  color: var(--zoe-white);
+  box-shadow: var(--shadow-brand);
+}
+.zoe-btn--primary:hover { background: var(--green-600); }
+.zoe-btn--primary:active { transform: scale(0.97); background: var(--green-700); }
+
+.zoe-btn--ink {
+  background: var(--zoe-ink);
+  color: var(--zoe-white);
+}
+.zoe-btn--ink:hover { background: #000; }
+.zoe-btn--ink:active { transform: scale(0.97); }
+
+.zoe-btn--outline {
+  background: transparent;
+  color: var(--zoe-ink);
+  border: 2px solid var(--zoe-ink);
+  padding: 12px 26px;
+}
+.zoe-btn--outline:hover { background: var(--zoe-ink); color: var(--zoe-white); }
+
+.zoe-btn--ghost {
+  background: var(--green-100);
+  color: var(--green-700);
+}
+.zoe-btn--ghost:hover { background: var(--green-200); }
+
+.zoe-badge {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-overline);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--green-100);
+  color: var(--green-700);
+}
+.zoe-badge--solid { background: var(--zoe-green); color: var(--zoe-white); }
+.zoe-badge--offer { background: var(--accent-terracotta); color: var(--zoe-white); }
+.zoe-badge--ink { background: var(--zoe-ink); color: var(--zoe-white); }
+
+.zoe-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.zoe-input {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-body);
+  color: var(--fg);
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  padding: 13px 22px;
+  width: 100%;
+  outline: none;
+  transition: border-color var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
+}
+.zoe-input::placeholder { color: var(--ink-300); }
+.zoe-input:focus { border-color: var(--zoe-green); box-shadow: 0 0 0 4px var(--ring); }

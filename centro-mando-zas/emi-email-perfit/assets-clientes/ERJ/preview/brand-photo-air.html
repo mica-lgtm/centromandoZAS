@@ -1,0 +1,41 @@
+<!-- @dsCard group="Brand" viewport="700x300" name="Texto sobre el aire" subtitle="El mismo texto se ubica solo según dónde está el aire en cada foto" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--crema); padding: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .cap { text-align: center; font-size: 11px; font-weight: 700; color: var(--gris-400); margin-top: 7px; letter-spacing: .08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <div class="grid" id="grid"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../assets/photo-engine.js"></script>
+  <script type="text/babel" src="../assets/PhotoText.jsx"></script>
+  <script type="text/babel">
+    function Demo({ photo, label }) {
+      return (
+        <div>
+          <PhotoText photo={photo} radius={16} pad={20} style={{ height: 250 }}>
+            <PhotoEyebrow>Domingo</PhotoEyebrow>
+            <PhotoTitle size={26}>Vení como estás</PhotoTitle>
+          </PhotoText>
+          <div className="cap">{label}</div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("grid")).render(
+      <>
+        <Demo photo="../assets/fotos/erj-17.png" label="Aire arriba" />
+        <Demo photo="../assets/fotos/erj-34.png" label="Aire a la izquierda" />
+        <Demo photo="../assets/fotos/erj-67.png" label="Aire a la derecha" />
+      </>
+    );
+  </script>
+</body>
+</html>

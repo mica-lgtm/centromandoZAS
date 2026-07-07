@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x190" name="Estrategias de fondo" subtitle="Rotar 4 composiciones — nunca la misma dos veces" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--crema); padding: 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .s { height: 150px; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; justify-content: flex-end; box-shadow: var(--shadow-sm); overflow: hidden; position: relative; }
+  .t { font-size: 13px; font-weight: 800; line-height: 1.1; }
+  .d { font-size: 10px; font-weight: 600; margin-top: 3px; opacity: .8; }
+  .claro { background: #fff; border: 1px solid var(--gris-100); }
+  .claro .t { color: var(--violeta-900); } .claro .d { color: var(--gris-500); }
+  .claro .dot { position:absolute; top:14px; left:14px; width:26px; height:6px; border-radius:99px; background: var(--rosa-500); }
+  .violeta { background: var(--violeta-900); } .violeta .t { color: #fff; } .violeta .d { color: var(--violeta-200); }
+  .violeta .block { position:absolute; top:14px; left:14px; width:44px; height:30px; border-radius:8px; background:#fff; }
+  .grad { background: var(--grad-amanecer); } .grad .t { color:#fff; } .grad .d { color: rgba(255,255,255,.85); }
+  .min { background: var(--niebla); } .min .t { color: var(--violeta-900); } .min .d { color: var(--gris-400); }
+  .min .dot { position:absolute; top:16px; left:16px; width:10px; height:10px; border-radius:99px; background: var(--rosa-500); }
+</style>
+</head>
+<body>
+  <div class="s claro"><span class="dot"></span><div class="t">Claro con acentos</div><div class="d">blanco + violeta/rosa</div></div>
+  <div class="s violeta"><span class="block"></span><div class="t">Violeta sólido</div><div class="d">bloques claros</div></div>
+  <div class="s grad"><div class="t">Degradado</div><div class="d">amanecer / bordó-violeta</div></div>
+  <div class="s min"><span class="dot"></span><div class="t">Minimalista</div><div class="d">aire + un acento</div></div>
+</body>
+</html>

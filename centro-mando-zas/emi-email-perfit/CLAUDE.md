@@ -27,6 +27,7 @@ No diseño automatizaciones completas de Perfit. Puedo crear emails puntuales pa
 - Usá solo datos confirmados por Mica, por archivos del proyecto o por fuentes que Mica indique.
 - Adaptá siempre tono, diseño, CTA y estructura a la marca.
 - Siempre proponé segmento recomendado.
+- El asunto y el preheader deben complementarse sin repetir palabras relevantes entre sí.
 - Siempre entregá asunto, preheader y asunto de reenvío.
 - Cuando generes HTML, creá también un resumen visible con estrategia, links usados y datos a validar.
 - El HTML final debe ser responsive, usable en Perfit, con estilos inline, footer y `${urls.unsubscribe}`.
@@ -35,20 +36,38 @@ No diseño automatizaciones completas de Perfit. Puedo crear emails puntuales pa
 - Si Mica pide "la captura", "lo de la captura", "producto protagonista" o "venta + valor", usá `templates/estilo-captura-producto-protagonista.md` y no el template de promo-grilla.
 - Toda entrega importante debe poder pasar por Rita para QA final.
 
+## Design systems de marca
+
+Antes de crear cualquier email, verificar si la marca tiene design system en:
+
+`/Users/mica/Desktop/ZAS-AGENT/madame-social-content-manager/assets-clientes/[marca]/`
+
+Si existe, leer `README.md` y `CLAUDE.md` (si hay) de esa carpeta antes de arrancar. Contienen: paleta exacta, tipografía, reglas de copy validadas por el cliente, fotografía disponible y reglas de composición. Esta información tiene prioridad sobre suposiciones genéricas de marca.
+
+Marcas con design system disponible:
+- Simona → `assets-clientes/Simona/`
+- Magnolias Deco → `assets-clientes/magnolias-deco/`
+- Zoe Tienda → `assets-clientes/zoe-tienda/`
+- Juanitas → `assets-clientes/Juanitas/`
+- ERJ → `assets-clientes/ERJ/`
+
+Vitalis Navitas tiene solo fuentes en `assets-clientes/vitalis-navitas/fuentes/`. Para paleta y tono de Vitalis, usar `marcas/vitalis-navitas.md`.
+
 ## Flujo de trabajo
 
 1. Entender pedido y objetivo.
 2. Identificar marca y leer su archivo en `marcas/`.
-3. Clasificar tipo de campaña: venta, valor/newsletter, promo, producto, categoría, fecha comercial u otra.
-4. Elegir estilo visual correcto con `skills/elegir-estilo-email.md`. Si hay referencia visual de Mica, esa referencia manda.
-5. Definir estrategia y segmento.
-6. Crear estructura del email.
-7. Crear copy completo.
-8. Proponer idea visual y módulos.
-9. Crear HTML final en `.html` cuando se pida implementación.
-10. Preparar resumen visible para Mica.
-11. Preparar brief para Rita si la pieza está lista para QA.
-12. Registrar aprendizajes o pendientes en `memory.md`, `tasks.md` o `progress/` cuando corresponda.
+3. Si la marca tiene design system en `../madame-social-content-manager/assets-clientes/`, leerlo antes de avanzar.
+4. Clasificar tipo de campaña: venta, valor/newsletter, promo, producto, categoría, fecha comercial u otra.
+5. Elegir estilo visual correcto con `skills/elegir-estilo-email.md`. Si hay referencia visual de Mica, esa referencia manda.
+6. Definir estrategia y segmento.
+7. Crear estructura del email.
+8. Crear copy completo.
+9. Proponer idea visual y módulos.
+10. Crear HTML final en `.html` cuando se pida implementación.
+11. Preparar resumen visible para Mica.
+12. Preparar brief para Rita si la pieza está lista para QA.
+13. Registrar aprendizajes o pendientes en `memory.md`, `tasks.md` o `progress/` cuando corresponda.
 
 ## Formato base de entrega
 

@@ -1,0 +1,97 @@
+<!-- @dsCard group="Components" viewport="900x620" name="UI Kit · Redes Sociales" subtitle="Posts, stories y flyer de evento — plantillas ERJ" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERJ · Kit Redes Sociales</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--niebla); font-family: var(--font-sans); }
+  .top { padding: 28px 36px 8px; }
+  .top h1 { margin: 0; font-size: 26px; font-weight: 900; color: var(--violeta-900); letter-spacing: -0.02em; }
+  .top p { margin: 6px 0 0; color: var(--gris-500); font-size: 15px; }
+  .tabs { display: flex; gap: 8px; padding: 18px 36px 0; flex-wrap: wrap; }
+  .tab { border: none; background: #fff; color: var(--violeta-800); font-weight: 700; font-size: 14px; padding: 10px 18px; border-radius: 999px; cursor: pointer; box-shadow: var(--shadow-sm); transition: all .2s var(--ease-out); font-family: inherit; }
+  .tab.active { background: var(--violeta-900); color: #fff; }
+  .stage { padding: 26px 36px 56px; }
+  .label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gris-400); margin: 0 0 14px; }
+  .rowwrap { display: flex; gap: 22px; flex-wrap: wrap; align-items: flex-start; }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .35s var(--ease-out); }
+  @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+  <div class="top">
+    <h1>Kit de Redes Sociales</h1>
+    <p>Plantillas listas para Instagram y campañas. Tres composiciones que rotan para que nada se vea igual.</p>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <div class="stage" id="stage"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../assets/photo-engine.js"></script>
+  <script type="text/babel" src="PostFeed.jsx"></script>
+  <script type="text/babel" src="Story.jsx"></script>
+  <script type="text/babel" src="Flyer.jsx"></script>
+  <script type="text/babel">
+    const { useState } = React;
+    function App() {
+      const [tab, setTab] = useState("posts");
+      const tabs = [
+        { id: "posts", label: "Posts 1:1" },
+        { id: "stories", label: "Stories 9:16" },
+        { id: "flyer", label: "Flyer de evento" },
+      ];
+      return (
+        <>
+          <div style={{ display: "flex", gap: 8, padding: "0", flexWrap: "wrap" }} id="tabbar">
+            {tabs.map(t => (
+              <button key={t.id} className={"tab" + (tab === t.id ? " active" : "")} onClick={() => setTab(t.id)}>{t.label}</button>
+            ))}
+          </div>
+          <div style={{ marginTop: 26 }}>
+            {tab === "posts" && (
+              <div>
+                <p className="label">Feed · 1080 × 1080 · texto sobre el aire</p>
+                <div className="rowwrap">
+                  <PostFeed variant="photo" photo="../../assets/fotos/erj-17.png" />
+                  <PostFeed variant="photo" photo="../../assets/fotos/erj-34.png" />
+                  <PostFeed variant="violeta" />
+                  <PostFeed variant="gradient" />
+                </div>
+              </div>
+            )}
+            {tab === "stories" && (
+              <div>
+                <p className="label">Stories · 1080 × 1920 · texto sobre el aire</p>
+                <div className="rowwrap">
+                  <Story variant="photo" photo="../../assets/fotos/erj-59.png" />
+                  <Story variant="photo" photo="../../assets/fotos/erj-66.png" />
+                  <Story variant="verse" />
+                  <Story variant="event" photo="../../assets/fotos/erj-19.png" />
+                </div>
+              </div>
+            )}
+            {tab === "flyer" && (
+              <div>
+                <p className="label">Flyer · vertical imprimible</p>
+                <div className="rowwrap">
+                  <Flyer photo="../../assets/fotos/erj-65.png" />
+                  <Flyer photo="../../assets/fotos/erj-67.png" />
+                </div>
+              </div>
+            )}
+          </div>
+        </>
+      );
+    }
+    // mount: replace tabs container + stage with single react tree
+    document.getElementById("tabs").remove();
+    ReactDOM.createRoot(document.getElementById("stage")).render(<App />);
+  </script>
+</body>
+</html>

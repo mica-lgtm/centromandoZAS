@@ -1,0 +1,229 @@
+<!-- @dsCard group="Components" viewport="1200x520" name="Anuncio · Cupón GRACIAS10 (Día del Padre)" subtitle="10% OFF finde largo · 2 versiones × 3 formatos" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoe Tienda · Anuncio GRACIAS10</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #efeae0; }
+  #root { height: 100vh; }
+
+  /* ============ Ad shared ============ */
+  .zad, .zad * { box-sizing: border-box; }
+  .zad {
+    width: 100%; height: 100%;
+    font-family: var(--font-body);
+    color: var(--fg);
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .zad-row-between { display: flex; align-items: center; justify-content: space-between; }
+
+  .zad-overline {
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-overline);
+    text-transform: uppercase;
+    color: var(--green-700);
+  }
+  .zad-overline--light { color: #fff; text-shadow: 0 2px 12px rgba(34,34,34,0.55); }
+
+  /* hero number (version B only) */
+  .zad-bignum {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 0.82;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.06em;
+    letter-spacing: -0.02em;
+  }
+  .zad-bignum-pct { color: var(--zoe-green); }
+  .zad-bignum-off { color: var(--zoe-ink); align-self: flex-start; margin-top: 0.12em; }
+  .zad-subhead {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--zoe-ink);
+    margin: 0;
+    line-height: 1;
+  }
+
+  /* hero headline (version A) — the urgency message, large; fills width, wraps only when needed */
+  .zad-hero {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 0.96;
+    letter-spacing: -0.015em;
+    color: var(--zoe-ink);
+    text-wrap: pretty;
+  }
+
+  /* orange bubble — the hook */
+  .zad-pill {
+    display: inline-flex; align-items: center;
+    background: var(--accent-terracotta); color: #fff;
+    font-weight: var(--fw-bold); letter-spacing: var(--ls-wide);
+    text-transform: uppercase; border-radius: var(--radius-pill);
+    padding: 11px 22px; font-size: 22px; white-space: nowrap;
+  }
+
+  /* urgency pill */
+  .zad-urgency {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: var(--accent-terracotta); color: #fff;
+    font-weight: var(--fw-bold); letter-spacing: var(--ls-wide);
+    text-transform: uppercase; border-radius: var(--radius-pill);
+    padding: 11px 22px; font-size: 22px; white-space: nowrap;
+  }
+  .zad-urgency--light {
+    background: rgba(255,255,255,0.18);
+    box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.55);
+    backdrop-filter: blur(4px);
+  }
+  .zad-urgency-dot {
+    width: 11px; height: 11px; border-radius: 50%; background: #fff;
+    animation: zad-pulse 1.8s var(--ease-out) infinite;
+  }
+  @keyframes zad-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.6); }
+    70% { box-shadow: 0 0 0 9px rgba(255,255,255,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+  }
+  @media (prefers-reduced-motion: reduce) { .zad-urgency-dot { animation: none; } }
+
+  /* CTA (no arrow) */
+  .zad-cta {
+    font-family: var(--font-body);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--zoe-green); color: #fff;
+    border: none; cursor: pointer;
+    border-radius: var(--radius-pill);
+    padding: 20px 40px; font-size: 26px;
+    box-shadow: var(--shadow-brand);
+  }
+  .zad-url { font-weight: var(--fw-bold); color: var(--ink-500); font-size: 24px; letter-spacing: 0.02em; }
+  .zad-url--center { text-align: center; display: block; }
+
+  /* ============ Coupon ticket (em-based — scales with font-size) ============ */
+  .zad-ticket {
+    display: inline-flex; align-items: stretch;
+    background: #fff; border-radius: 0.32em;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--paper-3);
+  }
+  .zad-ticket-stub {
+    background: var(--zoe-green); color: #fff;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 0.3em 0.52em; border-radius: 0.32em 0 0 0.32em; line-height: 0.82;
+  }
+  .zad-ticket--code .zad-ticket-stub { padding: 0.42em 0.5em; }
+  .zad-ticket-stub img { height: 1.15em; width: auto; display: block; }
+  .zad-ticket-pct { font-family: var(--font-display); font-weight: 800; font-size: 1em; }
+  .zad-ticket-off { font-weight: 700; font-size: 0.3em; letter-spacing: 0.2em; margin-top: 0.14em; }
+  .zad-ticket-body {
+    position: relative;
+    display: flex; flex-direction: column; justify-content: center; gap: 0.05em;
+    padding: 0.3em 0.6em;
+    border-left: 0.045em dashed var(--green-300);
+  }
+  .zad-ticket-body::before, .zad-ticket-body::after {
+    content: ""; position: absolute; left: -0.12em; width: 0.24em; height: 0.24em;
+    border-radius: 50%; background: var(--paper);
+  }
+  .zad-ticket-body::before { top: -0.12em; }
+  .zad-ticket-body::after { bottom: -0.12em; }
+  .zad-ticket-label { font-size: 0.23em; font-weight: var(--fw-bold); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-400); }
+  .zad-ticket-code {
+    font-family: var(--font-display); font-weight: 800; font-size: 0.6em;
+    letter-spacing: 0.05em; color: var(--green-900); line-height: 1;
+    background: var(--green-100); border-radius: 0.1em;
+    padding: 0.08em 0.22em; align-self: flex-start; margin: 0.04em 0;
+  }
+  .zad-ticket--code .zad-ticket-code { font-size: 0.74em; }
+  .zad-ticket-hint { font-size: 0.2em; font-weight: var(--fw-medium); color: var(--ink-400); }
+
+  /* ============ 1 · SQUARE 1080×1080 ============ */
+  .zad-square { display: flex; flex-direction: column; }
+  .zad-square-top { flex: 1; padding: 56px 56px 38px; display: flex; flex-direction: column; gap: 22px; }
+  .zad-square .zad-overline { font-size: 27px; }
+  .zad-square-hero { display: flex; flex-direction: column; gap: 12px; }
+  .zad-bignum--sq { font-size: 224px; }
+  .zad-subhead--sq { font-size: 50px; }
+  .zad-hero--sq { font-size: 88px; }
+  .zad-square .zad-pill { font-size: 24px; }
+  .zad-square-foot { margin-top: auto; align-items: flex-end; }
+  .zad-square-photo { height: 224px; flex: none; }
+  .zad-square-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* ============ 2 · VERTICAL 1080×1920 ============ */
+  .zad-vertical { display: flex; flex-direction: column; }
+  .zad-vert-photo { position: relative; height: 900px; flex: none; overflow: hidden; }
+  .zad-vert-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .zad-vert-grad {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(34,34,34,0.74) 0%, rgba(34,34,34,0.5) 11%, rgba(34,34,34,0.12) 28%, rgba(34,34,34,0) 46%, rgba(34,34,34,0) 60%, var(--paper) 99%);
+  }
+  .zad-vert-head {
+    position: absolute; top: 120px; left: 0; right: 0;
+    display: flex; flex-direction: column; align-items: center; gap: 22px;
+  }
+  .zad-vert-head .zad-overline { font-size: 30px; }
+  .zad-vert-body {
+    flex: 1; background: var(--paper);
+    padding: 20px 52px 112px;
+    display: flex; flex-direction: column; align-items: center; gap: 22px;
+    text-align: center;
+  }
+  .zad-vertical .zad-urgency { font-size: 26px; padding: 13px 28px; }
+  .zad-bignum--vert { font-size: 200px; justify-content: center; }
+  .zad-subhead--vert { font-size: 50px; }
+  .zad-hero--vert { font-size: 104px; }
+  .zad-vertical .zad-pill { font-size: 26px; padding: 13px 28px; }
+  .zad-vert-body .zad-cta { font-size: 34px; padding: 28px; }
+  .zad-url--center { font-size: 30px; }
+
+  /* ============ 3 · HORIZONTAL 1200×628 ============ */
+  .zad-horizontal { display: flex; flex-direction: row; }
+  .zad-horiz-photo { position: relative; width: 460px; flex: none; overflow: hidden; }
+  .zad-horiz-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .zad-horiz-tag { position: absolute; left: 26px; bottom: 26px; }
+  .zad-horiz-tag .zad-urgency { font-size: 17px; padding: 9px 16px; }
+  .zad-horiz-body {
+    flex: 1; padding: 42px 48px; display: flex; flex-direction: column;
+    justify-content: space-between; gap: 16px;
+  }
+  .zad-horizontal .zad-overline { font-size: 19px; }
+  .zad-bignum--horiz { font-size: 150px; }
+  .zad-subhead--horiz { font-size: 36px; margin-top: 2px; }
+  .zad-hero--horiz { font-size: 60px; }
+  .zad-horizontal .zad-pill { font-size: 16px; padding: 9px 16px; }
+  .zad-horiz-foot { align-items: center; }
+  .zad-horizontal .zad-cta { font-size: 21px; padding: 16px 32px; }
+  .zad-horizontal .zad-url { font-size: 19px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#78ac5e"/>
+      <text x="50" y="44" font-family="sans-serif" font-weight="800" font-size="26" fill="#fff" text-anchor="middle">10%</text>
+      <text x="50" y="64" font-family="sans-serif" font-weight="700" font-size="12" fill="#fff" text-anchor="middle" letter-spacing="2">OFF</text>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="design-canvas.jsx"></script>
+  <script type="text/babel" src="ads.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* ============================================================
+   JUANITAS — Colors & Type foundations
+   Marca argentina de ropa interior femenina.
+   Tono: cercano, femenino, cálido, comercial y claro.
+   ============================================================ */
+
+/* ---------- Accent script (manuscrita) ----------
+   La marca usa lettering manuscrito para palabras de acento
+   ("colaless", "Recomendaciones") y anotaciones ("Mili usa talle 7").
+   SUSTITUCIÓN: "Caveat" (Google Fonts) reemplaza el lettering
+   custom de marca. Si la marca tiene su fuente propia, cambiar. */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap");
+
+/* ---------- Fonts (Poppins) ---------- */
+@font-face { font-family: "Poppins"; font-weight: 300; font-style: normal;
+  src: url("fonts/Poppins-Light.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Poppins"; font-weight: 400; font-style: normal;
+  src: url("fonts/Poppins-Regular.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Poppins"; font-weight: 500; font-style: normal;
+  src: url("fonts/Poppins-Medium.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Poppins"; font-weight: 600; font-style: normal;
+  src: url("fonts/Poppins-SemiBold.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Poppins"; font-weight: 700; font-style: normal;
+  src: url("fonts/Poppins-Bold.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Poppins"; font-weight: 700; font-style: italic;
+  src: url("fonts/Poppins-BoldItalic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Poppins"; font-weight: 800; font-style: normal;
+  src: url("fonts/Poppins-ExtraBold.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Poppins"; font-weight: 900; font-style: normal;
+  src: url("fonts/Poppins-Black.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Poppins"; font-weight: 900; font-style: italic;
+  src: url("fonts/Poppins-BlackItalic.otf") format("opentype"); font-display: swap; }
+
+:root {
+  /* ----------------------------------------------------------
+     COLOR — Paleta de marca (8 colores oficiales)
+     Sistema cálido, femenino y amigable. El rosa es la ancla
+     femenina; el coral es el color de acción/oferta; azul,
+     celeste, verde, amarillo y naranja son acentos para dar
+     variedad y codificar categorías / temporadas.
+     ---------------------------------------------------------- */
+  --rosa:        #E698AC;  /* Ancla femenina — washes, fondos, identidad   */
+  --fucsia:      #E5197F;  /* Rosa fuerte de marca (logo / resaltadores).
+                             Presente en piezas reales: bloques marker,
+                             tabla de talles, logo. Acento de máximo impacto. */
+  --coral:       #D85F4A;  /* Acción / oferta / CTA — color cálido fuerte   */
+  --naranja:     #E6783F;  /* Acento cálido, energía, destacados            */
+  --amarillo:    #E3C759;  /* Acento luminoso, beneficios, highlights       */
+  --verde:       #95CA9E;  /* Acento fresco, "envío gratis", positivo       */
+  --celeste:     #82B9D3;  /* Acento suave, calma                           */
+  --azul:        #3B6EC5;  /* Acento profundo, contraste, links             */
+  --tinta:       #28282F;  /* Texto principal — casi negro neutro           */
+
+  /* Versiones suaves (fondos / washes ~ mezcla con blanco) */
+  --rosa-soft:    #FBEAF0;
+  --coral-soft:   #FBE7E1;
+  --naranja-soft: #FCEADD;
+  --amarillo-soft:#FBF4DC;
+  --verde-soft:   #EAF4EB;
+  --celeste-soft: #EAF3F8;
+  --azul-soft:    #E4EBF7;
+
+  /* Hover / press (versiones oscurecidas) */
+  --coral-deep:   #BE4631;
+  --naranja-deep: #C45F2C;
+  --azul-deep:    #2C549B;
+
+  /* Neutros cálidos */
+  --crema:        #FBF6F2;  /* Fondo crema por defecto                      */
+  --beige:        #F1EAE2;  /* Neutro beige, separadores suaves             */
+  --arena:        #E3D7CC;  /* Neutro medio                                 */
+  --blanco:       #FFFFFF;
+
+  /* Tinta / texto */
+  --tinta-2:      #5B5B63;  /* Texto secundario / bajadas                   */
+  --tinta-3:      #9A9AA3;
+  --gris:         #9A9AA3;  /* Texto terciario / metadatos                  */
+  --linea:        #ECE6E0;  /* Líneas y bordes hairline                     */
+
+  /* Estados semánticos */
+  --exito:        var(--verde);
+  --aviso:        var(--amarillo);
+  --error:        var(--coral);
+
+  /* ----------------------------------------------------------
+     COLOR — Roles semánticos (usar estos en componentes)
+     ---------------------------------------------------------- */
+  --bg:           var(--crema);
+  --bg-alt:       var(--rosa-soft);
+  --surface:      var(--blanco);
+  --fg1:          var(--tinta);     /* texto principal     */
+  --fg2:          var(--tinta-2);   /* texto secundario    */
+  --fg3:          var(--gris);      /* texto terciario     */
+  --brand:        var(--coral);     /* color de acción/marca fuerte */
+  --on-brand:     #FFF6F2;          /* texto sobre coral   */
+  --pink:         var(--rosa);      /* identidad femenina  */
+  --accent:       var(--azul);      /* acento de contraste */
+  --sale:         var(--coral);     /* precios / OFF       */
+  --border:       var(--linea);
+
+  /* ----------------------------------------------------------
+     COMPAT — alias de la paleta anterior (bordó).
+     Mantienen compatibilidad; mapean al nuevo sistema.
+     Preferir los nombres nuevos en piezas nuevas.
+     ---------------------------------------------------------- */
+  --bordo:        var(--coral);
+  --bordo-deep:   var(--coral-deep);
+  --bordo-soft:   #E59079;
+  --rojo:         var(--coral);
+  --rojo-deep:    var(--coral-deep);
+  --rosa-claro:   var(--rosa-soft);
+  --rosa-nube:    #FDF4F7;
+
+  /* ----------------------------------------------------------
+     TYPE — escala (base 1080px de ancho de placa)
+     ---------------------------------------------------------- */
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-hand: "Caveat", "Poppins", cursive;  /* manuscrita de acento */
+
+  --fw-light: 300; /* @kind font */
+  --fw-reg: 400;   /* @kind font */
+  --fw-med: 500;   /* @kind font */
+  --fw-semi: 600;  /* @kind font */
+  --fw-bold: 700;  /* @kind font */
+  --fw-xbold: 800; /* @kind font */
+  --fw-black: 900; /* @kind font */
+
+  /* Escala tipográfica (px) */
+  --t-hero:   120px;  /* número de oferta gigante: "50%"      */
+  --t-d1:      88px;  /* display / hook principal de placa     */
+  --t-d2:      64px;
+  --t-h1:      48px;
+  --t-h2:      36px;
+  --t-h3:      28px;
+  --t-lg:      24px;  /* bajada grande                         */
+  --t-body:    20px;  /* cuerpo                                */
+  --t-sm:      16px;
+  --t-xs:      13px;  /* legales, metadatos                    */
+
+  --lh-tight: 0.96; /* @kind font */
+  --lh-snug:  1.08; /* @kind font */
+  --lh-body:  1.45; /* @kind font */
+
+  /* Espaciado (8pt) */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px;
+  --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px; --sp-10: 128px;
+
+  /* Radios */
+  --r-sm: 8px; --r-md: 16px; --r-lg: 28px; --r-xl: 40px; --r-pill: 999px;
+
+  /* Sombras (cálidas neutras, tinte tinta) */
+  --sh-sm: 0 2px 8px rgba(40, 40, 47, 0.08);
+  --sh-md: 0 10px 30px rgba(40, 40, 47, 0.12);
+  --sh-lg: 0 24px 60px rgba(40, 40, 47, 0.16);
+}
+
+/* ---------- Clases tipográficas semánticas ---------- */
+.t-hero { font-family: var(--font); font-weight: var(--fw-black); font-size: var(--t-hero);
+  line-height: var(--lh-tight); letter-spacing: -0.03em; color: var(--brand); }
+.t-d1   { font-family: var(--font); font-weight: var(--fw-xbold); font-size: var(--t-d1);
+  line-height: var(--lh-tight); letter-spacing: -0.02em; }
+.t-d2   { font-family: var(--font); font-weight: var(--fw-xbold); font-size: var(--t-d2);
+  line-height: var(--lh-snug); letter-spacing: -0.02em; }
+.t-h1   { font-family: var(--font); font-weight: var(--fw-bold); font-size: var(--t-h1);
+  line-height: var(--lh-snug); letter-spacing: -0.01em; }
+.t-h2   { font-family: var(--font); font-weight: var(--fw-bold); font-size: var(--t-h2);
+  line-height: 1.12; letter-spacing: -0.01em; }
+.t-h3   { font-family: var(--font); font-weight: var(--fw-semi); font-size: var(--t-h3);
+  line-height: 1.2; }
+.t-lg   { font-family: var(--font); font-weight: var(--fw-med); font-size: var(--t-lg);
+  line-height: 1.35; }
+.t-body { font-family: var(--font); font-weight: var(--fw-reg); font-size: var(--t-body);
+  line-height: var(--lh-body); }
+.t-sm   { font-family: var(--font); font-weight: var(--fw-reg); font-size: var(--t-sm);
+  line-height: 1.4; }
+.t-xs   { font-family: var(--font); font-weight: var(--fw-med); font-size: var(--t-xs);
+  line-height: 1.35; }
+.t-eyebrow { font-family: var(--font); font-weight: var(--fw-semi); font-size: var(--t-sm);
+  letter-spacing: 0.16em; text-transform: uppercase; }
+
+/* ---------- Lettering manuscrito de acento ---------- */
+.t-hand { font-family: var(--font-hand); font-weight: 600; line-height: 0.9;
+  color: var(--fucsia); }            /* palabras de acento sobre titulares */
+.t-note { font-family: var(--font-hand); font-weight: 600; font-size: 24px;
+  color: var(--coral); }             /* anotaciones tipo "Mili usa talle 7" */
+
+/* ---------- Resaltador / marker (recurso estrella) ----------
+   Bloque de color sólido detrás de palabras clave, como un fibrón.
+   Uso: <span class="mark mark-fucsia">TIRO ALTO</span> */
+.mark { display: inline-block; padding: 0.05em 0.32em; color: #fff;
+  font-weight: var(--fw-xbold); border-radius: 6px; line-height: 1.18;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.mark-fucsia  { background: var(--fucsia); }
+.mark-coral   { background: var(--coral); color:#fff; }
+.mark-azul    { background: var(--azul); }
+.mark-naranja { background: var(--naranja); }
+.mark-amarillo{ background: var(--amarillo); color: var(--tinta); }
+.mark-rosa    { background: var(--rosa); color: var(--tinta); }
+.mark-tinta   { background: var(--tinta); }
+
+/* Foto recortada con borde blanco (efecto sticker) */
+.sticker { filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 6px #fff)
+  drop-shadow(0 8px 18px rgba(40,40,47,.18)); }
+
+/* Inset circular de detalle (zoom de producto) */
+.inset-circle { border-radius: 999px; overflow: hidden; background: #fff;
+  box-shadow: var(--sh-md); }

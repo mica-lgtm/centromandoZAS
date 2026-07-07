@@ -1,0 +1,62 @@
+<!-- @dsCard group="Components" viewport="760x620" name="UI Kit · Email marketing" subtitle="Newsletter mobile-first" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoe Tienda · UI Kit — Email marketing</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--paper-2); font-family: var(--font-body); color: var(--fg); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .top h1 { font-size: 28px; font-weight: 800; margin: 0; }
+  .sub { color: var(--fg-muted); font-weight: 500; margin: 0 0 28px; }
+  .device {
+    width: 390px; margin: 0 auto; background: #fff; border-radius: 28px;
+    box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--border);
+  }
+  .notch { height: 26px; background: var(--zoe-ink); display: flex; align-items: center; justify-content: center; }
+  .notch::after { content: ""; width: 110px; height: 6px; border-radius: 3px; background: rgba(255,255,255,.25); }
+  .mailmeta { padding: 14px 20px; border-bottom: 1px solid var(--border); background: var(--paper); }
+  .from { font-size: 14px; font-weight: 800; color: var(--fg); }
+  .subj { font-size: 13px; color: var(--fg-muted); font-weight: 600; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>UI Kit · Email marketing</h1>
+      <img src="../../assets/zoe-logo-color.png" alt="Zoe Tienda" style="height:34px">
+    </div>
+    <p class="sub">Newsletter mobile-first: banner limpio, jerarquía clara y CTAs visibles.</p>
+    <div class="device">
+      <div class="notch"></div>
+      <div class="mailmeta">
+        <div class="from">Zoe Tienda</div>
+        <div class="subj">🌿 Hasta 30% OFF comprando en cantidad</div>
+      </div>
+      <div id="email"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="EmailBlocks.jsx"></script>
+  <script type="text/babel">
+    function Email() {
+      return (
+        <React.Fragment>
+          <window.EmailHeader />
+          <window.EmailHero />
+          <window.EmailProducts />
+          <window.EmailPromo />
+          <window.EmailFooter />
+        </React.Fragment>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("email")).render(<Email />);
+  </script>
+</body>
+</html>

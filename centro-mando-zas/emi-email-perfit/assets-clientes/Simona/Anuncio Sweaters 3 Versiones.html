@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIMONA · Anuncio Sweaters — 3 versiones</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--simona-stone); font-family:var(--font-text); color:var(--simona-ink);}
+  .page{padding:34px 22px 70px;}
+  .head{max-width:1100px; margin:0 auto 8px;}
+  .kicker{font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; opacity:.62;}
+  h1.title{font-family:var(--font-display); font-weight:900; font-size:34px; letter-spacing:-0.02em; margin:8px 0 6px;}
+  .lede{opacity:.74; font-size:14px; max-width:680px; line-height:1.5;}
+  .vtabs{display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  .vtab{display:flex; flex-direction:column; gap:2px; text-align:left; padding:12px 20px; border-radius:16px; border:1.5px solid rgba(42,42,42,.18); background:rgba(255,255,255,.4); color:var(--simona-ink); cursor:pointer; transition:.15s;}
+  .vtab b{font-family:var(--font-display); font-weight:800; font-size:15px;}
+  .vtab span{font-size:11.5px; opacity:.66;}
+  .vtab.on{background:var(--simona-ink); color:var(--simona-cream); border-color:var(--simona-ink);}
+  .vtab.on span{opacity:.8;}
+  .stage{max-width:1180px; margin:30px auto 0; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start; justify-content:center;}
+  .frame{}
+  .holder{border-radius:4px; overflow:hidden; box-shadow:0 22px 56px rgba(42,42,42,.24); background:#fff;}
+  .scaled{transform-origin:top left;}
+  .cap{font-size:12px; opacity:.66; margin-top:13px; text-align:center;}
+  .cap b{opacity:1; font-weight:700;}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <div class="kicker">Campaña finde largo · Meta + Google Ads</div>
+    <h1 class="title">Sweaters · Hasta 40% OFF — 3 versiones</h1>
+    <div class="lede">Tres direcciones distintas en jerarquía y composición, cada una con fotos reales de la tienda. Cada versión trae sus 3 formatos (cuadrado, vertical y horizontal). Elegí una versión arriba.</div>
+    <div class="vtabs" id="vtabs"></div>
+  </div>
+  <div class="stage" id="stage"></div>
+</div>
+
+<script type="text/babel" src="ads3/AdKit.jsx"></script>
+<script type="text/babel" src="ads3/V1Editorial.jsx"></script>
+<script type="text/babel" src="ads3/V2Bold.jsx"></script>
+<script type="text/babel" src="ads3/V3Typographic.jsx"></script>
+<script type="text/babel">
+  const { useState } = React;
+
+  const VERSIONS = [
+    { id: 'v1', name: 'Versión 1', style: 'Editorial · foto full-bleed', Comp: V1Editorial, photo: 'Sweater Jume Natural (crudo)' },
+    { id: 'v2', name: 'Versión 2', style: 'Bold · bloque de color', Comp: V2Bold, photo: 'Sweater Jume Negro' },
+    { id: 'v3', name: 'Versión 3', style: 'Tipográfica · número gigante', Comp: V3Typographic, photo: 'Sweater Jume Natural (otra toma)' },
+  ];
+  const ORDER = ['sq', 'vt', 'hz'];
+
+  function scaleFor(fmt) {
+    const f = FORMATS[fmt];
+    if (fmt === 'vt') return Math.min(600 / f.h, 360 / f.w);   // ~0.31
+    if (fmt === 'hz') return Math.min(320 / f.h, 600 / f.w);   // ~0.5
+    return Math.min(520 / f.h, 520 / f.w);                     // square ~0.48
+  }
+
+  function Frame({ Comp, fmt }) {
+    const f = FORMATS[fmt];
+    const s = scaleFor(fmt);
+    return (
+      <div className="frame">
+        <div className="holder" style={{ width: f.w * s, height: f.h * s }}>
+          <div className="scaled" style={{ width: f.w, height: f.h, transform: `scale(${s})` }}>
+            <Comp fmt={fmt} />
+          </div>
+        </div>
+        <div className="cap"><b>{f.label}</b> · {f.sub}</div>
+      </div>
+    );
+  }
+
+  function App() {
+    const [vi, setVi] = useState(0);
+    const V = VERSIONS[vi];
+    return (
+      <React.Fragment>
+        {/* tabs rendered into #vtabs via portal-like direct render */}
+        <Tabs vi={vi} setVi={setVi} />
+        <div className="stage-inner" style={{ display: 'contents' }}>
+          {ORDER.map(fmt => <Frame key={fmt} Comp={V.Comp} fmt={fmt} />)}
+        </div>
+      </React.Fragment>
+    );
+  }
+
+  function Tabs({ vi, setVi }) {
+    return ReactDOM.createPortal(
+      VERSIONS.map((v, i) => (
+        <button key={v.id} className={'vtab' + (i === vi ? ' on' : '')} onClick={() => setVi(i)}>
+          <b>{v.name}</b><span>{v.style}</span><span>📷 {v.photo}</span>
+        </button>
+      )),
+      document.getElementById('vtabs')
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('stage')).render(<App />);
+</script>
+</body>
+</html>
