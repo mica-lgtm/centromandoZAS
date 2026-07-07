@@ -126,6 +126,98 @@ Referencia conceptual: email tipo Mini Ánima. Cupón claro, fecha límite, prod
 - Las palabras funcionales inevitables pueden aparecer, pero no se debe duplicar el mensaje central.
 - Aplicar en: todas las marcas y todas las campañas de Emi.
 
+## 2026-06-19 · Ciclo 05 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 05.1:** Retargeting comportamental "Vieron X sin comprar" → CTR 7%+ incluso con asuntos simples sin emoji ni urgencia ("Bienestar duradero con Omega 3" → 7.04% CTR en 71 enviados). La segmentación sola convierte cuando hay intención declarada. Sistematizar para todos los productos con segmentos de "Vieron".
+- **Regla ciclo 05.2:** Post-compra educativo (sobre producto que ya compraron) = mayor CTOR del ciclo — "🧠 Foco con más criterio" a Compradores de Melena de León: 7.14% CTR, 27.27% CTOR. Después de la compra, enseñar cómo usar el producto convierte mejor que vender algo nuevo. CTA ideal: "Aprovechá mejor tu X".
+- **Regla ciclo 05.3:** Comparativa directa de productos en el asunto ("¿Qué magnesio elegir? 🤔") resuelve objeción de decisión y activa conversión en segmento indeciso. CTOR 5.56% validado en 332 contactos (Vieron Bisglicinato/Citrato sin comprar).
+- **Regla ciclo 05.4:** Segmento "Nunca han interaccionado (email)" PROHIBIDO PERMANENTEMENTE — segunda infracción: 0.48% open + 2.56% bounce (supera umbral crítico de 2%) + 0.00% CTR en 7.727 envíos. Ninguna optimización de copy lo rescata. Archivar o eliminar de Klaviyo para prevenir uso futuro.
+- **Regla ciclo 05.5:** Preheader vacío al 100% por QUINTO ciclo consecutivo. Los recordatorios verbales son inefectivos en 10 semanas de análisis. Requiere implementación técnica bloqueante: checklist pre-schedule o campo obligatorio en template/proceso de envío.
+- **Regla ciclo 05.6:** NAD+ con asunto "Descubre el rol del NAD+ en tu salud" en base grande (12.157) logra solo 0.44% CTR. Dos problemas: (1) "Descubre" es español neutro (usar "Descubrí"); (2) "el rol de X en tu salud" no activa urgencia. Próxima campaña NAD+: segmento chico con intención + fórmula "Cellular NAD+: [beneficio concreto] en [N días]".
+- **Regla ciclo 05.7:** Cross-sell post-compra confirmado por CUARTO ciclo consecutivo — Compradores de Bisglicinato + email complementario: 2.82% CTOR. Continuar rotación: Colágeno→Omega3, Omega3→NeuroCalm, Melena de León→NAD+.
+- **Alerta QA:** Asunto cortado detectado en Probióticos — "seguí acompañando tu bienesta" (falta "r"). Agregar revisión de ortografía y longitud en checklist pre-schedule.
+- **ALERTA CRÍTICA ciclo 05:** Segmento "Nunca han interaccionado" usado por segunda vez a pesar de retiro explícito en Ciclo 04. Bounce 2.56% en 7.727 enviados. Comunicar bloqueo a toda persona con acceso a Klaviyo.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-19
+
+## 2026-06-21 · Ciclo 06 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 06.1:** Educativo comparativo directo en segmento de alta intención = CTOR 11.01% — "Qué mirar en un Omega 3" (Compradores potenciales, 2.520 enviados). Patrón validado por quinta vez consecutiva. Aplicar obligatoriamente en campañas a "Compradores potenciales".
+- **Regla ciclo 06.2:** Suscriptores nuevos + pregunta con timeframe = CTOR 25% en muestra pequeña (57 enviados, "¿Qué pasa en 90 días?"). Escalar en ciclo 07 con muestra 300-500 y segmento específico por producto.
+- **Regla ciclo 06.3:** Lista "Leads Fríos / Quiz" (excluyendo Shopify Customers) = bounce 0.93%, open 4.30%, CTR 0.03% — comportamiento idéntico a "Nunca interaccionaron". No usar hasta auditoría y limpieza. Si se usa, solo con asunto de altísimo impacto + incentivo concreto.
+- **Regla ciclo 06.4:** Frecuencia máxima a Base Completa = 1 campaña por día. Dos envíos a Base Completa el mismo día genera fatiga documentada y CTR < 0.05%. Implementar frequency cap operativo.
+- **Regla ciclo 06.5:** El naming formal "20JUN-XX" fue el primer factor que mejoró la tasa de preheader (de 100% a 64%). Mantener obligatoriamente el naming con fecha + número de secuencia para que el proceso de preheader sea natural.
+- **Regla ciclo 06.6:** "Interacción alta" infladísima por Apple Mail (79.48% open, CTOR 0.31%) + unsubscribe 0.45% supera límite. Asunto genérico "Descanso y recuperación" posible causa. Solo CTR/CTOR como KPIs en ese segmento.
+- **Regla ciclo 06.7:** Cross sell con asunto genérico = 0% CTR. Fórmula obligatoria para cross sell: "[Producto que ya tienen] + [beneficio del complementario]" — ej: "Tu Colágeno Flex funciona mejor con esto".
+- **Regla ciclo 06.8:** Segmento "Vieron Citrato y no compraron nunca ese producto" — TERCER ciclo consecutivo en que se usa a pesar de retiro explícito (ciclos 03 y 05). Requiere bloqueo técnico en Klaviyo: archivar segmento o agregar tag "PROHIBIDO". Los recordatorios verbales no funcionan.
+- **ALERTA CRÍTICA ciclo 06:** "20JUN-04 NeuroCalm" (Base Completa, 64.737 enviados) generó 511 bounces (0.79%) y solo 16 clicks (0.02% CTR). NeuroCalm es producto de nicho (sueño/cerebro) — no debe enviarse a Base Completa sin filtro de interés. 511 bounces en un envío = riesgo real de reputación de IP.
+- **ALERTA ciclo 06:** Doble campaña NAD+ en menos de 17hs a Base Completa — "Nuevo lanzamiento" (19-jun 18:30) y "Creatina/NAD+ informativo" (20-jun 11:00) solaparon audiencia. Evitar duplicar producto en 48hs a misma lista.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-21
+
+## 2026-06-23 · Ciclo 07 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 07.1:** Ángulo estacional natural (invierno + articulaciones) = open rate 20% y CTR 0.64% en segmento de intención (Colágeno Flex). "Dale vida a tus movimientos este invierno❄️" funciona. Sistematizar ángulos estacionales para Flex/Omega 3/Magnesio en invierno argentino (junio-agosto).
+- **Regla ciclo 07.2:** Segmento "04 - Nuevos Lanzamientos (activos 180d)" con 2.54% open rate — comportamiento de lista fría. Auditar antes del próximo uso. No usar sin limpieza previa.
+- **Regla ciclo 07.3:** Social proof con números grandes ("25.000 personas ya lo usan") a inactivos 90-365d = 6.07% open + 0.013% CTR. Social proof NO reactiva inactivos. Para este segmento: beneficio concreto + urgencia real (confirmado 3er ciclo consecutivo).
+- **Regla ciclo 07.4:** Naming estructurado garantiza preheader. Campañas con naming formal (22JUN-XX, Vitalis Email X, Email X-tema) tienen 100% preheader. Campañas sin naming formal tienen 0% preheader. El naming es el único control que funciona en la práctica.
+- **Regla ciclo 07.5:** Frecuencia cap urgente Base Completa. Dos envíos masivos en <24hs generaron 1.292 bounces acumulados. Máximo 1 envío a Base Completa cada 3-4 días para proteger reputación de IP.
+- **Regla ciclo 07.6:** Retargeting Probióticos "Vieron sin comprar" + dato estadístico en asunto = 12.50% CTOR (310 enviados). Sexta confirmación del patrón retargeting comportamental. Sistematizar para todos los productos.
+- **Regla ciclo 07.7:** Dormidos 91-180d + NAD+ = 23.79% open + 1.29% CTR (618 enviados). Escalar con segmento más amplio y asunto con número concreto.
+- **Regla ciclo 07.8:** Asunto-pregunta educativa abre pero NO convierte si el CTA no es explícito y comercial. "¿Se pueden combinar suplementos?" → 18.63% open / 0% CTR. Toda pieza educativa debe tener CTA visible y activo.
+- **MEJORA HISTÓRICA ciclo 07:** Preheader compliance del 0% (ciclos 04-06) al 59% (ciclo 07). El naming formal de series es el único mecanismo que funciona. Mantener y escalar.
+- **ALERTA CRÍTICA ciclo 07:** 1.292 bounces acumulados en dos envíos masivos consecutivos a Base Completa (<24hs). Auditar reputación de IP y lista Base Completa antes del próximo envío masivo.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-23
+
+## 2026-06-25 · Ciclo 08 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 08.1:** Ángulo "menopausia + colágeno" a segmento de potenciales antiage = CTOR 8.40% (1.512 enviados). Primer test de ángulo hormonal exitoso. Escalar: "perimenopausia", "colágeno después de los 40", "piel y hormonas". Nuevo eje de contenido validado.
+- **Regla ciclo 08.2:** NeuroCalm a Base Completa = 1.35% open rate (record mínimo histórico absoluto) + 507 bounces (0.75%). NeuroCalm, Melena de León, Cellular NAD+, Creatina = productos de nicho que NO van a Base Completa NUNCA. Solo a segmentos de intención específica.
+- **Regla ciclo 08.3:** Asunto > 55 caracteres = open rate catastrófico. "Tu piel en invierno necesita esto: rutina completa día y noche con -20% OFF" (72 chars) → 2.72% open. Límite de 55 caracteres pasa de recomendación a REGLA BLOQUEANTE. Si supera 55 chars, se acorta antes del envío.
+- **Regla ciclo 08.4:** Preheader compliance al 69% — récord histórico. Naming formal (24JUN-XX, Vitalis Miercoles X, Email X — Tema) = preheader siempre presente. Naming informal (Campaña ZAS, Campaña del DD jun) = preheader siempre vacío. Objetivo: 100% con naming estandarizado.
+- **Regla ciclo 08.5:** "Nunca han interaccionado (email)" — CUARTA INFRACCIÓN CONSECUTIVA a pesar de retiro explícito en ciclos 04, 05 y 06. Los recordatorios verbales son definitivamente inefectivos. Único camino: eliminar o archivar el segmento de Klaviyo. Tag "PROHIBIDO-NO USAR" inmediato.
+- **Regla ciclo 08.6:** WARMING W2/W3 (Openers & Clickers 14d/30d) infladísimas por Apple Mail — 31%+ open irreal. CTR real 0.48-0.52%, CTOR 1.54-1.65% — segmentos valiosos, pero open rate inutilizable. Reportar SOLO CTR y CTOR en campañas a estos segmentos.
+- **Regla ciclo 08.7:** Educativo comparativo corto ("Antes de elegir un colágeno, leé esto") + segmento alta intención = 37.68% open, 3.85% CTOR. Patrón confirmado por octavo ciclo consecutivo como el más consistente del proyecto.
+- **RÉCORD HISTÓRICO ciclo 08:** Preheader compliance 69% (sube de 59% en ciclo 07, de 0% en ciclos 04-06).
+- **ALERTA CRÍTICA ciclo 08:** 24JUN-04 NeuroCalm a Base Completa — 507 bounces en un envío + 1.35% open rate (record mínimo histórico). Auditar reputación IP antes del próximo envío masivo. No enviar a Base Completa en los próximos 3-5 días.
+- **ALERTA CRÍTICA ciclo 08:** Segmento "Nunca han interaccionado (email)" sigue activo en Klaviyo — eliminar o archivar inmediatamente.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-25
+
+## 2026-06-27 · Ciclo 09 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 09.1:** Asunto ultra-corto (22 chars) con evocación estacional a compradores históricos activos = 27.45% open en 2.497 enviados. "Tu piel en invierno" a compradores de Colágeno antiage desde siempre supera benchmarks sin número, sin urgencia y sin emoji. El atajo relacional supera la fórmula transaccional cuando el segmento tiene historial de compra fuerte y la marca comparte contexto con el comprador.
+- **Regla ciclo 09.2:** Dato de bounce en Klaviyo NO es final hasta 72hs post-envío. NeuroCalm reportó 507 bounces (0.75%) a las ~24hs (Ciclo 08) y 722 bounces (1.07%) a las ~72hs (Ciclo 09). Diferencia: 215 bounces adicionales. Para decisiones de reputación IP, nunca usar el bounce rate antes de 72hs del envío.
+- **Regla ciclo 09.3:** NeuroCalm a Base Completa = 722 bounces totales (1.07%), PEOR REGISTRO ABSOLUTO del proyecto en bounces individuales. Validado definitivamente por 5 ciclos consecutivos (06-09). El bloqueo técnico en Klaviyo (archivar segmento BC para NeuroCalm) es obligatorio e impostergable.
+- **Regla ciclo 09.4:** CTOR 0% en Omega 3 PLUS con asunto correcto (45 chars, dato concreto) → segmento "Contactos con actividad" no diferencia comportamiento real de Apple Mail phantom opens. Para campañas de conversión, solo usar segmentos con comportamiento real demostrado (clickers, compradores, vieron producto).
+- **Regla ciclo 09.5:** Pausa post-crisis validada operativamente — 0 envíos el 26-27/06 post-alerta NeuroCalm. Patrón correcto: alerta crítica → pausa 3-5 días → retomar con segmentos chicos (< 3.000) y productos core. No retomar Base Completa sin auditar sender score primero.
+- **Regla ciclo 09.6:** Datos de Klaviyo para envíos grandes pueden subestimar recipients en las primeras 24hs. Email 1 Colágeno: 325 enviados en Ciclo 08 → 2.497 enviados en Ciclo 09. Confirmar siempre con datos de 72hs antes de usar "total enviados" para decisiones de segmentación o proyecciones.
+- **ALERTA CRÍTICA ciclo 09:** Bounce acumulado en IP Vitalis — 722 bounces NeuroCalm (Ciclo 09) + ~550 Ciclo 07 + ~454 Ciclo 04 = patrón de deterioro de reputación IP. Auditar sender score en MxToolbox/Mail-Tester antes del próximo envío masivo. Si sender score < 80, implementar calentamiento gradual.
+- **ALERTA CRÍTICA ciclo 09:** NeuroCalm sigue sin bloqueo técnico después de 6 advertencias (Ciclos 06-09). Único camino efectivo: archivar o etiquetar "PROHIBIDO-NO USAR" en Klaviyo esta semana. Los recordatorios verbales son definitivamente inefectivos.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-06-27
+
+## 2026-07-01 · Ciclo 10 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 10.1:** Variante "Sustantivo: qué [verbo]" y "Sustantivo: cuándo [verbo]" confirmadas como fórmula ganadora — "Omega 3: qué esperar" (CTOR 13.64%, 672 enviados) y "Citrato: cuándo elegirlo" (CTOR 8.11%, 144 enviados). Agregar como variantes válidas de la fórmula "Sustantivo: dato concreto" validada desde ciclo 01.
+- **Regla ciclo 10.2:** Post-purchase educativo = CTOR 13.64% — confirmado por SÉPTIMO ciclo consecutivo como patrón de mayor CTOR con volumen real. "Omega 3: qué esperar" a Compradores recientes de Omega 3 = mejor CTR (2.24%) y CTOR del ciclo. Sistematizar como email obligatorio en secuencia post-compra para TODAS las líneas activas.
+- **Regla ciclo 10.3:** Retargeting Probióticos + número en asunto = CTOR 18.18% (mejor CTOR del ciclo) — "5 señales de que tu digestión pide más atención" a Vieron probióticos (72 enviados). Número + síntomas + categoría en retargeting comportamental = conversión máxima. Replicar con otras líneas.
+- **Regla ciclo 10.4:** Naming formal = 100% preheader, naming genérico "Campaña del XX" = 0% preheader — confirmado DÉCIMO ciclo consecutivo. Series "Email X lunes" y "M30 Email X" tuvieron 8/8 con preheader. "Campaña del XX" tuvo 5/5 sin preheader. Prohibir naming genérico para cualquier campaña sin verificación manual de preheader.
+- **Regla ciclo 10.5:** Base Completa + educativo genérico sin producto específico = 555 bounces + CTR 0.13% — "Cómo elegir suplementos con criterio" a 88,104 enviados. Base Completa solo acepta: (a) producto core con beneficio claro + CTA directo, (b) promo con urgencia real. Nunca educativo genérico sin ancla de producto.
+- **Regla ciclo 10.6:** VIP Champions + asunto genérico/filosófico = 0% CTR — "Una rutina premium también se construye con criterio" a VIP Champions: 0 clicks. Segmento VIP requiere beneficio explícito o descuento real en el asunto para convertir.
+- **RÉCORD HISTÓRICO ciclo 10:** Preheader compliance 62% (8/13 campañas con preheader) — primer ciclo con mayoría de campañas con preheader. Causado por naming de series estructuradas ("Email X lunes", "M30 Email X").
+- **Monitorear ciclo 11:** (a) M30 Email 4 "Encontrá tu fórmula" → 0% open con 58 enviados (datos prematuros, < 18hs). (b) Segmento "Vieron Citrato" reactivado → bounce 1.39% (2/144). Si supera 2% en ciclo 11, retirar nuevamente.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-07-01
+
+## 2026-07-03 · Ciclo 11 · Vitalis Klaviyo · Reglas de performance comprobadas
+
+- **Regla ciclo 11.1:** Nueva variante ganadora de asunto: "Producto: qué mirar en [componentes técnicos]" — "Omega 3: qué mirar en EPA y DHA" → CTOR 10% en 365 enviados (Interesados en omega 3). Extensión de la fórmula "Sustantivo: dato concreto" validada desde ciclo 01. Aplicar para comparativas de ingredientes.
+- **Regla ciclo 11.2:** Prueba social (testimonios) FUNCIONA solo en segmento de alta intención — "Lo que otros ya notaron" → 4.48% CTOR en 3.938 Compradores potenciales. Contrasta con ciclo 02 (testimonios a lista genérica = 0.17% CTOR). Regla: testimonios a alta intención = válido; testimonios a listas amplias = prohibido.
+- **Regla ciclo 11.3:** Educativo de acompañamiento alimentario = nuevo eje de contenido — "Alimentos y magnesio" a Interesados en citrato → 5.03% CTOR en 1.164 enviados. Replicar: "Alimentos para el colágeno", "Qué potencia el Omega 3". Bajo riesgo de unsubscribe (0.26%).
+- **Regla ciclo 11.4:** Asunto metafórico sin producto + segmento de interés = CTR < 0.05% — "Tu piel también tiene estructura" en "Interesados en belleza antiage" = 0.034% CTR. La metáfora no activa el clic incluso cuando el interés es real. Mantener fórmula "Ingrediente: [beneficio concreto]".
+- **Regla ciclo 11.5:** Preheader compliance 72.7% (8/11) — récord histórico (↑ de 62% ciclo 10). Series M01 y J02 = 100% preheader. "Campaña del XX" = 0% preheader (11 ciclos de evidencia). Próximo objetivo: 85%+.
+- **Regla ciclo 11.6:** Creatina a WARMING W3 (19k) = 0.096% CTR — cuarta infracción documentada. Regla definitiva: Creatina, NeuroCalm, Cellular NAD+, Melena de León NUNCA a listas > 3.000 sin segmentación de interés. Evaluar bloqueo técnico.
+- **Regla ciclo 11.7:** Segmento "Compradores recientes de Colágeno Antiage" con bounce 1.32% (11/835) — anomalía para compradores. Monitorear ciclo 12. Si > 0.8% otra vez, auditar ventana temporal del segmento.
+- **Nuevo producto:** Vitamina D3 — primera aparición en campaña (M01 Email 2). Verificar SKU en tienda antes de construir secuencia dedicada.
+- **Alerta operativa:** 5 remitentes distintos en un ciclo (hola@, agus@, tienda@, info@, matias@vitalisnavitas.com). Unificar a máximo 2 addresses activos.
+- Aplicar en: todas las campañas Vitalis Navitas desde 2026-07-03
+
 ## Aprendizajes futuros
 
 Agregar acá aprendizajes por correcciones de Mica o Rita.
