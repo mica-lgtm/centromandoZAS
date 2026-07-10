@@ -553,3 +553,15 @@ Lanza campañas → Monitorear performance
   1. Habilitar `pem-lb.myperfit.com` en la política de red del entorno cloud usado por esta rutina (o mover la ejecución a un entorno con acceso).
   2. Completar `retroalimentacion-perfit/cuentas.json` con las `api_key` de juanitas, magnolias, zoetienda y tessel.
 - Aplicar en: próxima corrida de la rutina — reintentar apenas se resuelva el bloqueo de red; no reintentar automáticamente sin intervención porque el bloqueo es de infraestructura, no transitorio.
+
+## 2026-07-10 · Rutina automática Perfit · Ciclo BLOQUEADO otra vez — mismos dos bloqueos sin resolver
+
+- Contexto: corrida automática diaria (24hs) de `analizar-performance-perfit.md` para simonashop, juanitas, magnolias, zoetienda y tessel (Living Tree y ERJ siguen excluidas a pedido de Mica).
+- **Bloqueo 1 — red:** verificado de nuevo con `curl` directo a `https://pem-lb.myperfit.com/v2/simonashop/campaigns` → `CONNECT tunnel failed, response 403`. El status del proxy del entorno confirma `connect_rejected` / "gateway answered 403 to CONNECT (policy denial or upstream failure)" para `pem-lb.myperfit.com:443`, timestamp de hoy. Sigue sin habilitarse.
+- **Bloqueo 2 — configuración:** `retroalimentacion-perfit/cuentas.json` sigue teniendo solo la `api_key` de `simonashop`. Siguen faltando las de juanitas, magnolias, zoetienda y tessel — pendiente desde 2026-06-09, van dos ciclos (07-09 y hoy) sin resolverse pese al pedido explícito.
+- Resultado: **no se generó ningún archivo `-ciclo-N.md` nuevo hoy** para ninguna cuenta. No se inventaron datos de performance ni siquiera para simonashop (aunque tiene key, la red sigue bloqueada).
+- No se tocó ningún archivo de ciclos anteriores.
+- **Pendiente para Mica / infraestructura (repetido, sin avance desde 07-09):**
+  1. Habilitar `pem-lb.myperfit.com` en la política de red del entorno cloud usado por esta rutina (o mover la ejecución a un entorno con acceso).
+  2. Completar `retroalimentacion-perfit/cuentas.json` con las `api_key` de juanitas, magnolias, zoetienda y tessel.
+- Aplicar en: próxima corrida — si para el próximo ciclo ninguno de los dos bloqueos se resolvió, evaluar si tiene sentido seguir reintentando la rutina diaria sin cambios, o pausarla hasta que infraestructura resuelva esto.
