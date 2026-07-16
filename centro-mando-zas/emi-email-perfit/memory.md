@@ -613,3 +613,15 @@ Lanza campañas → Monitorear performance
   1. Habilitar `pem-lb.myperfit.com` en la política de red del entorno cloud usado por esta rutina (o mover la ejecución a un entorno con acceso).
   2. Completar `retroalimentacion-perfit/cuentas.json` con las `api_key` de juanitas, magnolias, zoetienda y tessel.
 - **Recomendación:** se repite por cuarta vez consecutiva (07-11, 07-13, 07-14 y hoy) sin que se haya tomado acción alguna sobre ninguno de los dos bloqueos — se reitera pausar esta rutina diaria hasta que infraestructura resuelva al menos uno de los dos, en vez de seguir consumiendo ciclos de ejecución sin producir ningún reporte.
+
+## 2026-07-16 · Rutina automática Perfit · Ciclo BLOQUEADO — séptimo+ día consecutivo, sin avance
+
+- Contexto: corrida automática diaria (24hs) de `analizar-performance-perfit.md` para simonashop, juanitas, magnolias, zoetienda y tessel (Living Tree y ERJ siguen excluidas a pedido de Mica).
+- **Bloqueo 1 — red:** verificado de nuevo con `curl` directo a `https://pem-lb.myperfit.com/v2/simonashop/campaigns` → `CONNECT tunnel failed, response 403`. El status del proxy del entorno confirma `connect_rejected` / "gateway answered 403 to CONNECT (policy denial or upstream failure)" para `pem-lb.myperfit.com:443`, timestamp de hoy (2026-07-16T12:04:58Z). Idéntico a 07-09, 07-10, 07-11, 07-13, 07-14 y 07-15.
+- **Bloqueo 2 — configuración:** `retroalimentacion-perfit/cuentas.json` sigue teniendo solo la `api_key` de `simonashop`. Siguen faltando las de juanitas, magnolias, zoetienda y tessel — pendiente desde 2026-06-09, más de un mes sin resolverse pese al pedido explícito. Se volvió a buscar en env vars y en el resto del repo por si aparecieron keys nuevas — no aparecieron.
+- Resultado: **no se generó ningún archivo `-ciclo-N.md` nuevo hoy** para ninguna cuenta. No se inventaron datos de performance ni siquiera para simonashop (aunque tiene key, la red sigue bloqueada). No se generó ningún archivo "sin envíos" — eso implicaría afirmar que sabemos que no hubo campañas, cuando en realidad no pudimos ni consultar la API.
+- No se tocó ningún archivo de ciclos anteriores.
+- **Pendiente para Mica / infraestructura (repetido, van al menos 7 ciclos sin avance):**
+  1. Habilitar `pem-lb.myperfit.com` en la política de red del entorno cloud usado por esta rutina (o mover la ejecución a un entorno con acceso).
+  2. Completar `retroalimentacion-perfit/cuentas.json` con las `api_key` de juanitas, magnolias, zoetienda y tessel.
+- **Recomendación:** quinta vez consecutiva (07-11, 07-13, 07-14, 07-15 y hoy) sin ninguna acción sobre los dos bloqueos. Se avisa a Mica por notificación hoy en vez de solo dejarlo en memoria, porque ya lleva más de un mes sin resolverse. Se reitera pausar esta rutina diaria hasta que infraestructura resuelva al menos uno de los dos bloqueos.
