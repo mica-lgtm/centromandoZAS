@@ -691,3 +691,17 @@ Lanza campañas → Monitorear performance
   2. Completar `retroalimentacion-perfit/cuentas.json` con las `api_key` de juanitas, magnolias, zoetienda y tessel.
   3. Rotar la `api_key` de simonashop (expuesta en historial de git desde el commit `a59c006`) y agregar `cuentas.json` a `.gitignore`.
 - **Notificación:** se envía push hoy — se cumplen 2 semanas corridas de rutina bloqueada sin ninguna acción sobre ninguno de los 3 pendientes (incluyendo la key expuesta, que ya lleva 3 días sin rotar desde que se reportó). Es un punto de escalamiento razonable aunque el estado técnico no cambió desde el 07-20.
+
+## 2026-07-23 · Rutina automática Perfit · Ciclo BLOQUEADO — décimotercer+ día consecutivo, sin avance en ningún pendiente
+
+- Contexto: corrida automática diaria (24hs) de `analizar-performance-perfit.md` para simonashop, juanitas, magnolias, zoetienda y tessel (Living Tree y ERJ siguen excluidas a pedido explícito de Mica).
+- **Bloqueo 1 — red:** verificado con `curl` directo a `https://pem-lb.myperfit.com/v2/simonashop/campaigns` → `CONNECT tunnel failed, response 403`. El status del proxy del entorno confirma `connect_rejected` / "gateway answered 403 to CONNECT (policy denial or upstream failure)" para `pem-lb.myperfit.com:443`, timestamp de hoy (2026-07-23T12:05:06Z). Se corrió también `python3 analizar_performance_perfit.py` directamente — mismo error (`Tunnel connection failed: 403 Forbidden`) para simonashop, la única cuenta con key configurada. Idéntico a todos los ciclos desde 07-09 (15 días corridos, con huecos de registro en 07-12 y 07-17).
+- **Bloqueo 2 — configuración:** `retroalimentacion-perfit/cuentas.json` sigue teniendo solo la `api_key` de `simonashop`. Siguen faltando las de juanitas, magnolias, zoetienda y tessel — pendiente desde 2026-06-09, más de un mes y medio sin resolverse pese al pedido explícito.
+- **Seguridad:** se verificó de nuevo si `retroalimentacion-perfit/cuentas.json` quedó en `.gitignore` tras el hallazgo del 07-20 — sigue sin estarlo, y la `api_key` de simonashop (misma key, sin rotar — se confirmó que el sufijo no cambió) sigue expuesta en el historial de git (commit `a59c006`). Van 4 días desde que se reportó este hallazgo sin ninguna acción.
+- Resultado: **no se generó ningún archivo `-ciclo-N.md` nuevo hoy** para ninguna cuenta. No se inventaron datos de performance ni siquiera para simonashop (aunque tiene key, la red sigue bloqueada). No se generó ningún archivo "sin envíos" — eso implicaría afirmar que sabemos que no hubo campañas, cuando en realidad no pudimos ni consultar la API.
+- No se tocó ningún archivo de ciclos anteriores. No se imprimió ni escribió ninguna api_key.
+- **Pendiente para Mica / infraestructura (repetido, van al menos 13 ciclos sin avance en más de un mes y medio):**
+  1. Habilitar `pem-lb.myperfit.com` en la política de red del entorno cloud usado por esta rutina (o mover la ejecución a un entorno con acceso).
+  2. Completar `retroalimentacion-perfit/cuentas.json` con las `api_key` de juanitas, magnolias, zoetienda y tessel.
+  3. Rotar la `api_key` de simonashop (expuesta en historial de git desde el commit `a59c006`) y agregar `cuentas.json` a `.gitignore`.
+- **Notificación:** no se envía push hoy — el estado es idéntico al ya notificado el 07-22 (mismos 3 pendientes, sin novedad), y una alerta repetida sin información nueva no aporta valor. Se retoma la notificación si hay cambio de estado, o si pasa una semana más sin ninguna señal de avance sobre la rotación de la key expuesta.
