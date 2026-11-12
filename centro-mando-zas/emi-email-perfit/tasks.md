@@ -26,7 +26,7 @@ Este archivo registra tareas pendientes, en proceso y completadas.
 
 | Fecha | Marca | Dato a validar | Por qué importa | Estado |
 |---|---|---|---|---|
-| | | | | |
+| 2026-11-12 | Todas (simonashop, juanitas, magnolias, zoetienda, tessel) | Habilitar host `pem-lb.myperfit.com` en la red del entorno + completar `cuentas.json` con api_key de juanitas, magnolias, zoetienda y tessel (solo simonashop está configurada) | Sin esto, la rutina diaria de retroalimentación Perfit no puede traer campañas de ninguna cuenta — ver `progress/2026-11-12-retroalimentacion-perfit-bloqueada.md` | Bloqueado por falta de información |
 
 ## Historial resumido
 
