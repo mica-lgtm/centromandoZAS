@@ -35,7 +35,7 @@ def load_config():
         return None
 
 
-def get_campaigns(account, api_key, hours=48):
+def get_campaigns(account, api_key, hours=24):
     """Get sent campaigns from last N hours."""
     url = f"https://pem-lb.myperfit.com/v2/{account}/campaigns"
 
@@ -208,12 +208,12 @@ def generate_report(account, client_name, analysis):
 
     # Build markdown
     lines = [
-        f"# {account} · {date_str} — Análisis Performance 48hs — Ciclo 1",
+        f"# {account} · {date_str} — Análisis Performance 24hs — Ciclo 1",
         "",
         "## Resumen",
         "",
         f"**Cliente:** {client_name}",
-        f"**Período:** {(now - timedelta(hours=48)).strftime('%Y-%m-%d %H:%M')} a {now.strftime('%Y-%m-%d %H:%M')}",
+        f"**Período:** {(now - timedelta(hours=24)).strftime('%Y-%m-%d %H:%M')} a {now.strftime('%Y-%m-%d %H:%M')}",
         f"**Campañas analizadas:** {analysis['total']}",
         f"**Enviados totales:** {analysis['total_sent']}",
         f"**Promedio open rate:** {analysis['avg_open_rate']:.1f}%",
@@ -303,7 +303,7 @@ def generate_report(account, client_name, analysis):
         "## 📝 Notas operativas",
         "",
         f"- Generado: {now.strftime('%Y-%m-%d %H:%M:%S')}",
-        f"- Próximo ciclo: {(now + timedelta(hours=48)).strftime('%Y-%m-%d %H:%M')}",
+        f"- Próximo ciclo: {(now + timedelta(hours=24)).strftime('%Y-%m-%d %H:%M')}",
         "- Generado por: Emi (agente automático)",
     ])
 
@@ -338,7 +338,7 @@ def main():
         campaigns = get_campaigns(account, api_key)
 
         if not campaigns:
-            print(f"   ℹ️  Sin campañas enviadas en las últimas 48hs\n")
+            print(f"   ℹ️  Sin campañas enviadas en las últimas 24hs\n")
             continue
 
         print(f"   ✓ {len(campaigns)} campañas encontradas")
